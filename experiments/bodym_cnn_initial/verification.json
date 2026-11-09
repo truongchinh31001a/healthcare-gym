@@ -1,0 +1,8 @@
+{
+  "same_subject_split_as_ridge": true,
+  "train_test_subject_isolation": true,
+  "normalization_fit_scope": "fit subjects during selection; all train subjects during refit",
+  "testA_restored_predictions_and_macro_mae": "passed",
+  "testB_restored_predictions_and_macro_mae": "passed",
+  "raw_pair_cpu_inference_matches_cached_gpu_inference": "passed"
+}

@@ -1,0 +1,97 @@
+{
+  "subject_id": "synthetic-steady",
+  "as_of": "2026-10-22T00:00:00+07:00",
+  "facts": [
+    {
+      "stream_id": "e54ec131ba2aed5ac519",
+      "field": "skeletal_muscle_mass_kg",
+      "unit": "kg",
+      "provenance": "observed",
+      "verification_band": "reviewed",
+      "source": "manual_measurement",
+      "measurement_method": "bioimpedance_device",
+      "device_id": "BIA-A",
+      "device_model": "BIA-A",
+      "protocol_id": "synthetic-morning",
+      "model_version": null,
+      "latest": {
+        "day": "2026-10-21",
+        "value": 30.275,
+        "observation_ids": [
+          "steady-smm-055"
+        ],
+        "flags": []
+      },
+      "trend": {
+        "method": "Theil-Sen on daily medians and actual elapsed days",
+        "window_days": 28,
+        "days_with_values": 4,
+        "span_days": 20,
+        "slope_per_week": 0.0349999999999997,
+        "status": "descriptive_only",
+        "withheld_reasons": [],
+        "statistical_confidence": null,
+        "explanation": "Data-support and source checks, not a probability of health improvement. No forecast or causal conclusion."
+      }
+    },
+    {
+      "stream_id": "4ff6fcd51cbbe55889b9",
+      "field": "waist_cm",
+      "unit": "cm",
+      "provenance": "observed",
+      "verification_band": "reviewed",
+      "source": "manual_measurement",
+      "measurement_method": "tape_measure",
+      "device_id": "tape-A",
+      "device_model": "tape-A",
+      "protocol_id": "synthetic-morning",
+      "model_version": null,
+      "latest": {
+        "day": "2026-10-21",
+        "value": 91.15,
+        "observation_ids": [
+          "steady-waist-055"
+        ],
+        "flags": []
+      },
+      "trend": {
+        "method": "Theil-Sen on daily medians and actual elapsed days",
+        "window_days": 28,
+        "days_with_values": 7,
+        "span_days": 23,
+        "slope_per_week": -0.490000000000002,
+        "status": "descriptive_only",
+        "withheld_reasons": [],
+        "statistical_confidence": null,
+        "explanation": "Data-support and source checks, not a probability of health improvement. No forecast or causal conclusion."
+      }
+    }
+  ],
+  "needs_source_selection": [
+    {
+      "field": "percent_body_fat",
+      "candidate_stream_ids": [
+        "47d9310d5645d98cfd20",
+        "bbdc3473f0c7cbc03cb6"
+      ]
+    },
+    {
+      "field": "weight_kg",
+      "candidate_stream_ids": [
+        "1611e440fca57cc32044",
+        "2f81218cbea8f485d78d"
+      ]
+    }
+  ],
+  "inferred_stream_ids_excluded": [
+    "49f2ade8251f41648624"
+  ],
+  "missing_or_withheld_stream_ids": [
+    "49f2ade8251f41648624",
+    "4d54e88ba137fd5b18a0"
+  ],
+  "plan_generation_authorized": false,
+  "requires_safety_screening": true,
+  "goal_changes_require_user_approval": true,
+  "interpretation_limits": "Reviewed describes entry/transcription review, not clinical validation. BIA results are device estimates; no causal or clinical conclusion."
+}

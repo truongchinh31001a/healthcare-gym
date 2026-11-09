@@ -1,0 +1,2019 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Personal Health Assistant API",
+    "version": "0.5.0"
+  },
+  "paths": {
+    "/api/v1/auth/register": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Register",
+        "operationId": "register_api_v1_auth_register_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Register"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/login": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Login",
+        "operationId": "login_api_v1_auth_login_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/session": {
+      "get": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Session",
+        "operationId": "session_api_v1_auth_session_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/logout": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Logout",
+        "operationId": "logout_api_v1_auth_logout_post",
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/api/v1/capabilities": {
+      "get": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Get Capabilities",
+        "operationId": "get_capabilities_api_v1_capabilities_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/consents": {
+      "get": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "List Consents",
+        "operationId": "list_consents_api_v1_me_consents_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Set Consent",
+        "operationId": "set_consent_api_v1_me_consents_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsentInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/profile": {
+      "get": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Get Profile",
+        "operationId": "get_profile_api_v1_me_profile_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Put Profile",
+        "operationId": "put_profile_api_v1_me_profile_put",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Profile"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/health-context": {
+      "get": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Get Context",
+        "operationId": "get_context_api_v1_me_health_context_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Put Context",
+        "operationId": "put_context_api_v1_me_health_context_put",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HealthContext"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/measurement-sessions": {
+      "post": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Add Session",
+        "operationId": "add_session_api_v1_me_measurement_sessions_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MeasurementInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/observations": {
+      "get": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Observations",
+        "operationId": "observations_api_v1_me_observations_get",
+        "parameters": [
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 500,
+              "minimum": 1,
+              "default": 100,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/observations/{record_id}/revisions": {
+      "post": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Revise Observation",
+        "operationId": "revise_observation_api_v1_me_observations__record_id__revisions_post",
+        "parameters": [
+          {
+            "name": "record_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Record Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Revision"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/progress": {
+      "get": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Get Progress",
+        "operationId": "get_progress_api_v1_me_progress_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "properties": {
+                    "schema_version": {
+                      "const": "1.0.0"
+                    },
+                    "subject_id": {
+                      "type": "string"
+                    },
+                    "as_of": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "report_timezone": {
+                      "type": "string"
+                    },
+                    "synthetic_only": {
+                      "type": "boolean"
+                    },
+                    "series": {
+                      "items": {
+                        "properties": {
+                          "stream_id": {
+                            "type": "string"
+                          },
+                          "subject_id": {
+                            "type": "string"
+                          },
+                          "field": {
+                            "type": "string"
+                          },
+                          "provenance": {
+                            "enum": [
+                              "observed",
+                              "declared",
+                              "extracted",
+                              "inferred"
+                            ]
+                          },
+                          "unit": {
+                            "type": "string"
+                          },
+                          "verification_band": {
+                            "type": "string"
+                          },
+                          "days": {
+                            "items": {
+                              "properties": {
+                                "day": {
+                                  "type": "string",
+                                  "format": "date"
+                                },
+                                "value": {
+                                  "type": [
+                                    "number",
+                                    "null"
+                                  ]
+                                },
+                                "observation_ids": {
+                                  "items": {
+                                    "type": "string"
+                                  },
+                                  "type": "array"
+                                },
+                                "flags": {
+                                  "items": {
+                                    "type": "string"
+                                  },
+                                  "type": "array"
+                                }
+                              },
+                              "type": "object",
+                              "required": [
+                                "day",
+                                "value",
+                                "observation_ids",
+                                "flags"
+                              ]
+                            },
+                            "type": "array"
+                          },
+                          "trend": {
+                            "properties": {
+                              "status": {
+                                "enum": [
+                                  "withheld",
+                                  "descriptive_only"
+                                ]
+                              },
+                              "slope_per_week": {
+                                "type": [
+                                  "number",
+                                  "null"
+                                ]
+                              },
+                              "withheld_reasons": {
+                                "items": {
+                                  "type": "string"
+                                },
+                                "type": "array"
+                              },
+                              "statistical_confidence": {
+                                "type": "null"
+                              }
+                            },
+                            "type": "object",
+                            "required": [
+                              "status",
+                              "slope_per_week",
+                              "withheld_reasons",
+                              "statistical_confidence"
+                            ]
+                          }
+                        },
+                        "type": "object",
+                        "required": [
+                          "stream_id",
+                          "subject_id",
+                          "field",
+                          "provenance",
+                          "verification_band",
+                          "unit",
+                          "days",
+                          "trend"
+                        ]
+                      },
+                      "type": "array"
+                    },
+                    "quality_summary": {
+                      "type": "object"
+                    },
+                    "interpolated_values": {
+                      "const": false
+                    },
+                    "clinical_interpretation": {
+                      "const": false
+                    }
+                  },
+                  "additionalProperties": false,
+                  "type": "object",
+                  "required": [
+                    "schema_version",
+                    "subject_id",
+                    "as_of",
+                    "report_timezone",
+                    "synthetic_only",
+                    "series",
+                    "quality_summary",
+                    "interpolated_values",
+                    "clinical_interpretation"
+                  ],
+                  "title": "BodyProgressDashboard-v1"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/planner-context": {
+      "get": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Get Planner Context",
+        "operationId": "get_planner_context_api_v1_me_planner_context_get",
+        "parameters": [
+          {
+            "name": "stream_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "default": [],
+              "title": "Stream Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "title": "BodyProgressPlannerContext-v1",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "subject_id",
+                    "as_of",
+                    "facts",
+                    "needs_source_selection",
+                    "inferred_stream_ids_excluded",
+                    "missing_or_withheld_stream_ids",
+                    "plan_generation_authorized",
+                    "requires_safety_screening",
+                    "goal_changes_require_user_approval",
+                    "interpretation_limits"
+                  ],
+                  "properties": {
+                    "subject_id": {
+                      "type": "string"
+                    },
+                    "as_of": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "facts": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "stream_id",
+                          "field",
+                          "provenance",
+                          "verification_band",
+                          "measurement_method",
+                          "trend"
+                        ],
+                        "properties": {
+                          "provenance": {
+                            "enum": [
+                              "observed",
+                              "extracted"
+                            ]
+                          },
+                          "verification_band": {
+                            "const": "reviewed"
+                          },
+                          "trend": {
+                            "type": "object",
+                            "required": [
+                              "status"
+                            ],
+                            "properties": {
+                              "status": {
+                                "const": "descriptive_only"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "needs_source_selection": {
+                      "type": "array"
+                    },
+                    "inferred_stream_ids_excluded": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "missing_or_withheld_stream_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "plan_generation_authorized": {
+                      "const": false
+                    },
+                    "requires_safety_screening": {
+                      "const": true
+                    },
+                    "goal_changes_require_user_approval": {
+                      "const": true
+                    },
+                    "interpretation_limits": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/documents": {
+      "get": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "List Documents",
+        "operationId": "list_documents_api_v1_me_documents_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Upload Document",
+        "operationId": "upload_document_api_v1_me_documents_post",
+        "requestBody": {
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/documents/{document_id}/content": {
+      "get": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Document Content",
+        "operationId": "document_content_api_v1_me_documents__document_id__content_get",
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/documents/{document_id}": {
+      "delete": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Delete Document",
+        "operationId": "delete_document_api_v1_me_documents__document_id__delete",
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/documents/{document_id}/ocr": {
+      "post": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Request Ocr",
+        "operationId": "request_ocr_api_v1_me_documents__document_id__ocr_post",
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/documents/{document_id}/transcription": {
+      "post": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Transcribe",
+        "operationId": "transcribe_api_v1_me_documents__document_id__transcription_post",
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Transcription"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/report-drafts/{draft_id}": {
+      "get": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Get Draft",
+        "operationId": "get_draft_api_v1_me_report_drafts__draft_id__get",
+        "parameters": [
+          {
+            "name": "draft_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Draft Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/report-drafts": {
+      "get": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "List Drafts",
+        "operationId": "list_drafts_api_v1_me_report_drafts_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/report-drafts/{draft_id}/confirm": {
+      "post": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Confirm Report",
+        "operationId": "confirm_report_api_v1_me_report_drafts__draft_id__confirm_post",
+        "parameters": [
+          {
+            "name": "draft_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Draft Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfirmDraft"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/goals": {
+      "get": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "List Goals",
+        "operationId": "list_goals_api_v1_me_goals_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Create Goal",
+        "operationId": "create_goal_api_v1_me_goals_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoalInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/goals/{goal_id}": {
+      "put": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Revise Goal",
+        "operationId": "revise_goal_api_v1_me_goals__goal_id__put",
+        "parameters": [
+          {
+            "name": "goal_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Goal Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoalRevision"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/goals/{goal_id}/history": {
+      "get": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Goal History",
+        "operationId": "goal_history_api_v1_me_goals__goal_id__history_get",
+        "parameters": [
+          {
+            "name": "goal_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Goal Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/export": {
+      "get": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Export Account",
+        "operationId": "export_account_api_v1_me_export_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/account": {
+      "delete": {
+        "tags": [
+          "module-01"
+        ],
+        "summary": "Delete Account",
+        "operationId": "delete_account_api_v1_me_account_delete",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Reauthenticate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/overview": {
+      "get": {
+        "tags": [
+          "module-01",
+          "admin"
+        ],
+        "summary": "Admin Overview",
+        "operationId": "admin_overview_api_v1_admin_overview_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/users": {
+      "get": {
+        "tags": [
+          "module-01",
+          "admin"
+        ],
+        "summary": "Admin Users",
+        "operationId": "admin_users_api_v1_admin_users_get",
+        "parameters": [
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 25,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/users/{subject_id}/support-profile": {
+      "get": {
+        "tags": [
+          "module-01",
+          "admin"
+        ],
+        "summary": "Support Profile",
+        "operationId": "support_profile_api_v1_admin_users__subject_id__support_profile_get",
+        "parameters": [
+          {
+            "name": "subject_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subject Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": [
+          "system"
+        ],
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ready": {
+      "get": {
+        "tags": [
+          "system"
+        ],
+        "summary": "Ready",
+        "operationId": "ready_ready_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/metrics": {
+      "get": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Get Metrics",
+        "operationId": "get_metrics_api_v1_admin_metrics_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ConfirmDraft": {
+        "properties": {
+          "version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Version"
+          },
+          "selected_fields": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 9,
+            "minItems": 1,
+            "title": "Selected Fields"
+          },
+          "corrections": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Corrections"
+          },
+          "acknowledged_flags": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 100,
+            "title": "Acknowledged Flags"
+          },
+          "checked_original": {
+            "type": "boolean",
+            "const": true,
+            "title": "Checked Original"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "version",
+          "selected_fields",
+          "checked_original"
+        ],
+        "title": "ConfirmDraft"
+      },
+      "ConsentInput": {
+        "properties": {
+          "purpose": {
+            "type": "string",
+            "enum": [
+              "health_data_processing",
+              "document_processing",
+              "body_image_processing",
+              "admin_support",
+              "research_training"
+            ],
+            "title": "Purpose"
+          },
+          "granted": {
+            "type": "boolean",
+            "title": "Granted"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "purpose",
+          "granted"
+        ],
+        "title": "ConsentInput"
+      },
+      "GoalInput": {
+        "properties": {
+          "target_weight_kg": {
+            "type": "number",
+            "maximum": 400.0,
+            "minimum": 20.0,
+            "title": "Target Weight Kg"
+          },
+          "weeks": {
+            "type": "integer",
+            "maximum": 104.0,
+            "minimum": 1.0,
+            "title": "Weeks"
+          },
+          "approved_by_user": {
+            "type": "boolean",
+            "const": true,
+            "title": "Approved By User"
+          },
+          "weight_stream_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 20,
+                "minLength": 20
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Weight Stream Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "target_weight_kg",
+          "weeks",
+          "approved_by_user"
+        ],
+        "title": "GoalInput"
+      },
+      "GoalRevision": {
+        "properties": {
+          "target_weight_kg": {
+            "type": "number",
+            "maximum": 400.0,
+            "minimum": 20.0,
+            "title": "Target Weight Kg"
+          },
+          "weeks": {
+            "type": "integer",
+            "maximum": 104.0,
+            "minimum": 1.0,
+            "title": "Weeks"
+          },
+          "approved_by_user": {
+            "type": "boolean",
+            "const": true,
+            "title": "Approved By User"
+          },
+          "weight_stream_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 20,
+                "minLength": 20
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Weight Stream Id"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Version"
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 500,
+            "minLength": 5,
+            "title": "Reason"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "target_weight_kg",
+          "weeks",
+          "approved_by_user",
+          "version",
+          "reason"
+        ],
+        "title": "GoalRevision"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HealthContext": {
+        "properties": {
+          "version": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Version",
+            "default": 0
+          },
+          "pregnancy": {
+            "type": "string",
+            "enum": [
+              "unknown",
+              "no",
+              "yes"
+            ],
+            "title": "Pregnancy",
+            "default": "unknown"
+          },
+          "eating_disorder_risk": {
+            "type": "string",
+            "enum": [
+              "unknown",
+              "no",
+              "yes"
+            ],
+            "title": "Eating Disorder Risk",
+            "default": "unknown"
+          },
+          "clinician_restrictions": {
+            "type": "string",
+            "enum": [
+              "unknown",
+              "no",
+              "yes"
+            ],
+            "title": "Clinician Restrictions",
+            "default": "unknown"
+          },
+          "acute_red_flags": {
+            "type": "string",
+            "enum": [
+              "unknown",
+              "no",
+              "yes"
+            ],
+            "title": "Acute Red Flags",
+            "default": "unknown"
+          },
+          "notes": {
+            "type": "string",
+            "maxLength": 2000,
+            "title": "Notes",
+            "default": ""
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "HealthContext"
+      },
+      "Login": {
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "title": "Email"
+          },
+          "password": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Password"
+          },
+          "client": {
+            "type": "string",
+            "enum": [
+              "mobile",
+              "web"
+            ],
+            "title": "Client",
+            "default": "mobile"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "email",
+          "password"
+        ],
+        "title": "Login"
+      },
+      "MeasurementInput": {
+        "properties": {
+          "measured_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Measured At"
+          },
+          "values": {
+            "items": {
+              "$ref": "#/components/schemas/Value"
+            },
+            "type": "array",
+            "maxItems": 14,
+            "minItems": 1,
+            "title": "Values"
+          },
+          "device_id": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Device Id"
+          },
+          "device_model": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Device Model"
+          },
+          "protocol_id": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Protocol Id"
+          },
+          "measurement_method": {
+            "type": "string",
+            "enum": [
+              "scale",
+              "tape",
+              "device_report"
+            ],
+            "title": "Measurement Method"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "measured_at",
+          "values",
+          "device_id",
+          "device_model",
+          "protocol_id",
+          "measurement_method"
+        ],
+        "title": "MeasurementInput"
+      },
+      "Profile": {
+        "properties": {
+          "version": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Version",
+            "default": 0
+          },
+          "display_name": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Display Name"
+          },
+          "birth_date": {
+            "type": "string",
+            "format": "date",
+            "title": "Birth Date"
+          },
+          "height_cm": {
+            "type": "number",
+            "maximum": 250.0,
+            "minimum": 80.0,
+            "title": "Height Cm"
+          },
+          "gender": {
+            "type": "string",
+            "enum": [
+              "male",
+              "female",
+              "unspecified"
+            ],
+            "title": "Gender",
+            "default": "unspecified"
+          },
+          "timezone": {
+            "type": "string",
+            "title": "Timezone",
+            "default": "Asia/Bangkok"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "display_name",
+          "birth_date",
+          "height_cm"
+        ],
+        "title": "Profile"
+      },
+      "Reauthenticate": {
+        "properties": {
+          "password": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Password"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "password"
+        ],
+        "title": "Reauthenticate"
+      },
+      "Register": {
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "title": "Email"
+          },
+          "password": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 12,
+            "title": "Password"
+          },
+          "adult_attestation": {
+            "type": "boolean",
+            "const": true,
+            "title": "Adult Attestation"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "email",
+          "password",
+          "adult_attestation"
+        ],
+        "title": "Register"
+      },
+      "Revision": {
+        "properties": {
+          "value": {
+            "type": "number",
+            "maximum": 1000000.0,
+            "minimum": -1000000.0,
+            "title": "Value"
+          },
+          "unit": {
+            "type": "string",
+            "title": "Unit"
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 500,
+            "minLength": 5,
+            "title": "Reason"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "value",
+          "unit",
+          "reason"
+        ],
+        "title": "Revision"
+      },
+      "Transcription": {
+        "properties": {
+          "values": {
+            "items": {
+              "$ref": "#/components/schemas/Value"
+            },
+            "type": "array",
+            "maxItems": 9,
+            "minItems": 1,
+            "title": "Values"
+          },
+          "measured_on": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Measured On"
+          },
+          "device_id": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Device Id"
+          },
+          "device_model": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Device Model"
+          },
+          "protocol_id": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Protocol Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "values",
+          "device_id",
+          "device_model",
+          "protocol_id"
+        ],
+        "title": "Transcription"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "Value": {
+        "properties": {
+          "field": {
+            "type": "string",
+            "title": "Field"
+          },
+          "value": {
+            "type": "number",
+            "maximum": 1000000.0,
+            "minimum": -1000000.0,
+            "title": "Value"
+          },
+          "unit": {
+            "type": "string",
+            "title": "Unit"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "field",
+          "value",
+          "unit"
+        ],
+        "title": "Value"
+      }
+    }
+  }
+}

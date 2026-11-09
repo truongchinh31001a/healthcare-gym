@@ -1,0 +1,117 @@
+{
+  "run_at": "2026-10-21T20:14:24.795323+00:00",
+  "data": "fictional temporary account only",
+  "steps_passed": 21,
+  "cleanup": "temporary account and uploaded file deleted",
+  "steps": [
+    {
+      "method": "POST",
+      "step": "register",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "step": "login",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "step": "consents",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "step": "consents",
+      "status": 201
+    },
+    {
+      "method": "PUT",
+      "step": "profile",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "step": "measurement-sessions",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "step": "measurement-sessions",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "step": "measurement-sessions",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "step": "measurement-sessions",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "step": "progress",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "step": "health-context",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "step": "goals",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "step": "documents",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "step": "transcription",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "step": "observations",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "step": "confirm",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "step": "observations",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "step": "export",
+      "status": 200
+    },
+    {
+      "method": "DELETE",
+      "step": "616c4de9-e74f-4c8d-a9ef-db91b635be82",
+      "status": 204
+    },
+    {
+      "method": "GET",
+      "step": "observations",
+      "status": 200
+    },
+    {
+      "method": "DELETE",
+      "step": "account",
+      "status": 204
+    }
+  ],
+  "limits": [
+    "No real OCR/CV or clinical accuracy evaluation",
+    "No native device UI automation"
+  ]
+}

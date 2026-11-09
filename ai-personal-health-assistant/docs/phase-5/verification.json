@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-22",
+  "scope": "local module01 integration MVP",
+  "api_tests_passed": 25,
+  "http_e2e_steps_passed": 21,
+  "typescript": [
+    "web",
+    "mobile",
+    "contracts"
+  ],
+  "next_production_build": "passed",
+  "expo_hermes_exports": [
+    "android",
+    "ios"
+  ],
+  "sqlite_alembic_upgrade": "passed",
+  "alembic_model_drift": "none",
+  "compose_config": "valid",
+  "browser_ui_smoke": [
+    "admin login",
+    "dashboard fetch",
+    "users without support permission disabled",
+    "logout"
+  ],
+  "default_model_unchanged": true,
+  "default_checkpoint_sha256": "df650517448c7a87143bc89df47e6b86105972782ea5a0351f455a44101bf6f2",
+  "default_config_sha256": "9a0a69da8d237e8bfdb430d5ed2386a7796870cf847c5430c654dfad118ecf08",
+  "not_verified": [
+    "Docker image builds and runtime",
+    "PostgreSQL runtime/concurrency",
+    "native device UI, picker, SecureStore, preview",
+    "real report OCR benchmark",
+    "real body capture CV and clinical safety"
+  ],
+  "temporary_accounts": "deleted after checks"
+}

@@ -1,0 +1,4 @@
+# Phase 4, Python 3.11. Existing workspace environment already has these.
+-r requirements.txt
+jsonschema==4.26.0
+tzdata==2026.3

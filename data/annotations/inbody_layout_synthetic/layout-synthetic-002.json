@@ -1,0 +1,72 @@
+{
+  "document_id": "layout-synthetic-002",
+  "subject_id": "layout-synthetic-002-subject",
+  "synthetic": true,
+  "measured_at": "2026-10-21",
+  "values": {
+    "weight_kg": 72.0,
+    "height_cm": 172.0,
+    "skeletal_muscle_mass_kg": 32.0,
+    "body_fat_mass_kg": 19.0,
+    "percent_body_fat": 26.4,
+    "total_body_water_l": null,
+    "ecw_tbw_ratio": 0.385,
+    "basal_metabolic_rate_kcal": 1520.0,
+    "bmi": 24.3
+  },
+  "value_boxes": {
+    "weight_kg": [
+      450,
+      255,
+      512,
+      278
+    ],
+    "height_cm": [
+      450,
+      370,
+      533,
+      388
+    ],
+    "skeletal_muscle_mass_kg": [
+      450,
+      485,
+      512,
+      508
+    ],
+    "body_fat_mass_kg": [
+      450,
+      600,
+      512,
+      623
+    ],
+    "percent_body_fat": [
+      450,
+      715,
+      528,
+      733
+    ],
+    "ecw_tbw_ratio": [
+      1350,
+      370,
+      1469,
+      388
+    ],
+    "basal_metabolic_rate_kcal": [
+      1350,
+      485,
+      1507,
+      508
+    ],
+    "bmi": [
+      1350,
+      600,
+      1475,
+      623
+    ]
+  },
+  "bbox_coordinate_space": "exif_transposed_page_0",
+  "transcript": "SYNTHETIC BODY DATA - ENGINEERING FIXTURE\nTest date: 2026-10-21\nWeight: 72 kg Ref: 0-100 Total Body Water: Ref: 0-100\nHeight: 172 cm Ref: 0-100 ECW/TBW: 0.385 ratio Ref: 0-100\nSkeletal Muscle Mass: 32 kg Ref: 0-100 Basal Metabolic Rate: 1520 kcal/day Ref: 0-100\nBody Fat Mass: 19 kg Ref: 0-100 Body Mass Index: 24.3 kg/m2 Ref: 0-100\nPercent Body Fat: 26.4 % Ref: 0-100\nGenerated example only. No real person. No medical interpretation.",
+  "language": "en",
+  "layout_family": "original-two-column",
+  "transform": "none"
+}

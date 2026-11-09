@@ -1,0 +1,19 @@
+{
+  "document_id": "synthetic-009",
+  "subject_id": "synthetic-subject-009",
+  "synthetic": true,
+  "measured_at": "2026-10-21",
+  "values": {
+    "weight_kg": 53.8,
+    "height_cm": 176.5,
+    "skeletal_muscle_mass_kg": 21.5,
+    "body_fat_mass_kg": 16.4,
+    "percent_body_fat": 30.5,
+    "total_body_water_l": 29.6,
+    "ecw_tbw_ratio": 0.399,
+    "basal_metabolic_rate_kcal": 2075.0,
+    "bmi": 17.3
+  },
+  "transcript": "SYNTHETIC WELLNESS REPORT\nTest date: 2026-10-21\nWeight: 53,8 kg\nHeight: 176,5 cm\nSkeletal Muscle Mass: 21,5 kg\nBody Fat Mass: 16,4 kg\nPercent Body Fat: 30,5 %\nTotal Body Water: 29,6 L\nECW/TBW: 0,399 ratio\nBasal Metabolic Rate: 2075,0 kcal/day\nBody Mass Index: 17,3 kg/m2\nOriginal test layout. No real person. Not a medical result.",
+  "annotation_version": "synthetic-generator-0.1.0"
+}

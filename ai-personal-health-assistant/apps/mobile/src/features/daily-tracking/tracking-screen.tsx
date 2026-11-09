@@ -1,0 +1,24 @@
+import { useState } from "react";
+import { Text, View } from "react-native";
+import { Link } from "expo-router";
+import { fields, fieldLabel, type FieldName, type Observation, type Page } from "@health/contracts";
+import { Screen } from "@/components/layouts/screen";
+import { Button, Card, Choice, Copy, Input, useResource, useTask, styles } from "@/components/ui";
+import { useSession } from "@/lib/session";
+
+export default function TrackingScreen() {
+  const { api } = useSession(); const task = useTask(); const [offset, setOffset] = useState(0);
+  const history = useResource<Page<Observation>>(`/me/observations?offset=${offset}&limit=25`);
+  const [field, setField] = useState<FieldName>("weight_kg"); const [value, setValue] = useState("");
+  const [when, setWhen] = useState(new Date().toISOString()); const [device, setDevice] = useState(""); const [model, setModel] = useState(""); const [protocol, setProtocol] = useState("");
+  const [editing, setEditing] = useState<Observation | null>(null); const [corrected, setCorrected] = useState(""); const [reason, setReason] = useState("");
+  return <Screen title="Lần đo hôm nay" description="Ghi thời điểm đo, thiết bị và cách đo để các lần sau có thể so sánh.">
+    {task.feedback}<Card title="Thêm số đo"><Choice label="Chỉ số" value={field} onChange={setField} options={Object.entries(fields).map(([key, spec]) => ({ value: key as FieldName, label: spec.label }))} /><Input label={`Giá trị (${fields[field].unit})`} value={value} onChangeText={setValue} keyboardType="decimal-pad" /><Input label="Thời điểm đo (ISO 8601 có múi giờ)" value={when} onChangeText={setWhen} autoCapitalize="none" /><Button title="Dùng thời điểm hiện tại" onPress={() => setWhen(new Date().toISOString())} /><Input label="Mã thiết bị riêng (dùng lại cho những lần sau)" value={device} onChangeText={setDevice} placeholder="can-o-nha-01" /><Input label="Tên/loại thiết bị" value={model} onChangeText={setModel} /><Input label="Mã quy trình đo ổn định" value={protocol} onChangeText={setProtocol} placeholder="buoi-sang-truoc-an-v1" /><Copy>Cách đo: {fields[field].method === "scale" ? "cân" : fields[field].method === "tape" ? "thước dây" : "số đọc trực tiếp trên thiết bị"}. Với dữ liệu từ phiếu, dùng mục Phiếu InBody.</Copy><Button title="Lưu lần đo" disabled={task.busy || !value.trim()} onPress={() => void task.run(async () => {
+      if (!value.trim() || !Number.isFinite(Number(value))) throw new Error("Nhập một giá trị số hợp lệ");
+      await api("/me/measurement-sessions", { method: "POST", body: { measured_at: when, values: [{ field, value: Number(value), unit: fields[field].unit }], device_id: device.trim(), device_model: model.trim(), protocol_id: protocol.trim(), measurement_method: fields[field].method } }); setValue(""); history.reload();
+    })} /></Card>
+    <Card title="Phiếu InBody"><Copy>Tải phiếu lên, nhập số đọc được và đối chiếu từng trường trước khi xác nhận. Tự động đọc phiếu đang được kiểm chứng.</Copy><Link href="/reports"><Copy>Mở phiếu và xác nhận số liệu →</Copy></Link></Card>
+    <Card title="Lịch sử số đo">{history.feedback}<Copy>{history.data?.total ?? 0} bản ghi, gồm cả lịch sử điều chỉnh.</Copy>{history.data?.items.map(item => <View key={item.id} style={{ borderTopWidth: 1, borderColor: "#d9e8e3", paddingTop: 13, gap: 7 }}><Text style={styles.title}>{fieldLabel(item.field)} · {item.value} {item.unit}</Text><Copy>{item.measured_at ?? "Chưa rõ ngày đo"} · {item.device_model}</Copy><Copy>{item.provenance === "extracted" ? "Từ phiếu đã đối chiếu" : "Đo thủ công"} · {item.verification_status}{item.version > 1 ? " · Đã có bản sửa" : ""}</Copy>{item.quality_flags.length > 0 && <Copy>Lưu ý: {item.quality_flags.join(", ")}</Copy>}{item.provenance === "observed" && item.version === 1 && <Button title="Điều chỉnh số nhập" onPress={() => { setEditing(item); setCorrected(String(item.value)); setReason(""); }} />}</View>)}<View style={styles.row}><Button title="Trang trước" disabled={offset === 0} onPress={() => setOffset(Math.max(0, offset-25))} /><Button title="Trang sau" disabled={offset+25 >= (history.data?.total ?? 0)} onPress={() => setOffset(offset+25)} /></View></Card>
+    {editing && <Card title={`Điều chỉnh ${fieldLabel(editing.field)}`}><Copy>Bản cũ được giữ trong lịch sử. Bản sửa thay thế số liệu khi tính tiến trình.</Copy><Input label={`Giá trị mới (${editing.unit})`} value={corrected} onChangeText={setCorrected} keyboardType="decimal-pad" /><Input label="Lý do điều chỉnh (ít nhất 5 ký tự)" value={reason} onChangeText={setReason} /><Button title="Lưu bản điều chỉnh" disabled={task.busy || !corrected.trim()} onPress={() => void task.run(async () => { await api(`/me/observations/${editing.id}/revisions`, { method: "POST", body: { value: Number(corrected), unit: editing.unit, reason } }); setEditing(null); history.reload(); })} /><Button title="Hủy" onPress={() => setEditing(null)} /></Card>}
+  </Screen>;
+}

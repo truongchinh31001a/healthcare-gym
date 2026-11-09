@@ -1,0 +1,2091 @@
+{
+  "schema_version": "1.0.0",
+  "subject_id": "synthetic-steady",
+  "as_of": "2026-10-22T00:00:00+07:00",
+  "report_timezone": "Asia/Bangkok",
+  "synthetic_only": true,
+  "series": [
+    {
+      "stream_id": "47d9310d5645d98cfd20",
+      "subject_id": "synthetic-steady",
+      "field": "percent_body_fat",
+      "provenance": "extracted",
+      "source": "inbody",
+      "measurement_method": "device_report",
+      "device_id": "BIA-A",
+      "device_model": "BIA-A",
+      "protocol_id": "synthetic-morning",
+      "model_version": "synthetic-parser-v1",
+      "verification_band": "reviewed",
+      "unit": "%",
+      "reviewed_measurement": true,
+      "record_state_counts": {
+        "active": 9
+      },
+      "historical_audit_flags": [
+        "date_only_precision"
+      ],
+      "days": [
+        {
+          "day": "2026-08-27",
+          "value": 25.0,
+          "observation_ids": [
+            "ocr-pbf-000"
+          ],
+          "flags": [
+            "date_only_precision"
+          ]
+        },
+        {
+          "day": "2026-09-03",
+          "value": 24.86,
+          "observation_ids": [
+            "ocr-pbf-007"
+          ],
+          "flags": [
+            "date_only_precision"
+          ]
+        },
+        {
+          "day": "2026-09-10",
+          "value": 24.72,
+          "observation_ids": [
+            "ocr-pbf-014"
+          ],
+          "flags": [
+            "date_only_precision"
+          ]
+        },
+        {
+          "day": "2026-09-17",
+          "value": 24.58,
+          "observation_ids": [
+            "ocr-pbf-021"
+          ],
+          "flags": [
+            "date_only_precision"
+          ]
+        },
+        {
+          "day": "2026-09-24",
+          "value": 24.44,
+          "observation_ids": [
+            "ocr-pbf-028"
+          ],
+          "flags": [
+            "date_only_precision"
+          ]
+        },
+        {
+          "day": "2026-10-01",
+          "value": 24.3,
+          "observation_ids": [
+            "ocr-pbf-035"
+          ],
+          "flags": [
+            "date_only_precision"
+          ]
+        },
+        {
+          "day": "2026-10-08",
+          "value": 24.16,
+          "observation_ids": [
+            "ocr-pbf-042"
+          ],
+          "flags": [
+            "date_only_precision"
+          ]
+        },
+        {
+          "day": "2026-10-15",
+          "value": 24.02,
+          "observation_ids": [
+            "ocr-pbf-049"
+          ],
+          "flags": [
+            "date_only_precision"
+          ]
+        },
+        {
+          "day": "2026-10-21",
+          "value": 23.9,
+          "observation_ids": [
+            "ocr-pbf-055"
+          ],
+          "flags": [
+            "date_only_precision"
+          ]
+        }
+      ],
+      "weekly": [
+        {
+          "week_start": "2026-08-24",
+          "median": 25.0,
+          "days_with_values": 1,
+          "flags": [
+            "date_only_precision"
+          ]
+        },
+        {
+          "week_start": "2026-08-31",
+          "median": 24.86,
+          "days_with_values": 1,
+          "flags": [
+            "date_only_precision"
+          ]
+        },
+        {
+          "week_start": "2026-09-07",
+          "median": 24.72,
+          "days_with_values": 1,
+          "flags": [
+            "date_only_precision"
+          ]
+        },
+        {
+          "week_start": "2026-09-14",
+          "median": 24.58,
+          "days_with_values": 1,
+          "flags": [
+            "date_only_precision"
+          ]
+        },
+        {
+          "week_start": "2026-09-21",
+          "median": 24.44,
+          "days_with_values": 1,
+          "flags": [
+            "date_only_precision"
+          ]
+        },
+        {
+          "week_start": "2026-09-28",
+          "median": 24.3,
+          "days_with_values": 1,
+          "flags": [
+            "date_only_precision"
+          ]
+        },
+        {
+          "week_start": "2026-10-05",
+          "median": 24.16,
+          "days_with_values": 1,
+          "flags": [
+            "date_only_precision"
+          ]
+        },
+        {
+          "week_start": "2026-10-12",
+          "median": 24.02,
+          "days_with_values": 1,
+          "flags": [
+            "date_only_precision"
+          ]
+        },
+        {
+          "week_start": "2026-10-19",
+          "median": 23.9,
+          "days_with_values": 1,
+          "flags": [
+            "date_only_precision"
+          ]
+        }
+      ],
+      "gaps": [],
+      "active_observations": 9,
+      "days_with_values": 9,
+      "calendar_days_without_values_in_analysis_window": 81,
+      "latest": {
+        "day": "2026-10-21",
+        "value": 23.9,
+        "observation_ids": [
+          "ocr-pbf-055"
+        ],
+        "flags": [
+          "date_only_precision"
+        ]
+      },
+      "latest_age_days": 1,
+      "trend": {
+        "method": "Theil-Sen on daily medians and actual elapsed days",
+        "window_days": 28,
+        "days_with_values": 4,
+        "span_days": 20,
+        "slope_per_week": -0.14000000000000065,
+        "status": "descriptive_only",
+        "withheld_reasons": [],
+        "statistical_confidence": null,
+        "explanation": "Data-support and source checks, not a probability of health improvement. No forecast or causal conclusion."
+      },
+      "recent_week_comparison": {
+        "current": {
+          "start": "2026-10-16",
+          "end": "2026-10-22",
+          "days_with_values": 1,
+          "median": 23.9,
+          "has_review_flags": false
+        },
+        "previous": {
+          "start": "2026-10-09",
+          "end": "2026-10-15",
+          "days_with_values": 1,
+          "median": 24.02,
+          "has_review_flags": false
+        },
+        "change": null,
+        "relative_percent": null,
+        "change_unit": "percentage_points"
+      }
+    },
+    {
+      "stream_id": "bbdc3473f0c7cbc03cb6",
+      "subject_id": "synthetic-steady",
+      "field": "percent_body_fat",
+      "provenance": "observed",
+      "source": "manual_measurement",
+      "measurement_method": "bioimpedance_device",
+      "device_id": "BIA-A",
+      "device_model": "BIA-A",
+      "protocol_id": "synthetic-morning",
+      "model_version": null,
+      "verification_band": "reviewed",
+      "unit": "%",
+      "reviewed_measurement": true,
+      "record_state_counts": {
+        "active": 9
+      },
+      "historical_audit_flags": [],
+      "days": [
+        {
+          "day": "2026-08-27",
+          "value": 25.0,
+          "observation_ids": [
+            "steady-pbf-000"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-03",
+          "value": 24.86,
+          "observation_ids": [
+            "steady-pbf-007"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-10",
+          "value": 24.72,
+          "observation_ids": [
+            "steady-pbf-014"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-17",
+          "value": 24.58,
+          "observation_ids": [
+            "steady-pbf-021"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-24",
+          "value": 24.44,
+          "observation_ids": [
+            "steady-pbf-028"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-01",
+          "value": 24.3,
+          "observation_ids": [
+            "steady-pbf-035"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-08",
+          "value": 24.16,
+          "observation_ids": [
+            "steady-pbf-042"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-15",
+          "value": 24.02,
+          "observation_ids": [
+            "steady-pbf-049"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-21",
+          "value": 23.9,
+          "observation_ids": [
+            "steady-pbf-055"
+          ],
+          "flags": []
+        }
+      ],
+      "weekly": [
+        {
+          "week_start": "2026-08-24",
+          "median": 25.0,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-08-31",
+          "median": 24.86,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-07",
+          "median": 24.72,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-14",
+          "median": 24.58,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-21",
+          "median": 24.44,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-28",
+          "median": 24.3,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-05",
+          "median": 24.16,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-12",
+          "median": 24.02,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-19",
+          "median": 23.9,
+          "days_with_values": 1,
+          "flags": []
+        }
+      ],
+      "gaps": [],
+      "active_observations": 9,
+      "days_with_values": 9,
+      "calendar_days_without_values_in_analysis_window": 81,
+      "latest": {
+        "day": "2026-10-21",
+        "value": 23.9,
+        "observation_ids": [
+          "steady-pbf-055"
+        ],
+        "flags": []
+      },
+      "latest_age_days": 1,
+      "trend": {
+        "method": "Theil-Sen on daily medians and actual elapsed days",
+        "window_days": 28,
+        "days_with_values": 4,
+        "span_days": 20,
+        "slope_per_week": -0.14000000000000065,
+        "status": "descriptive_only",
+        "withheld_reasons": [],
+        "statistical_confidence": null,
+        "explanation": "Data-support and source checks, not a probability of health improvement. No forecast or causal conclusion."
+      },
+      "recent_week_comparison": {
+        "current": {
+          "start": "2026-10-16",
+          "end": "2026-10-22",
+          "days_with_values": 1,
+          "median": 23.9,
+          "has_review_flags": false
+        },
+        "previous": {
+          "start": "2026-10-09",
+          "end": "2026-10-15",
+          "days_with_values": 1,
+          "median": 24.02,
+          "has_review_flags": false
+        },
+        "change": null,
+        "relative_percent": null,
+        "change_unit": "percentage_points"
+      }
+    },
+    {
+      "stream_id": "e54ec131ba2aed5ac519",
+      "subject_id": "synthetic-steady",
+      "field": "skeletal_muscle_mass_kg",
+      "provenance": "observed",
+      "source": "manual_measurement",
+      "measurement_method": "bioimpedance_device",
+      "device_id": "BIA-A",
+      "device_model": "BIA-A",
+      "protocol_id": "synthetic-morning",
+      "model_version": null,
+      "verification_band": "reviewed",
+      "unit": "kg",
+      "reviewed_measurement": true,
+      "record_state_counts": {
+        "active": 9
+      },
+      "historical_audit_flags": [],
+      "days": [
+        {
+          "day": "2026-08-27",
+          "value": 30.0,
+          "observation_ids": [
+            "steady-smm-000"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-03",
+          "value": 30.035,
+          "observation_ids": [
+            "steady-smm-007"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-10",
+          "value": 30.07,
+          "observation_ids": [
+            "steady-smm-014"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-17",
+          "value": 30.105,
+          "observation_ids": [
+            "steady-smm-021"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-24",
+          "value": 30.14,
+          "observation_ids": [
+            "steady-smm-028"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-01",
+          "value": 30.175,
+          "observation_ids": [
+            "steady-smm-035"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-08",
+          "value": 30.21,
+          "observation_ids": [
+            "steady-smm-042"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-15",
+          "value": 30.245,
+          "observation_ids": [
+            "steady-smm-049"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-21",
+          "value": 30.275,
+          "observation_ids": [
+            "steady-smm-055"
+          ],
+          "flags": []
+        }
+      ],
+      "weekly": [
+        {
+          "week_start": "2026-08-24",
+          "median": 30.0,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-08-31",
+          "median": 30.035,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-07",
+          "median": 30.07,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-14",
+          "median": 30.105,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-21",
+          "median": 30.14,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-28",
+          "median": 30.175,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-05",
+          "median": 30.21,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-12",
+          "median": 30.245,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-19",
+          "median": 30.275,
+          "days_with_values": 1,
+          "flags": []
+        }
+      ],
+      "gaps": [],
+      "active_observations": 9,
+      "days_with_values": 9,
+      "calendar_days_without_values_in_analysis_window": 81,
+      "latest": {
+        "day": "2026-10-21",
+        "value": 30.275,
+        "observation_ids": [
+          "steady-smm-055"
+        ],
+        "flags": []
+      },
+      "latest_age_days": 1,
+      "trend": {
+        "method": "Theil-Sen on daily medians and actual elapsed days",
+        "window_days": 28,
+        "days_with_values": 4,
+        "span_days": 20,
+        "slope_per_week": 0.0349999999999997,
+        "status": "descriptive_only",
+        "withheld_reasons": [],
+        "statistical_confidence": null,
+        "explanation": "Data-support and source checks, not a probability of health improvement. No forecast or causal conclusion."
+      },
+      "recent_week_comparison": {
+        "current": {
+          "start": "2026-10-16",
+          "end": "2026-10-22",
+          "days_with_values": 1,
+          "median": 30.275,
+          "has_review_flags": false
+        },
+        "previous": {
+          "start": "2026-10-09",
+          "end": "2026-10-15",
+          "days_with_values": 1,
+          "median": 30.245,
+          "has_review_flags": false
+        },
+        "change": null,
+        "relative_percent": null,
+        "change_unit": "kg"
+      }
+    },
+    {
+      "stream_id": "49f2ade8251f41648624",
+      "subject_id": "synthetic-steady",
+      "field": "waist_cm",
+      "provenance": "inferred",
+      "source": "synthetic_ml_fixture",
+      "measurement_method": "two_view_silhouette_regression",
+      "device_id": "camera-A",
+      "device_model": "camera-A",
+      "protocol_id": "synthetic-morning",
+      "model_version": "synthetic-ml-v1",
+      "verification_band": "unverified_estimate",
+      "unit": "cm",
+      "reviewed_measurement": false,
+      "record_state_counts": {
+        "active": 15
+      },
+      "historical_audit_flags": [],
+      "days": [
+        {
+          "day": "2026-08-27",
+          "value": 100.0,
+          "observation_ids": [
+            "ml-waist-000"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-08-31",
+          "value": 99.6,
+          "observation_ids": [
+            "ml-waist-004"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-04",
+          "value": 99.2,
+          "observation_ids": [
+            "ml-waist-008"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-08",
+          "value": 98.8,
+          "observation_ids": [
+            "ml-waist-012"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-12",
+          "value": 98.4,
+          "observation_ids": [
+            "ml-waist-016"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-16",
+          "value": 98.0,
+          "observation_ids": [
+            "ml-waist-020"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-20",
+          "value": 97.6,
+          "observation_ids": [
+            "ml-waist-024"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-24",
+          "value": 97.2,
+          "observation_ids": [
+            "ml-waist-028"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-28",
+          "value": 96.8,
+          "observation_ids": [
+            "ml-waist-032"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-02",
+          "value": 96.4,
+          "observation_ids": [
+            "ml-waist-036"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-06",
+          "value": 96.0,
+          "observation_ids": [
+            "ml-waist-040"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-10",
+          "value": 95.6,
+          "observation_ids": [
+            "ml-waist-044"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-14",
+          "value": 95.2,
+          "observation_ids": [
+            "ml-waist-048"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-18",
+          "value": 94.8,
+          "observation_ids": [
+            "ml-waist-052"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-21",
+          "value": 94.5,
+          "observation_ids": [
+            "ml-waist-055"
+          ],
+          "flags": []
+        }
+      ],
+      "weekly": [
+        {
+          "week_start": "2026-08-24",
+          "median": 100.0,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-08-31",
+          "median": 99.4,
+          "days_with_values": 2,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-07",
+          "median": 98.6,
+          "days_with_values": 2,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-14",
+          "median": 97.8,
+          "days_with_values": 2,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-21",
+          "median": 97.2,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-28",
+          "median": 96.6,
+          "days_with_values": 2,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-05",
+          "median": 95.8,
+          "days_with_values": 2,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-12",
+          "median": 95.0,
+          "days_with_values": 2,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-19",
+          "median": 94.5,
+          "days_with_values": 1,
+          "flags": []
+        }
+      ],
+      "gaps": [],
+      "active_observations": 15,
+      "days_with_values": 15,
+      "calendar_days_without_values_in_analysis_window": 75,
+      "latest": {
+        "day": "2026-10-21",
+        "value": 94.5,
+        "observation_ids": [
+          "ml-waist-055"
+        ],
+        "flags": []
+      },
+      "latest_age_days": 1,
+      "trend": {
+        "method": "Theil-Sen on daily medians and actual elapsed days",
+        "window_days": 28,
+        "days_with_values": 7,
+        "span_days": 23,
+        "slope_per_week": null,
+        "status": "withheld",
+        "withheld_reasons": [
+          "source_not_reviewed_measurement"
+        ],
+        "statistical_confidence": null,
+        "explanation": "Data-support and source checks, not a probability of health improvement. No forecast or causal conclusion."
+      },
+      "recent_week_comparison": {
+        "current": {
+          "start": "2026-10-16",
+          "end": "2026-10-22",
+          "days_with_values": 2,
+          "median": 94.65,
+          "has_review_flags": false
+        },
+        "previous": {
+          "start": "2026-10-09",
+          "end": "2026-10-15",
+          "days_with_values": 2,
+          "median": 95.4,
+          "has_review_flags": false
+        },
+        "change": null,
+        "relative_percent": null,
+        "change_unit": "cm"
+      }
+    },
+    {
+      "stream_id": "4ff6fcd51cbbe55889b9",
+      "subject_id": "synthetic-steady",
+      "field": "waist_cm",
+      "provenance": "observed",
+      "source": "manual_measurement",
+      "measurement_method": "tape_measure",
+      "device_id": "tape-A",
+      "device_model": "tape-A",
+      "protocol_id": "synthetic-morning",
+      "model_version": null,
+      "verification_band": "reviewed",
+      "unit": "cm",
+      "reviewed_measurement": true,
+      "record_state_counts": {
+        "active": 15,
+        "duplicate_event": 1
+      },
+      "historical_audit_flags": [],
+      "days": [
+        {
+          "day": "2026-08-27",
+          "value": 95.0,
+          "observation_ids": [
+            "same-event-new-id"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-08-31",
+          "value": 94.72,
+          "observation_ids": [
+            "steady-waist-004"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-04",
+          "value": 94.44,
+          "observation_ids": [
+            "steady-waist-008"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-08",
+          "value": 94.16,
+          "observation_ids": [
+            "steady-waist-012"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-12",
+          "value": 93.88,
+          "observation_ids": [
+            "steady-waist-016"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-16",
+          "value": 93.6,
+          "observation_ids": [
+            "steady-waist-020"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-20",
+          "value": 93.32,
+          "observation_ids": [
+            "steady-waist-024"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-24",
+          "value": 93.04,
+          "observation_ids": [
+            "steady-waist-028"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-28",
+          "value": 92.76,
+          "observation_ids": [
+            "steady-waist-032"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-02",
+          "value": 92.48,
+          "observation_ids": [
+            "steady-waist-036"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-06",
+          "value": 92.2,
+          "observation_ids": [
+            "steady-waist-040"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-10",
+          "value": 91.92,
+          "observation_ids": [
+            "steady-waist-044"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-14",
+          "value": 91.64,
+          "observation_ids": [
+            "steady-waist-048"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-18",
+          "value": 91.36,
+          "observation_ids": [
+            "steady-waist-052"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-21",
+          "value": 91.15,
+          "observation_ids": [
+            "steady-waist-055"
+          ],
+          "flags": []
+        }
+      ],
+      "weekly": [
+        {
+          "week_start": "2026-08-24",
+          "median": 95.0,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-08-31",
+          "median": 94.58,
+          "days_with_values": 2,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-07",
+          "median": 94.02,
+          "days_with_values": 2,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-14",
+          "median": 93.46,
+          "days_with_values": 2,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-21",
+          "median": 93.04,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-28",
+          "median": 92.62,
+          "days_with_values": 2,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-05",
+          "median": 92.06,
+          "days_with_values": 2,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-12",
+          "median": 91.5,
+          "days_with_values": 2,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-19",
+          "median": 91.15,
+          "days_with_values": 1,
+          "flags": []
+        }
+      ],
+      "gaps": [],
+      "active_observations": 15,
+      "days_with_values": 15,
+      "calendar_days_without_values_in_analysis_window": 75,
+      "latest": {
+        "day": "2026-10-21",
+        "value": 91.15,
+        "observation_ids": [
+          "steady-waist-055"
+        ],
+        "flags": []
+      },
+      "latest_age_days": 1,
+      "trend": {
+        "method": "Theil-Sen on daily medians and actual elapsed days",
+        "window_days": 28,
+        "days_with_values": 7,
+        "span_days": 23,
+        "slope_per_week": -0.490000000000002,
+        "status": "descriptive_only",
+        "withheld_reasons": [],
+        "statistical_confidence": null,
+        "explanation": "Data-support and source checks, not a probability of health improvement. No forecast or causal conclusion."
+      },
+      "recent_week_comparison": {
+        "current": {
+          "start": "2026-10-16",
+          "end": "2026-10-22",
+          "days_with_values": 2,
+          "median": 91.255,
+          "has_review_flags": false
+        },
+        "previous": {
+          "start": "2026-10-09",
+          "end": "2026-10-15",
+          "days_with_values": 2,
+          "median": 91.78,
+          "has_review_flags": false
+        },
+        "change": null,
+        "relative_percent": null,
+        "change_unit": "cm"
+      }
+    },
+    {
+      "stream_id": "4d54e88ba137fd5b18a0",
+      "subject_id": "synthetic-steady",
+      "field": "weight_kg",
+      "provenance": "extracted",
+      "source": "inbody",
+      "measurement_method": "device_report",
+      "device_id": "BIA-A",
+      "device_model": "BIA-A",
+      "protocol_id": "synthetic-morning",
+      "model_version": "synthetic-parser-v1",
+      "verification_band": "pending_user_review",
+      "unit": "kg",
+      "reviewed_measurement": false,
+      "record_state_counts": {
+        "active": 10
+      },
+      "historical_audit_flags": [
+        "missing_measured_at"
+      ],
+      "days": [
+        {
+          "day": "2026-08-27",
+          "value": 90.0,
+          "observation_ids": [
+            "pending-weight-000"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-03",
+          "value": 89.72,
+          "observation_ids": [
+            "pending-weight-007"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-10",
+          "value": 89.44,
+          "observation_ids": [
+            "pending-weight-014"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-17",
+          "value": 89.16,
+          "observation_ids": [
+            "pending-weight-021"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-24",
+          "value": 88.88,
+          "observation_ids": [
+            "pending-weight-028"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-01",
+          "value": 88.6,
+          "observation_ids": [
+            "pending-weight-035"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-08",
+          "value": 88.32,
+          "observation_ids": [
+            "pending-weight-042"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-15",
+          "value": 88.04,
+          "observation_ids": [
+            "pending-weight-049"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-21",
+          "value": 87.8,
+          "observation_ids": [
+            "pending-weight-055"
+          ],
+          "flags": []
+        }
+      ],
+      "weekly": [
+        {
+          "week_start": "2026-08-24",
+          "median": 90.0,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-08-31",
+          "median": 89.72,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-07",
+          "median": 89.44,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-14",
+          "median": 89.16,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-21",
+          "median": 88.88,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-28",
+          "median": 88.6,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-05",
+          "median": 88.32,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-12",
+          "median": 88.04,
+          "days_with_values": 1,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-19",
+          "median": 87.8,
+          "days_with_values": 1,
+          "flags": []
+        }
+      ],
+      "gaps": [],
+      "active_observations": 9,
+      "days_with_values": 9,
+      "calendar_days_without_values_in_analysis_window": 81,
+      "latest": {
+        "day": "2026-10-21",
+        "value": 87.8,
+        "observation_ids": [
+          "pending-weight-055"
+        ],
+        "flags": []
+      },
+      "latest_age_days": 1,
+      "trend": {
+        "method": "Theil-Sen on daily medians and actual elapsed days",
+        "window_days": 28,
+        "days_with_values": 4,
+        "span_days": 20,
+        "slope_per_week": null,
+        "status": "withheld",
+        "withheld_reasons": [
+          "source_not_reviewed_measurement"
+        ],
+        "statistical_confidence": null,
+        "explanation": "Data-support and source checks, not a probability of health improvement. No forecast or causal conclusion."
+      },
+      "recent_week_comparison": {
+        "current": {
+          "start": "2026-10-16",
+          "end": "2026-10-22",
+          "days_with_values": 1,
+          "median": 87.8,
+          "has_review_flags": false
+        },
+        "previous": {
+          "start": "2026-10-09",
+          "end": "2026-10-15",
+          "days_with_values": 1,
+          "median": 88.04,
+          "has_review_flags": false
+        },
+        "change": null,
+        "relative_percent": null,
+        "change_unit": "kg"
+      }
+    },
+    {
+      "stream_id": "1611e440fca57cc32044",
+      "subject_id": "synthetic-steady",
+      "field": "weight_kg",
+      "provenance": "observed",
+      "source": "manual_measurement",
+      "measurement_method": "digital_scale",
+      "device_id": "scale-A",
+      "device_model": "scale-A",
+      "protocol_id": "synthetic-morning",
+      "model_version": null,
+      "verification_band": "reviewed",
+      "unit": "kg",
+      "reviewed_measurement": true,
+      "record_state_counts": {
+        "active": 56,
+        "duplicate_copy": 1,
+        "superseded": 1
+      },
+      "historical_audit_flags": [
+        "outside_plausibility_bounds"
+      ],
+      "days": [
+        {
+          "day": "2026-08-27",
+          "value": 80.0,
+          "observation_ids": [
+            "steady-weight-000"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-08-28",
+          "value": 79.96,
+          "observation_ids": [
+            "steady-weight-001"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-08-29",
+          "value": 79.92,
+          "observation_ids": [
+            "steady-weight-002"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-08-30",
+          "value": 79.88,
+          "observation_ids": [
+            "steady-weight-003"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-08-31",
+          "value": 79.84,
+          "observation_ids": [
+            "steady-weight-004"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-01",
+          "value": 79.8,
+          "observation_ids": [
+            "steady-weight-005"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-02",
+          "value": 79.76,
+          "observation_ids": [
+            "steady-weight-006"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-03",
+          "value": 79.72,
+          "observation_ids": [
+            "steady-weight-007"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-04",
+          "value": 79.68,
+          "observation_ids": [
+            "steady-weight-008"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-05",
+          "value": 79.64,
+          "observation_ids": [
+            "steady-weight-009"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-06",
+          "value": 79.6,
+          "observation_ids": [
+            "steady-weight-010-revision"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-07",
+          "value": 79.56,
+          "observation_ids": [
+            "steady-weight-011"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-08",
+          "value": 79.52,
+          "observation_ids": [
+            "steady-weight-012"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-09",
+          "value": 79.48,
+          "observation_ids": [
+            "steady-weight-013"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-10",
+          "value": 79.44,
+          "observation_ids": [
+            "steady-weight-014"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-11",
+          "value": 79.4,
+          "observation_ids": [
+            "steady-weight-015"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-12",
+          "value": 79.36,
+          "observation_ids": [
+            "steady-weight-016"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-13",
+          "value": 79.32,
+          "observation_ids": [
+            "steady-weight-017"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-14",
+          "value": 79.28,
+          "observation_ids": [
+            "steady-weight-018"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-15",
+          "value": 79.24,
+          "observation_ids": [
+            "steady-weight-019"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-16",
+          "value": 79.2,
+          "observation_ids": [
+            "steady-weight-020"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-17",
+          "value": 79.16,
+          "observation_ids": [
+            "steady-weight-021"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-18",
+          "value": 79.12,
+          "observation_ids": [
+            "steady-weight-022"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-19",
+          "value": 79.08,
+          "observation_ids": [
+            "steady-weight-023"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-20",
+          "value": 79.04,
+          "observation_ids": [
+            "steady-weight-024"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-21",
+          "value": 79.0,
+          "observation_ids": [
+            "steady-weight-025"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-22",
+          "value": 78.96,
+          "observation_ids": [
+            "steady-weight-026"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-23",
+          "value": 78.92,
+          "observation_ids": [
+            "steady-weight-027"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-24",
+          "value": 78.88,
+          "observation_ids": [
+            "steady-weight-028"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-25",
+          "value": 78.84,
+          "observation_ids": [
+            "steady-weight-029"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-26",
+          "value": 78.8,
+          "observation_ids": [
+            "steady-weight-030"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-27",
+          "value": 78.76,
+          "observation_ids": [
+            "steady-weight-031"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-28",
+          "value": 78.72,
+          "observation_ids": [
+            "steady-weight-032"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-29",
+          "value": 78.68,
+          "observation_ids": [
+            "steady-weight-033"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-09-30",
+          "value": 78.64,
+          "observation_ids": [
+            "steady-weight-034"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-01",
+          "value": 78.6,
+          "observation_ids": [
+            "steady-weight-035"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-02",
+          "value": 78.56,
+          "observation_ids": [
+            "steady-weight-036"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-03",
+          "value": 78.52,
+          "observation_ids": [
+            "steady-weight-037"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-04",
+          "value": 78.48,
+          "observation_ids": [
+            "steady-weight-038"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-05",
+          "value": 78.44,
+          "observation_ids": [
+            "steady-weight-039"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-06",
+          "value": 78.4,
+          "observation_ids": [
+            "steady-weight-040"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-07",
+          "value": 78.36,
+          "observation_ids": [
+            "steady-weight-041"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-08",
+          "value": 78.32,
+          "observation_ids": [
+            "steady-weight-042"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-09",
+          "value": 78.28,
+          "observation_ids": [
+            "steady-weight-043"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-10",
+          "value": 78.24,
+          "observation_ids": [
+            "steady-weight-044"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-11",
+          "value": 78.2,
+          "observation_ids": [
+            "steady-weight-045"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-12",
+          "value": 78.16,
+          "observation_ids": [
+            "steady-weight-046"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-13",
+          "value": 78.12,
+          "observation_ids": [
+            "steady-weight-047"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-14",
+          "value": 78.08,
+          "observation_ids": [
+            "steady-weight-048"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-15",
+          "value": 78.04,
+          "observation_ids": [
+            "steady-weight-049"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-16",
+          "value": 78.0,
+          "observation_ids": [
+            "steady-weight-050"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-17",
+          "value": 77.96,
+          "observation_ids": [
+            "steady-weight-051"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-18",
+          "value": 77.92,
+          "observation_ids": [
+            "steady-weight-052"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-19",
+          "value": 77.88,
+          "observation_ids": [
+            "steady-weight-053"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-20",
+          "value": 77.84,
+          "observation_ids": [
+            "steady-weight-054"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-21",
+          "value": 77.8,
+          "observation_ids": [
+            "steady-weight-055"
+          ],
+          "flags": []
+        }
+      ],
+      "weekly": [
+        {
+          "week_start": "2026-08-24",
+          "median": 79.94,
+          "days_with_values": 4,
+          "flags": []
+        },
+        {
+          "week_start": "2026-08-31",
+          "median": 79.72,
+          "days_with_values": 7,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-07",
+          "median": 79.44,
+          "days_with_values": 7,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-14",
+          "median": 79.16,
+          "days_with_values": 7,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-21",
+          "median": 78.88,
+          "days_with_values": 7,
+          "flags": []
+        },
+        {
+          "week_start": "2026-09-28",
+          "median": 78.6,
+          "days_with_values": 7,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-05",
+          "median": 78.32,
+          "days_with_values": 7,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-12",
+          "median": 78.04,
+          "days_with_values": 7,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-19",
+          "median": 77.84,
+          "days_with_values": 3,
+          "flags": []
+        }
+      ],
+      "gaps": [],
+      "active_observations": 56,
+      "days_with_values": 56,
+      "calendar_days_without_values_in_analysis_window": 34,
+      "latest": {
+        "day": "2026-10-21",
+        "value": 77.8,
+        "observation_ids": [
+          "steady-weight-055"
+        ],
+        "flags": []
+      },
+      "latest_age_days": 1,
+      "trend": {
+        "method": "Theil-Sen on daily medians and actual elapsed days",
+        "window_days": 28,
+        "days_with_values": 27,
+        "span_days": 26,
+        "slope_per_week": -0.2800000000000005,
+        "status": "descriptive_only",
+        "withheld_reasons": [],
+        "statistical_confidence": null,
+        "explanation": "Data-support and source checks, not a probability of health improvement. No forecast or causal conclusion."
+      },
+      "recent_week_comparison": {
+        "current": {
+          "start": "2026-10-16",
+          "end": "2026-10-22",
+          "days_with_values": 6,
+          "median": 77.9,
+          "has_review_flags": false
+        },
+        "previous": {
+          "start": "2026-10-09",
+          "end": "2026-10-15",
+          "days_with_values": 7,
+          "median": 78.16,
+          "has_review_flags": false
+        },
+        "change": -0.2599999999999909,
+        "relative_percent": -0.33265097236436914,
+        "change_unit": "kg"
+      }
+    },
+    {
+      "stream_id": "2f81218cbea8f485d78d",
+      "subject_id": "synthetic-steady",
+      "field": "weight_kg",
+      "provenance": "observed",
+      "source": "manual_measurement",
+      "measurement_method": "digital_scale",
+      "device_id": "scale-B",
+      "device_model": "scale-B",
+      "protocol_id": "synthetic-morning",
+      "model_version": null,
+      "verification_band": "reviewed",
+      "unit": "kg",
+      "reviewed_measurement": true,
+      "record_state_counts": {
+        "active": 15
+      },
+      "historical_audit_flags": [],
+      "days": [
+        {
+          "day": "2026-10-07",
+          "value": 80.36,
+          "observation_ids": [
+            "steady-scaleB-041"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-08",
+          "value": 80.32,
+          "observation_ids": [
+            "steady-scaleB-042"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-09",
+          "value": 80.28,
+          "observation_ids": [
+            "steady-scaleB-043"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-10",
+          "value": 80.24,
+          "observation_ids": [
+            "steady-scaleB-044"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-11",
+          "value": 80.2,
+          "observation_ids": [
+            "steady-scaleB-045"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-12",
+          "value": 80.16,
+          "observation_ids": [
+            "steady-scaleB-046"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-13",
+          "value": 80.12,
+          "observation_ids": [
+            "steady-scaleB-047"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-14",
+          "value": 80.08,
+          "observation_ids": [
+            "steady-scaleB-048"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-15",
+          "value": 80.04,
+          "observation_ids": [
+            "steady-scaleB-049"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-16",
+          "value": 80.0,
+          "observation_ids": [
+            "steady-scaleB-050"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-17",
+          "value": 79.96,
+          "observation_ids": [
+            "steady-scaleB-051"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-18",
+          "value": 79.92,
+          "observation_ids": [
+            "steady-scaleB-052"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-19",
+          "value": 79.88,
+          "observation_ids": [
+            "steady-scaleB-053"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-20",
+          "value": 79.84,
+          "observation_ids": [
+            "steady-scaleB-054"
+          ],
+          "flags": []
+        },
+        {
+          "day": "2026-10-21",
+          "value": 79.8,
+          "observation_ids": [
+            "steady-scaleB-055"
+          ],
+          "flags": []
+        }
+      ],
+      "weekly": [
+        {
+          "week_start": "2026-10-05",
+          "median": 80.28,
+          "days_with_values": 5,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-12",
+          "median": 80.04,
+          "days_with_values": 7,
+          "flags": []
+        },
+        {
+          "week_start": "2026-10-19",
+          "median": 79.84,
+          "days_with_values": 3,
+          "flags": []
+        }
+      ],
+      "gaps": [],
+      "active_observations": 15,
+      "days_with_values": 15,
+      "calendar_days_without_values_in_analysis_window": 75,
+      "latest": {
+        "day": "2026-10-21",
+        "value": 79.8,
+        "observation_ids": [
+          "steady-scaleB-055"
+        ],
+        "flags": []
+      },
+      "latest_age_days": 1,
+      "trend": {
+        "method": "Theil-Sen on daily medians and actual elapsed days",
+        "window_days": 28,
+        "days_with_values": 15,
+        "span_days": 14,
+        "slope_per_week": -0.27999999999999853,
+        "status": "descriptive_only",
+        "withheld_reasons": [],
+        "statistical_confidence": null,
+        "explanation": "Data-support and source checks, not a probability of health improvement. No forecast or causal conclusion."
+      },
+      "recent_week_comparison": {
+        "current": {
+          "start": "2026-10-16",
+          "end": "2026-10-22",
+          "days_with_values": 6,
+          "median": 79.9,
+          "has_review_flags": false
+        },
+        "previous": {
+          "start": "2026-10-09",
+          "end": "2026-10-15",
+          "days_with_values": 7,
+          "median": 80.16,
+          "has_review_flags": false
+        },
+        "change": -0.2599999999999909,
+        "relative_percent": -0.32435129740517826,
+        "change_unit": "kg"
+      }
+    }
+  ],
+  "quality_summary": {
+    "invalid_records": 0,
+    "analysis_states": {
+      "active": 138,
+      "duplicate_copy": 1,
+      "duplicate_event": 1,
+      "superseded": 1
+    }
+  },
+  "interpolated_values": false,
+  "clinical_interpretation": false
+}

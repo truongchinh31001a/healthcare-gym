@@ -1,0 +1,141 @@
+{
+  "documents": 8,
+  "document_success_rate": 1.0,
+  "field_precision": 1.0,
+  "field_recall": 1.0,
+  "field_f1": 1.0,
+  "per_field": {
+    "weight_kg": {
+      "unit": "kg",
+      "labeled": 8,
+      "predicted": 8,
+      "paired": 8,
+      "exact": 8,
+      "mae": 0.0,
+      "coverage": 1.0,
+      "exact_match_rate": 1.0
+    },
+    "height_cm": {
+      "unit": "cm",
+      "labeled": 8,
+      "predicted": 8,
+      "paired": 8,
+      "exact": 8,
+      "mae": 0.0,
+      "coverage": 1.0,
+      "exact_match_rate": 1.0
+    },
+    "skeletal_muscle_mass_kg": {
+      "unit": "kg",
+      "labeled": 8,
+      "predicted": 8,
+      "paired": 8,
+      "exact": 8,
+      "mae": 0.0,
+      "coverage": 1.0,
+      "exact_match_rate": 1.0
+    },
+    "body_fat_mass_kg": {
+      "unit": "kg",
+      "labeled": 8,
+      "predicted": 8,
+      "paired": 8,
+      "exact": 8,
+      "mae": 0.0,
+      "coverage": 1.0,
+      "exact_match_rate": 1.0
+    },
+    "percent_body_fat": {
+      "unit": "%",
+      "labeled": 8,
+      "predicted": 8,
+      "paired": 8,
+      "exact": 8,
+      "mae": 0.0,
+      "coverage": 1.0,
+      "exact_match_rate": 1.0
+    },
+    "total_body_water_l": {
+      "unit": "L",
+      "labeled": 7,
+      "predicted": 7,
+      "paired": 7,
+      "exact": 7,
+      "mae": 0.0,
+      "coverage": 1.0,
+      "exact_match_rate": 1.0
+    },
+    "ecw_tbw_ratio": {
+      "unit": "ratio",
+      "labeled": 8,
+      "predicted": 8,
+      "paired": 8,
+      "exact": 8,
+      "mae": 0.0,
+      "coverage": 1.0,
+      "exact_match_rate": 1.0
+    },
+    "basal_metabolic_rate_kcal": {
+      "unit": "kcal/day",
+      "labeled": 8,
+      "predicted": 8,
+      "paired": 8,
+      "exact": 8,
+      "mae": 0.0,
+      "coverage": 1.0,
+      "exact_match_rate": 1.0
+    },
+    "bmi": {
+      "unit": "kg/m2",
+      "labeled": 8,
+      "predicted": 8,
+      "paired": 8,
+      "exact": 8,
+      "mae": 0.0,
+      "coverage": 1.0,
+      "exact_match_rate": 1.0
+    }
+  },
+  "transcript_documents": 8,
+  "cer": 0.0003824091778202677,
+  "wer": 0.004597701149425287,
+  "errors": [],
+  "transcript_errors": [
+    {
+      "document_id": "synthetic-009",
+      "char_edits": 1,
+      "differences": [
+        {
+          "reference": " ",
+          "prediction": ""
+        }
+      ]
+    }
+  ],
+  "dataset_id": "inbody-synthetic-smoke-v1",
+  "split": "smoke_test",
+  "engine": "paddle",
+  "synthetic_only": true,
+  "real_documents": 0,
+  "config": {
+    "experiment_id": "inbody_ocr_smoke_v1",
+    "manifest": "data/manifests/inbody_synthetic_v1.json",
+    "split": "smoke_test",
+    "confidence_threshold": 0.85,
+    "device": "cpu",
+    "detection_model": "PP-OCRv5_mobile_det",
+    "recognition_model": "en_PP-OCRv5_mobile_rec",
+    "note": "English simple-row smoke fixtures only. Vietnamese and real InBody layouts are not evaluated."
+  },
+  "manifest_sha256": "43192e7af8ba820c15133d64bfe1159d18cd430ef0ddb94ebb82aaa96fe342f5",
+  "package_versions": {
+    "paddleocr": "3.7.0",
+    "paddlepaddle": "3.3.1",
+    "paddlex": "3.7.2",
+    "Pillow": "12.3.0"
+  },
+  "mean_latency_seconds": 4.421457387499231,
+  "latency_scope": "preprocessing + inference + parsing + local JSON; excludes engine/model startup",
+  "correction_rate": null,
+  "correction_rate_note": "No human annotation/review study yet"
+}

@@ -1,0 +1,15 @@
+{
+  "version": "spatial-fields-config-0.1.0",
+  "geometry": {
+    "row_tolerance": 0.5,
+    "max_label_gap_heights": 2.0,
+    "max_value_gap_heights": 10.0
+  },
+  "templates": {},
+  "notes": [
+    "Generic mode uses OCR boxes and known label anchors, never annotation ground truth.",
+    "Unlabeled multiple candidate values remain unresolved.",
+    "No real-device template is registered yet. Add normalized label_box/value_box only after verifying a permitted sample.",
+    "Templates must be explicitly selected with --template; no automatic or oracle routing in the primary pipeline."
+  ]
+}

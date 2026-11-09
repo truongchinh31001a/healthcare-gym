@@ -1,0 +1,23 @@
+{
+  "method": "subject-max-split-conformal-v1",
+  "alpha": 0.1,
+  "nominal_coverage": 0.9,
+  "calibration_subjects": 323,
+  "order_statistic_rank": 292,
+  "targets": [
+    "chest",
+    "waist",
+    "hip"
+  ],
+  "unit": "cm",
+  "checkpoint_sha256": "eb8c9ea8e2e594266f83e62adf3c33dc0b0a6adaf36d2b5e5dacb8d417e048f2",
+  "per_target_radius_cm": {
+    "chest": 5.945082832032995,
+    "waist": 7.549388800263841,
+    "hip": 4.657891936382839
+  },
+  "joint_radius_cm": 8.041511604811603,
+  "coverage_unit": "New subject bundle, all supplied photos. Per-target marginal; joint radius covers all 3 targets together.",
+  "limitations": "Exchangeability required; subject/photo-count/capture domain shift and historical dataset reuse can invalidate guarantees. Not an individual health confidence probability.",
+  "split_sha256": "741a96a313652c47db4e303c9245649c5610be87e322c271f806777f95ec9133"
+}

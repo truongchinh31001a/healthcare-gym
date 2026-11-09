@@ -1,0 +1,10 @@
+{
+  "same_subject_split_as_ridge": true,
+  "train_test_subject_isolation": true,
+  "normalization_fit_scope": "fit subjects during selection; all train subjects during refit",
+  "testA_restored_predictions_and_macro_mae": "passed",
+  "testB_restored_predictions_and_macro_mae": "passed",
+  "raw_pair_preprocessing_and_same_backend_inference": "passed",
+  "cpu_vs_batched_gpu_max_abs_difference_cm": 0.004603876347346159,
+  "cpu_vs_batched_gpu_tolerance_cm": 0.01
+}

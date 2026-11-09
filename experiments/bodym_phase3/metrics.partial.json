@@ -1,0 +1,1898 @@
+{
+  "created_at_utc": "2026-10-21T18:06:20.008970+00:00",
+  "config": {
+    "seed": 42,
+    "calibration_split_seed": 20261022,
+    "calibration_fraction_of_original_fit": 0.2,
+    "base_config": "configs/bodym_cnn.json",
+    "outer_split": "configs/bodym_subject_split.json",
+    "data_root": "data/raw/bodym",
+    "variants": [
+      "tabular_only",
+      "image_only",
+      "fusion"
+    ],
+    "alpha": 0.1,
+    "ood_training_quantile": 0.99,
+    "output": "experiments/bodym_phase3",
+    "model_dir": "models/bodym_phase3",
+    "protocol": "Hold calibration subjects out of all new training, normalization, BatchNorm and epoch selection; select on original validation, refit on proper-fit plus tuning only. Existing default checkpoint is never calibrated or replaced.",
+    "limitations": "Research extension on a historically reused dataset, one seed; tests already inspected in earlier phases. Empirical coverage under domain shift, not unconditional deployment guarantees."
+  },
+  "training_config": {
+    "seed": 42,
+    "image_height": 128,
+    "image_width": 96,
+    "padding": 4,
+    "channels": [
+      16,
+      32,
+      64,
+      128
+    ],
+    "metadata_hidden": [
+      32,
+      16
+    ],
+    "fusion_hidden": [
+      128,
+      64
+    ],
+    "dropout": 0.2,
+    "batch_size": 64,
+    "max_epochs": 60,
+    "patience": 12,
+    "learning_rate": 0.001,
+    "min_learning_rate": 1e-05,
+    "weight_decay": 0.0001,
+    "huber_beta": 1.0,
+    "calibrate_batchnorm": true,
+    "preprocess_workers": 8,
+    "cpu_threads": 4
+  },
+  "split_sha256": "741a96a313652c47db4e303c9245649c5610be87e322c271f806777f95ec9133",
+  "subject_counts": {
+    "proper_fit": 1291,
+    "tuning": 404,
+    "calibration": 323
+  },
+  "refit_subjects": 1695,
+  "source_image_inventory_sha256": "d896f114157cec3ec4af6aeb95e811f721e4c5cabede46c4b91ff9b0931d5e51",
+  "default_checkpoint_sha256": "df650517448c7a87143bc89df47e6b86105972782ea5a0351f455a44101bf6f2",
+  "default_config_sha256": "9a0a69da8d237e8bfdb430d5ed2386a7796870cf847c5430c654dfad118ecf08",
+  "subgroup_bins": {
+    "fit_subjects": 1291,
+    "bmi_quartile_edges": [
+      22.206533432006836,
+      24.681095123291016,
+      27.529799461364746
+    ],
+    "height_weight_min": [
+      146.1999969482422,
+      28.700000762939453
+    ],
+    "height_weight_max": [
+      197.1999969482422,
+      156.60000610351562
+    ]
+  },
+  "versions": {
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.6"
+  },
+  "device": "cuda",
+  "results": {
+    "tabular_only": {
+      "parameters": 11283,
+      "checkpoint_sha256": "eb8c9ea8e2e594266f83e62adf3c33dc0b0a6adaf36d2b5e5dacb8d417e048f2",
+      "selection": {
+        "selected_epoch": 21,
+        "tuning_mean_mae_cm": 2.795725781419596,
+        "selection_epochs_run": 33,
+        "training_seconds": 23.277802300020994
+      },
+      "calibrator": {
+        "method": "subject-max-split-conformal-v1",
+        "alpha": 0.1,
+        "nominal_coverage": 0.9,
+        "calibration_subjects": 323,
+        "order_statistic_rank": 292,
+        "targets": [
+          "chest",
+          "waist",
+          "hip"
+        ],
+        "unit": "cm",
+        "checkpoint_sha256": "eb8c9ea8e2e594266f83e62adf3c33dc0b0a6adaf36d2b5e5dacb8d417e048f2",
+        "per_target_radius_cm": {
+          "chest": 5.945082832032995,
+          "waist": 7.549388800263841,
+          "hip": 4.657891936382839
+        },
+        "joint_radius_cm": 8.041511604811603,
+        "coverage_unit": "New subject bundle, all supplied photos. Per-target marginal; joint radius covers all 3 targets together.",
+        "limitations": "Exchangeability required; subject/photo-count/capture domain shift and historical dataset reuse can invalidate guarantees. Not an individual health confidence probability.",
+        "split_sha256": "741a96a313652c47db4e303c9245649c5610be87e322c271f806777f95ec9133"
+      },
+      "tests": {
+        "testA": {
+          "point": {
+            "subjects": 87,
+            "photo_pairs": 1684,
+            "mean_mae_cm": 2.6633110224685184,
+            "mae_cm": {
+              "chest": 2.9239050714279586,
+              "waist": 3.209320689962098,
+              "hip": 1.8567073060154986
+            },
+            "rmse_cm": {
+              "chest": 3.7158669542106724,
+              "waist": 3.7846638756199047,
+              "hip": 2.3302354959226648
+            },
+            "bias_cm": {
+              "chest": -1.1496232352798221,
+              "waist": 1.6308651809183206,
+              "hip": 0.7032577763945216
+            }
+          },
+          "interval": {
+            "subjects": 87,
+            "photo_pairs": 1684,
+            "nominal_coverage": 0.9,
+            "per_target_subject_all_photos_coverage": {
+              "chest": 0.8620689655172413,
+              "waist": 0.9655172413793104,
+              "hip": 0.9540229885057471
+            },
+            "per_target_subject_balanced_pair_coverage": {
+              "chest": 0.8620689655172494,
+              "waist": 0.9655172413793233,
+              "hip": 0.9540229885057616
+            },
+            "per_target_width_cm": {
+              "chest": 11.89016566406599,
+              "waist": 15.098777600527683,
+              "hip": 9.315783872765678
+            },
+            "joint_subject_all_targets_all_photos_coverage": 0.9310344827586207,
+            "joint_width_cm": 16.083023209623207
+          },
+          "subgroups": {
+            "provided_gender_female": {
+              "subjects": 41,
+              "photo_pairs": 827,
+              "mean_mae_cm": 2.6314726371767176,
+              "mae_cm": {
+                "chest": 3.176176399674118,
+                "waist": 2.6212572557361153,
+                "hip": 2.0969842561199195
+              },
+              "rmse_cm": {
+                "chest": 3.9334057688201005,
+                "waist": 3.151481402692174,
+                "hip": 2.594872145539143
+              },
+              "bias_cm": {
+                "chest": -1.220531701262427,
+                "waist": 1.262683005906849,
+                "hip": 0.6697936539809475
+              },
+              "small_group": false
+            },
+            "provided_gender_male": {
+              "subjects": 46,
+              "photo_pairs": 857,
+              "mean_mae_cm": 2.6916887137068666,
+              "mae_cm": {
+                "chest": 2.6990545397303,
+                "waist": 3.733464185685264,
+                "hip": 1.642547415705035
+              },
+              "rmse_cm": {
+                "chest": 3.5106302222265358,
+                "waist": 4.270614914438772,
+                "hip": 2.0659872893162423
+              },
+              "bias_cm": {
+                "chest": -1.086422211251842,
+                "waist": 1.959027554298092,
+                "hip": 0.7330844941979271
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q1": {
+              "subjects": 30,
+              "photo_pairs": 568,
+              "mean_mae_cm": 2.3679383631317013,
+              "mae_cm": {
+                "chest": 2.6520331394417496,
+                "waist": 2.677266860992441,
+                "hip": 1.7745150889609134
+              },
+              "rmse_cm": {
+                "chest": 3.3152301160683835,
+                "waist": 3.067746331220199,
+                "hip": 2.283605154650021
+              },
+              "bias_cm": {
+                "chest": -0.8445123719813433,
+                "waist": 0.9619926513182363,
+                "hip": 0.5181258377275135
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q2": {
+              "subjects": 29,
+              "photo_pairs": 587,
+              "mean_mae_cm": 2.401426419160436,
+              "mae_cm": {
+                "chest": 2.876816708559097,
+                "waist": 2.6148150393759355,
+                "hip": 1.712647509546275
+              },
+              "rmse_cm": {
+                "chest": 3.8411977560477086,
+                "waist": 3.0730045096546856,
+                "hip": 2.181785863661389
+              },
+              "bias_cm": {
+                "chest": -1.2527655233024189,
+                "waist": 1.3908441111675547,
+                "hip": 0.7174680097231986
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q3": {
+              "subjects": 14,
+              "photo_pairs": 270,
+              "mean_mae_cm": 3.045292240165366,
+              "mae_cm": {
+                "chest": 3.3759521111558883,
+                "waist": 3.989657830033392,
+                "hip": 1.770266779306817
+              },
+              "rmse_cm": {
+                "chest": 3.7013365142966683,
+                "waist": 4.695645932570417,
+                "hip": 2.3287672603270324
+              },
+              "bias_cm": {
+                "chest": -1.0896751856473392,
+                "waist": 2.9246664759263625,
+                "hip": 0.9615943007433536
+              },
+              "small_group": true
+            },
+            "fit_bmi_Q4": {
+              "subjects": 14,
+              "photo_pairs": 259,
+              "mean_mae_cm": 3.456746467345894,
+              "mae_cm": {
+                "chest": 3.1519809233274705,
+                "waist": 4.800574888182815,
+                "hip": 2.417683590527395
+              },
+              "rmse_cm": {
+                "chest": 4.241435343867498,
+                "waist": 5.218672348821746,
+                "hip": 2.6991335922240514
+              },
+              "bias_cm": {
+                "chest": -1.6497283953622157,
+                "waist": 2.267548665251312,
+                "hip": 0.8121970658655675
+              },
+              "small_group": true
+            },
+            "outside_fit_height_weight_range": {
+              "subjects": 1,
+              "photo_pairs": 21,
+              "mean_mae_cm": 4.521069226276571,
+              "mae_cm": {
+                "chest": 7.076864806607034,
+                "waist": 3.2233395499943063,
+                "hip": 3.263003322228371
+              },
+              "rmse_cm": {
+                "chest": 7.076864806607032,
+                "waist": 3.2233395499943067,
+                "hip": 3.263003322228371
+              },
+              "bias_cm": {
+                "chest": 7.076864806607034,
+                "waist": 3.2233395499943063,
+                "hip": 3.263003322228371
+              },
+              "small_group": true
+            }
+          },
+          "flagged": {
+            "point": {
+              "subjects": 2,
+              "photo_pairs": 22,
+              "mean_mae_cm": 2.7859164149642006,
+              "mae_cm": {
+                "chest": 4.947614591897916,
+                "waist": 1.6864890660995118,
+                "hip": 1.723645586895174
+              },
+              "rmse_cm": {
+                "chest": 5.386334247593627,
+                "waist": 2.2816999758778254,
+                "hip": 2.3109687030666075
+              },
+              "bias_cm": {
+                "chest": 2.129250214709117,
+                "waist": 1.6864890660995118,
+                "hip": 1.723645586895174
+              }
+            },
+            "interval": {
+              "subjects": 2,
+              "photo_pairs": 22,
+              "nominal_coverage": 0.9,
+              "per_target_subject_all_photos_coverage": {
+                "chest": 0.5,
+                "waist": 1.0,
+                "hip": 1.0
+              },
+              "per_target_subject_balanced_pair_coverage": {
+                "chest": 0.5,
+                "waist": 1.0000000000000004,
+                "hip": 1.0000000000000004
+              },
+              "per_target_width_cm": {
+                "chest": 11.89016566406599,
+                "waist": 15.098777600527683,
+                "hip": 9.315783872765678
+              },
+              "joint_subject_all_targets_all_photos_coverage": 1.0,
+              "joint_width_cm": 16.083023209623207
+            }
+          },
+          "unflagged": {
+            "point": {
+              "subjects": 86,
+              "photo_pairs": 1662,
+              "mean_mae_cm": 2.6417091828893535,
+              "mae_cm": {
+                "chest": 2.8756148419491288,
+                "waist": 3.2091576799617245,
+                "hip": 1.8403550267572073
+              },
+              "rmse_cm": {
+                "chest": 3.6586708616755863,
+                "waist": 3.7907020562545957,
+                "hip": 2.3171820017169606
+              },
+              "bias_cm": {
+                "chest": -1.2452800729761795,
+                "waist": 1.6123480370918484,
+                "hip": 0.6734932933034313
+              }
+            },
+            "interval": {
+              "subjects": 86,
+              "photo_pairs": 1662,
+              "nominal_coverage": 0.9,
+              "per_target_subject_all_photos_coverage": {
+                "chest": 0.872093023255814,
+                "waist": 0.9651162790697675,
+                "hip": 0.9534883720930233
+              },
+              "per_target_subject_balanced_pair_coverage": {
+                "chest": 0.8720930232558218,
+                "waist": 0.9651162790697804,
+                "hip": 0.9534883720930378
+              },
+              "per_target_width_cm": {
+                "chest": 11.89016566406599,
+                "waist": 15.098777600527683,
+                "hip": 9.315783872765678
+              },
+              "joint_subject_all_targets_all_photos_coverage": 0.9302325581395349,
+              "joint_width_cm": 16.083023209623207
+            }
+          }
+        },
+        "testB": {
+          "point": {
+            "subjects": 400,
+            "photo_pairs": 1160,
+            "mean_mae_cm": 2.9649845312624503,
+            "mae_cm": {
+              "chest": 3.121803762134556,
+              "waist": 3.4411837880970237,
+              "hip": 2.3319660435557723
+            },
+            "rmse_cm": {
+              "chest": 4.108162823049032,
+              "waist": 4.5348800835800445,
+              "hip": 3.0866301617601857
+            },
+            "bias_cm": {
+              "chest": -0.6007270917373457,
+              "waist": 0.27114729960080725,
+              "hip": -0.6806792704054981
+            }
+          },
+          "interval": {
+            "subjects": 400,
+            "photo_pairs": 1160,
+            "nominal_coverage": 0.9,
+            "per_target_subject_all_photos_coverage": {
+              "chest": 0.865,
+              "waist": 0.9075,
+              "hip": 0.87
+            },
+            "per_target_subject_balanced_pair_coverage": {
+              "chest": 0.8649999999999969,
+              "waist": 0.9074999999999954,
+              "hip": 0.8699999999999978
+            },
+            "per_target_width_cm": {
+              "chest": 11.89016566406599,
+              "waist": 15.098777600527683,
+              "hip": 9.315783872765678
+            },
+            "joint_subject_all_targets_all_photos_coverage": 0.875,
+            "joint_width_cm": 16.083023209623207
+          },
+          "subgroups": {
+            "provided_gender_female": {
+              "subjects": 243,
+              "photo_pairs": 687,
+              "mean_mae_cm": 2.9819541988751435,
+              "mae_cm": {
+                "chest": 3.242232954543854,
+                "waist": 3.310753895901755,
+                "hip": 2.39287574617982
+              },
+              "rmse_cm": {
+                "chest": 4.3629573264191714,
+                "waist": 4.422359427889792,
+                "hip": 3.1917412247907357
+              },
+              "bias_cm": {
+                "chest": -0.4048434576375803,
+                "waist": 0.717988186596072,
+                "hip": -0.698532036441975
+              },
+              "small_group": false
+            },
+            "provided_gender_male": {
+              "subjects": 157,
+              "photo_pairs": 473,
+              "mean_mae_cm": 2.9387193769319673,
+              "mae_cm": {
+                "chest": 2.9354069866220347,
+                "waist": 3.64305935372411,
+                "hip": 2.237691790449758
+              },
+              "rmse_cm": {
+                "chest": 3.679171301960183,
+                "waist": 4.70373212844978,
+                "hip": 2.9164826723998227
+              },
+              "bias_cm": {
+                "chest": -0.9039100413312494,
+                "waist": -0.42045993313708596,
+                "hip": -0.6530472822089127
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q1": {
+              "subjects": 134,
+              "photo_pairs": 374,
+              "mean_mae_cm": 2.316245087754805,
+              "mae_cm": {
+                "chest": 2.662205163134269,
+                "waist": 2.4411533833981762,
+                "hip": 1.8453767167319697
+              },
+              "rmse_cm": {
+                "chest": 3.4686234570353,
+                "waist": 3.150072485493427,
+                "hip": 2.43802834442405
+              },
+              "bias_cm": {
+                "chest": -0.6250216052468303,
+                "waist": 0.10048063720371662,
+                "hip": -0.38043962375700513
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q2": {
+              "subjects": 86,
+              "photo_pairs": 274,
+              "mean_mae_cm": 2.8261635883270735,
+              "mae_cm": {
+                "chest": 2.8802304758752557,
+                "waist": 3.6862592328839168,
+                "hip": 1.9120010562220469
+              },
+              "rmse_cm": {
+                "chest": 4.018407106263704,
+                "waist": 4.633920288141406,
+                "hip": 2.499073630905129
+              },
+              "bias_cm": {
+                "chest": -0.46986221135173645,
+                "waist": 0.3728367704193234,
+                "hip": -0.7403091210583658
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q3": {
+              "subjects": 79,
+              "photo_pairs": 232,
+              "mean_mae_cm": 2.9522541720710094,
+              "mae_cm": {
+                "chest": 3.057051058336984,
+                "waist": 3.582341101389868,
+                "hip": 2.217370356486175
+              },
+              "rmse_cm": {
+                "chest": 3.7083954059156112,
+                "waist": 4.602810387351813,
+                "hip": 3.0474555072367893
+              },
+              "bias_cm": {
+                "chest": -0.4911124038635932,
+                "waist": -0.5428273083783393,
+                "hip": -0.7896647135489508
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q4": {
+              "subjects": 101,
+              "photo_pairs": 280,
+              "mean_mae_cm": 3.953849728278185,
+              "mae_cm": {
+                "chest": 3.9879124599993094,
+                "waist": 4.448868523026119,
+                "hip": 3.424768201809126
+              },
+              "rmse_cm": {
+                "chest": 5.1352819950617485,
+                "waist": 5.781499052039954,
+                "hip": 4.154976892603403
+              },
+              "bias_cm": {
+                "chest": -0.7656624902018758,
+                "waist": 1.0476624708995232,
+                "hip": -0.9429970474987547
+              },
+              "small_group": false
+            },
+            "outside_fit_height_weight_range": {
+              "subjects": 1,
+              "photo_pairs": 5,
+              "mean_mae_cm": 10.323139252979294,
+              "mae_cm": {
+                "chest": 16.86420053775123,
+                "waist": 10.647067726549722,
+                "hip": 3.458149494636928
+              },
+              "rmse_cm": {
+                "chest": 16.86420053775123,
+                "waist": 10.647067726549722,
+                "hip": 3.4581494946369276
+              },
+              "bias_cm": {
+                "chest": -16.86420053775123,
+                "waist": -10.647067726549722,
+                "hip": -3.458149494636928
+              },
+              "small_group": true
+            }
+          },
+          "flagged": {
+            "point": {
+              "subjects": 2,
+              "photo_pairs": 6,
+              "mean_mae_cm": 6.27840738475815,
+              "mae_cm": {
+                "chest": 9.177651311078195,
+                "waist": 6.793442919703012,
+                "hip": 2.8641279234932435
+              },
+              "rmse_cm": {
+                "chest": 11.97131248451076,
+                "waist": 7.8103323140060645,
+                "hip": 2.925079552613523
+              },
+              "bias_cm": {
+                "chest": -7.686549226673038,
+                "waist": -6.793442919703012,
+                "hip": -2.8641279234932435
+              }
+            },
+            "interval": {
+              "subjects": 2,
+              "photo_pairs": 6,
+              "nominal_coverage": 0.9,
+              "per_target_subject_all_photos_coverage": {
+                "chest": 0.5,
+                "waist": 0.5,
+                "hip": 1.0
+              },
+              "per_target_subject_balanced_pair_coverage": {
+                "chest": 0.5000000000000001,
+                "waist": 0.5000000000000001,
+                "hip": 1.0
+              },
+              "per_target_width_cm": {
+                "chest": 11.89016566406599,
+                "waist": 15.098777600527683,
+                "hip": 9.315783872765678
+              },
+              "joint_subject_all_targets_all_photos_coverage": 0.5,
+              "joint_width_cm": 16.083023209623207
+            }
+          },
+          "unflagged": {
+            "point": {
+              "subjects": 399,
+              "photo_pairs": 1154,
+              "mean_mae_cm": 2.946543040731832,
+              "mae_cm": {
+                "chest": 3.087361664952559,
+                "waist": 3.423123928602155,
+                "hip": 2.3291435286407816
+              },
+              "rmse_cm": {
+                "chest": 4.025731600409398,
+                "waist": 4.509164963292213,
+                "hip": 3.085642840644331
+              },
+              "bias_cm": {
+                "chest": -0.5599665066596167,
+                "waist": 0.2985112470347687,
+                "hip": -0.6737181921492791
+              }
+            },
+            "interval": {
+              "subjects": 399,
+              "photo_pairs": 1154,
+              "nominal_coverage": 0.9,
+              "per_target_subject_all_photos_coverage": {
+                "chest": 0.8671679197994987,
+                "waist": 0.9097744360902256,
+                "hip": 0.8696741854636592
+              },
+              "per_target_subject_balanced_pair_coverage": {
+                "chest": 0.8671679197994956,
+                "waist": 0.909774436090221,
+                "hip": 0.869674185463657
+              },
+              "per_target_width_cm": {
+                "chest": 11.89016566406599,
+                "waist": 15.098777600527683,
+                "hip": 9.315783872765678
+              },
+              "joint_subject_all_targets_all_photos_coverage": 0.8771929824561403,
+              "joint_width_cm": 16.083023209623207
+            }
+          }
+        }
+      }
+    },
+    "image_only": {
+      "parameters": 138739,
+      "checkpoint_sha256": "f426358de2383081a23d74fc35b935a635f3388c759baf7c3a4299485e59f404",
+      "selection": {
+        "selected_epoch": 15,
+        "tuning_mean_mae_cm": 4.235003505679779,
+        "selection_epochs_run": 27,
+        "training_seconds": 90.44545010000365
+      },
+      "calibrator": {
+        "method": "subject-max-split-conformal-v1",
+        "alpha": 0.1,
+        "nominal_coverage": 0.9,
+        "calibration_subjects": 323,
+        "order_statistic_rank": 292,
+        "targets": [
+          "chest",
+          "waist",
+          "hip"
+        ],
+        "unit": "cm",
+        "checkpoint_sha256": "f426358de2383081a23d74fc35b935a635f3388c759baf7c3a4299485e59f404",
+        "per_target_radius_cm": {
+          "chest": 9.975985490575681,
+          "waist": 11.554571379506342,
+          "hip": 9.732431407583931
+        },
+        "joint_radius_cm": 12.65209352730676,
+        "coverage_unit": "New subject bundle, all supplied photos. Per-target marginal; joint radius covers all 3 targets together.",
+        "limitations": "Exchangeability required; subject/photo-count/capture domain shift and historical dataset reuse can invalidate guarantees. Not an individual health confidence probability.",
+        "split_sha256": "741a96a313652c47db4e303c9245649c5610be87e322c271f806777f95ec9133"
+      },
+      "tests": {
+        "testA": {
+          "point": {
+            "subjects": 87,
+            "photo_pairs": 1684,
+            "mean_mae_cm": 3.833420650586369,
+            "mae_cm": {
+              "chest": 4.114028380815852,
+              "waist": 3.648314749112403,
+              "hip": 3.7379188218308523
+            },
+            "rmse_cm": {
+              "chest": 5.146437733077321,
+              "waist": 4.71679915694851,
+              "hip": 4.747931771683969
+            },
+            "bias_cm": {
+              "chest": -1.9655084899272146,
+              "waist": 0.37826504021680285,
+              "hip": -0.21602104018578064
+            }
+          },
+          "interval": {
+            "subjects": 87,
+            "photo_pairs": 1684,
+            "nominal_coverage": 0.9,
+            "per_target_subject_all_photos_coverage": {
+              "chest": 0.7241379310344828,
+              "waist": 0.8735632183908046,
+              "hip": 0.8505747126436781
+            },
+            "per_target_subject_balanced_pair_coverage": {
+              "chest": 0.9484845673406679,
+              "waist": 0.9823179252452332,
+              "hip": 0.9482434584975519
+            },
+            "per_target_width_cm": {
+              "chest": 19.951970981151362,
+              "waist": 23.109142759012684,
+              "hip": 19.464862815167862
+            },
+            "joint_subject_all_targets_all_photos_coverage": 0.8505747126436781,
+            "joint_width_cm": 25.30418705461352
+          },
+          "subgroups": {
+            "provided_gender_female": {
+              "subjects": 41,
+              "photo_pairs": 827,
+              "mean_mae_cm": 3.846979844156864,
+              "mae_cm": {
+                "chest": 3.9717084172683967,
+                "waist": 3.5322045404647264,
+                "hip": 4.03702657473747
+              },
+              "rmse_cm": {
+                "chest": 4.97056313459264,
+                "waist": 4.690014179045381,
+                "hip": 5.214276820393816
+              },
+              "bias_cm": {
+                "chest": -0.4620580227835385,
+                "waist": 1.4103097751468054,
+                "hip": -1.038349668636612
+              },
+              "small_group": false
+            },
+            "provided_gender_male": {
+              "subjects": 46,
+              "photo_pairs": 857,
+              "mean_mae_cm": 3.8213352824039712,
+              "mae_cm": {
+                "chest": 4.240878783108129,
+                "waist": 3.7518042829070763,
+                "hip": 3.4713227811967076
+              },
+              "rmse_cm": {
+                "chest": 5.298277086129518,
+                "waist": 4.740545166738027,
+                "hip": 4.289756475042313
+              },
+              "bias_cm": {
+                "chest": -3.3055404280335368,
+                "waist": -0.5416009191773271,
+                "hip": 0.5169240416943083
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q1": {
+              "subjects": 30,
+              "photo_pairs": 568,
+              "mean_mae_cm": 3.487580485905662,
+              "mae_cm": {
+                "chest": 3.6509206889064996,
+                "waist": 3.438504353026419,
+                "hip": 3.373316415784067
+              },
+              "rmse_cm": {
+                "chest": 4.661983654537167,
+                "waist": 4.492018800720418,
+                "hip": 4.347010396397108
+              },
+              "bias_cm": {
+                "chest": 0.22484491046258318,
+                "waist": 1.5503279415038957,
+                "hip": 1.568938768638284
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q2": {
+              "subjects": 29,
+              "photo_pairs": 587,
+              "mean_mae_cm": 3.7663142639257656,
+              "mae_cm": {
+                "chest": 4.047041578820613,
+                "waist": 3.4001871478567707,
+                "hip": 3.8517140650999133
+              },
+              "rmse_cm": {
+                "chest": 4.945968350537276,
+                "waist": 4.354763355519986,
+                "hip": 4.76064832832936
+              },
+              "bias_cm": {
+                "chest": -2.9516445915690075,
+                "waist": -0.7286690393717269,
+                "hip": -0.721852913682929
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q3": {
+              "subjects": 14,
+              "photo_pairs": 270,
+              "mean_mae_cm": 3.624925238467489,
+              "mae_cm": {
+                "chest": 4.199578418415027,
+                "waist": 3.2287487540873494,
+                "hip": 3.446448542900092
+              },
+              "rmse_cm": {
+                "chest": 5.155257016016911,
+                "waist": 4.070930724789272,
+                "hip": 4.186540462140488
+              },
+              "bias_cm": {
+                "chest": -3.799120019807357,
+                "waist": -0.37828351555833173,
+                "hip": -1.3564814167024963
+              },
+              "small_group": true
+            },
+            "fit_bmi_Q4": {
+              "subjects": 14,
+              "photo_pairs": 259,
+              "mean_mae_cm": 4.922008216532316,
+              "mae_cm": {
+                "chest": 5.159610344298293,
+                "waist": 5.031453052636946,
+                "hip": 4.574961252661709
+              },
+              "rmse_cm": {
+                "chest": 6.384997904327054,
+                "waist": 6.258002223827947,
+                "hip": 5.926360016323137
+              },
+              "bias_cm": {
+                "chest": -2.782800893195824,
+                "waist": 0.916185115238711,
+                "hip": -1.8526799446193978
+              },
+              "small_group": true
+            },
+            "outside_fit_height_weight_range": {
+              "subjects": 1,
+              "photo_pairs": 21,
+              "mean_mae_cm": 6.703394922624599,
+              "mae_cm": {
+                "chest": 4.827779817523315,
+                "waist": 9.061205094152186,
+                "hip": 6.221199856198298
+              },
+              "rmse_cm": {
+                "chest": 5.242565501828444,
+                "waist": 9.669929650812394,
+                "hip": 6.544519298885492
+              },
+              "bias_cm": {
+                "chest": -4.232453753148574,
+                "waist": -9.061205094152186,
+                "hip": -6.221199856198298
+              },
+              "small_group": true
+            }
+          },
+          "flagged": {
+            "point": {
+              "subjects": 2,
+              "photo_pairs": 22,
+              "mean_mae_cm": 6.236062853680909,
+              "mae_cm": {
+                "chest": 4.12539775189023,
+                "waist": 8.057054896744582,
+                "hip": 6.525735912407912
+              },
+              "rmse_cm": {
+                "chest": 4.42727508911092,
+                "waist": 8.463185102241068,
+                "hip": 6.688921737424015
+              },
+              "bias_cm": {
+                "chest": -0.4047190334457153,
+                "waist": -1.0041501974076066,
+                "hip": 0.304536056209612
+              }
+            },
+            "interval": {
+              "subjects": 2,
+              "photo_pairs": 22,
+              "nominal_coverage": 0.9,
+              "per_target_subject_all_photos_coverage": {
+                "chest": 0.5,
+                "waist": 0.5,
+                "hip": 0.5
+              },
+              "per_target_subject_balanced_pair_coverage": {
+                "chest": 0.9761904761904767,
+                "waist": 0.928571428571429,
+                "hip": 0.9761904761904767
+              },
+              "per_target_width_cm": {
+                "chest": 19.951970981151362,
+                "waist": 23.109142759012684,
+                "hip": 19.464862815167862
+              },
+              "joint_subject_all_targets_all_photos_coverage": 0.5,
+              "joint_width_cm": 25.30418705461352
+            }
+          },
+          "unflagged": {
+            "point": {
+              "subjects": 86,
+              "photo_pairs": 1662,
+              "mean_mae_cm": 3.7991049005130617,
+              "mae_cm": {
+                "chest": 4.105426874001929,
+                "waist": 3.583878416877885,
+                "hip": 3.708009410659372
+              },
+              "rmse_cm": {
+                "chest": 5.14520598755324,
+                "waist": 4.626755271394189,
+                "hip": 4.721971457282317
+              },
+              "bias_cm": {
+                "chest": -1.9407305751191353,
+                "waist": 0.4863221464762203,
+                "hip": -0.14722742984122045
+              }
+            },
+            "interval": {
+              "subjects": 86,
+              "photo_pairs": 1662,
+              "nominal_coverage": 0.9,
+              "per_target_subject_all_photos_coverage": {
+                "chest": 0.7325581395348837,
+                "waist": 0.8837209302325582,
+                "hip": 0.8604651162790697
+              },
+              "per_target_subject_balanced_pair_coverage": {
+                "chest": 0.9484392605378745,
+                "waist": 0.9837734492929352,
+                "hip": 0.9481953481035593
+              },
+              "per_target_width_cm": {
+                "chest": 19.951970981151362,
+                "waist": 23.109142759012684,
+                "hip": 19.464862815167862
+              },
+              "joint_subject_all_targets_all_photos_coverage": 0.8604651162790697,
+              "joint_width_cm": 25.30418705461352
+            }
+          }
+        },
+        "testB": {
+          "point": {
+            "subjects": 400,
+            "photo_pairs": 1160,
+            "mean_mae_cm": 5.039011739893155,
+            "mae_cm": {
+              "chest": 4.995192832143869,
+              "waist": 5.50955427070532,
+              "hip": 4.612288116830276
+            },
+            "rmse_cm": {
+              "chest": 6.493795817651422,
+              "waist": 7.225626397537416,
+              "hip": 6.016236428114952
+            },
+            "bias_cm": {
+              "chest": 1.6476700032368772,
+              "waist": 2.3055775323292913,
+              "hip": 0.16329673384863297
+            }
+          },
+          "interval": {
+            "subjects": 400,
+            "photo_pairs": 1160,
+            "nominal_coverage": 0.9,
+            "per_target_subject_all_photos_coverage": {
+              "chest": 0.7525,
+              "waist": 0.77,
+              "hip": 0.84
+            },
+            "per_target_subject_balanced_pair_coverage": {
+              "chest": 0.8926358225108189,
+              "waist": 0.8966536796536758,
+              "hip": 0.9163630952380906
+            },
+            "per_target_width_cm": {
+              "chest": 19.951970981151362,
+              "waist": 23.109142759012684,
+              "hip": 19.464862815167862
+            },
+            "joint_subject_all_targets_all_photos_coverage": 0.7675,
+            "joint_width_cm": 25.30418705461352
+          },
+          "subgroups": {
+            "provided_gender_female": {
+              "subjects": 243,
+              "photo_pairs": 687,
+              "mean_mae_cm": 5.339565350137902,
+              "mae_cm": {
+                "chest": 5.432533562750086,
+                "waist": 5.7917953077113795,
+                "hip": 4.794367179952238
+              },
+              "rmse_cm": {
+                "chest": 7.049825544277619,
+                "waist": 7.734017181262403,
+                "hip": 6.358730045663916
+              },
+              "bias_cm": {
+                "chest": 2.947442934014274,
+                "waist": 3.767348439234146,
+                "hip": -0.4257852226078295
+              },
+              "small_group": false
+            },
+            "provided_gender_male": {
+              "subjects": 157,
+              "photo_pairs": 473,
+              "mean_mae_cm": 4.573823667985686,
+              "mae_cm": {
+                "chest": 4.3182896631164365,
+                "waist": 5.072709863109944,
+                "hip": 4.330471477730679
+              },
+              "rmse_cm": {
+                "chest": 5.5239166611095625,
+                "waist": 6.359115252636233,
+                "hip": 5.443814048956115
+              },
+              "bias_cm": {
+                "chest": -0.3640804565013878,
+                "waist": 0.04309135157846411,
+                "hip": 1.0750605263258335
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q1": {
+              "subjects": 134,
+              "photo_pairs": 374,
+              "mean_mae_cm": 4.81441767800667,
+              "mae_cm": {
+                "chest": 5.158501202025305,
+                "waist": 5.101213518490313,
+                "hip": 4.1835383135043935
+              },
+              "rmse_cm": {
+                "chest": 6.61714812948482,
+                "waist": 6.827582488472678,
+                "hip": 5.171836748457146
+              },
+              "bias_cm": {
+                "chest": 3.7279092063080403,
+                "waist": 4.038736015149495,
+                "hip": 2.5031278359184883
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q2": {
+              "subjects": 86,
+              "photo_pairs": 274,
+              "mean_mae_cm": 4.265003138617662,
+              "mae_cm": {
+                "chest": 4.384463856414829,
+                "waist": 4.711236381993278,
+                "hip": 3.6993091774448805
+              },
+              "rmse_cm": {
+                "chest": 5.525483549795164,
+                "waist": 5.928688297765245,
+                "hip": 4.442208469007795
+              },
+              "bias_cm": {
+                "chest": 1.8430942900361804,
+                "waist": 2.605516080898205,
+                "hip": 0.3659662583471166
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q3": {
+              "subjects": 79,
+              "photo_pairs": 232,
+              "mean_mae_cm": 4.417022351164177,
+              "mae_cm": {
+                "chest": 4.368185587339313,
+                "waist": 4.922578409894381,
+                "hip": 3.9603030562588373
+              },
+              "rmse_cm": {
+                "chest": 5.628088030379559,
+                "waist": 6.360872977330867,
+                "hip": 4.865517111122282
+              },
+              "bias_cm": {
+                "chest": 1.4597746217135625,
+                "waist": 1.53740027500701,
+                "hip": -0.2791441062420125
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q4": {
+              "subjects": 101,
+              "photo_pairs": 280,
+              "mean_mae_cm": 6.48255140040871,
+              "mae_cm": {
+                "chest": 5.788984343907719,
+                "waist": 7.19018884724107,
+                "hip": 6.46848101007734
+              },
+              "rmse_cm": {
+                "chest": 7.625078951365662,
+                "waist": 9.129488235442336,
+                "hip": 8.517064094246768
+              },
+              "bias_cm": {
+                "chest": -1.1316845189010822,
+                "waist": 0.35159784375133296,
+                "hip": -2.767536141567891
+              },
+              "small_group": false
+            },
+            "outside_fit_height_weight_range": {
+              "subjects": 1,
+              "photo_pairs": 5,
+              "mean_mae_cm": 4.965227273157522,
+              "mae_cm": {
+                "chest": 7.411008584838527,
+                "waist": 3.372986726485033,
+                "hip": 4.111686508149006
+              },
+              "rmse_cm": {
+                "chest": 8.137140107275945,
+                "waist": 3.9506991645187197,
+                "hip": 4.675748921356845
+              },
+              "bias_cm": {
+                "chest": -7.411008584838527,
+                "waist": -0.8713388446241881,
+                "hip": 4.111686508149006
+              },
+              "small_group": true
+            }
+          },
+          "flagged": {
+            "point": {
+              "subjects": 2,
+              "photo_pairs": 6,
+              "mean_mae_cm": 10.786532821666304,
+              "mae_cm": {
+                "chest": 9.16310936726835,
+                "waist": 10.43127128433953,
+                "hip": 12.765217813391036
+              },
+              "rmse_cm": {
+                "chest": 9.62691180331244,
+                "waist": 12.678576170961628,
+                "hip": 15.502023122523624
+              },
+              "bias_cm": {
+                "chest": -9.16310936726835,
+                "waist": -9.180447343409107,
+                "hip": -8.653531305242026
+              }
+            },
+            "interval": {
+              "subjects": 2,
+              "photo_pairs": 6,
+              "nominal_coverage": 0.9,
+              "per_target_subject_all_photos_coverage": {
+                "chest": 0.0,
+                "waist": 0.5,
+                "hip": 0.5
+              },
+              "per_target_subject_balanced_pair_coverage": {
+                "chest": 0.4000000000000001,
+                "waist": 0.5000000000000001,
+                "hip": 0.5000000000000001
+              },
+              "per_target_width_cm": {
+                "chest": 19.951970981151362,
+                "waist": 23.109142759012684,
+                "hip": 19.464862815167862
+              },
+              "joint_subject_all_targets_all_photos_coverage": 0.5,
+              "joint_width_cm": 25.30418705461352
+            }
+          },
+          "unflagged": {
+            "point": {
+              "subjects": 399,
+              "photo_pairs": 1154,
+              "mean_mae_cm": 5.025127254239957,
+              "mae_cm": {
+                "chest": 4.9757102714605255,
+                "waist": 5.498929012216368,
+                "hip": 4.60074247904298
+              },
+              "rmse_cm": {
+                "chest": 6.477644154817976,
+                "waist": 7.2073726896463,
+                "hip": 5.984433126638112
+              },
+              "bias_cm": {
+                "chest": 1.6838013429562633,
+                "waist": 2.329519793126948,
+                "hip": 0.16620129853913929
+              }
+            },
+            "interval": {
+              "subjects": 399,
+              "photo_pairs": 1154,
+              "nominal_coverage": 0.9,
+              "per_target_subject_all_photos_coverage": {
+                "chest": 0.7568922305764411,
+                "waist": 0.7719298245614035,
+                "hip": 0.8395989974937343
+              },
+              "per_target_subject_balanced_pair_coverage": {
+                "chest": 0.8941211253241291,
+                "waist": 0.8976477991515548,
+                "hip": 0.9161534789354293
+              },
+              "per_target_width_cm": {
+                "chest": 19.951970981151362,
+                "waist": 23.109142759012684,
+                "hip": 19.464862815167862
+              },
+              "joint_subject_all_targets_all_photos_coverage": 0.7694235588972431,
+              "joint_width_cm": 25.30418705461352
+            }
+          }
+        }
+      }
+    },
+    "fusion": {
+      "parameters": 141443,
+      "checkpoint_sha256": "b4f22b0152aff8401f19a1a2aa2a583a2a36bb6db2eece3d5c89932cfd62750a",
+      "selection": {
+        "selected_epoch": 58,
+        "tuning_mean_mae_cm": 2.3751889631223704,
+        "selection_epochs_run": 60,
+        "training_seconds": 248.2776576000142
+      },
+      "calibrator": {
+        "method": "subject-max-split-conformal-v1",
+        "alpha": 0.1,
+        "nominal_coverage": 0.9,
+        "calibration_subjects": 323,
+        "order_statistic_rank": 292,
+        "targets": [
+          "chest",
+          "waist",
+          "hip"
+        ],
+        "unit": "cm",
+        "checkpoint_sha256": "b4f22b0152aff8401f19a1a2aa2a583a2a36bb6db2eece3d5c89932cfd62750a",
+        "per_target_radius_cm": {
+          "chest": 5.617867808822666,
+          "waist": 6.161803852357593,
+          "hip": 4.26733540610951
+        },
+        "joint_radius_cm": 7.432083656995019,
+        "coverage_unit": "New subject bundle, all supplied photos. Per-target marginal; joint radius covers all 3 targets together.",
+        "limitations": "Exchangeability required; subject/photo-count/capture domain shift and historical dataset reuse can invalidate guarantees. Not an individual health confidence probability.",
+        "split_sha256": "741a96a313652c47db4e303c9245649c5610be87e322c271f806777f95ec9133"
+      },
+      "tests": {
+        "testA": {
+          "point": {
+            "subjects": 87,
+            "photo_pairs": 1684,
+            "mean_mae_cm": 2.127228640305803,
+            "mae_cm": {
+              "chest": 2.3715496724279865,
+              "waist": 2.433797451646222,
+              "hip": 1.5763387968432019
+            },
+            "rmse_cm": {
+              "chest": 2.9527490908556557,
+              "waist": 2.969209182733991,
+              "hip": 1.983088817078428
+            },
+            "bias_cm": {
+              "chest": -0.7767693874598706,
+              "waist": 1.7727239836479847,
+              "hip": 0.6038669325289135
+            }
+          },
+          "interval": {
+            "subjects": 87,
+            "photo_pairs": 1684,
+            "nominal_coverage": 0.9,
+            "per_target_subject_all_photos_coverage": {
+              "chest": 0.7471264367816092,
+              "waist": 0.7931034482758621,
+              "hip": 0.7816091954022989
+            },
+            "per_target_subject_balanced_pair_coverage": {
+              "chest": 0.9474887490460443,
+              "waist": 0.976455617884849,
+              "hip": 0.9685989632753199
+            },
+            "per_target_width_cm": {
+              "chest": 11.235735617645332,
+              "waist": 12.323607704715187,
+              "hip": 8.53467081221902
+            },
+            "joint_subject_all_targets_all_photos_coverage": 0.8850574712643678,
+            "joint_width_cm": 14.864167313990038
+          },
+          "subgroups": {
+            "provided_gender_female": {
+              "subjects": 41,
+              "photo_pairs": 827,
+              "mean_mae_cm": 2.1846940329703735,
+              "mae_cm": {
+                "chest": 2.4925661584366727,
+                "waist": 2.325157862647952,
+                "hip": 1.7363580778264953
+              },
+              "rmse_cm": {
+                "chest": 3.0731327334656537,
+                "waist": 2.804579429482314,
+                "hip": 2.174073537870027
+              },
+              "bias_cm": {
+                "chest": -0.750947475485524,
+                "waist": 1.8636504401572649,
+                "hip": 0.7306874887537237
+              },
+              "small_group": false
+            },
+            "provided_gender_male": {
+              "subjects": 46,
+              "photo_pairs": 857,
+              "mean_mae_cm": 2.076009485974335,
+              "mae_cm": {
+                "chest": 2.2636871522898154,
+                "waist": 2.530628389666404,
+                "hip": 1.4337129159667845
+              },
+              "rmse_cm": {
+                "chest": 2.8411545767802666,
+                "waist": 3.108604394800233,
+                "hip": 1.7958246479102928
+              },
+              "bias_cm": {
+                "chest": -0.7997845698717856,
+                "waist": 1.6916808376288366,
+                "hip": 0.49083121937201746
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q1": {
+              "subjects": 30,
+              "photo_pairs": 568,
+              "mean_mae_cm": 2.1343063684624854,
+              "mae_cm": {
+                "chest": 2.332201575275252,
+                "waist": 2.401390908251989,
+                "hip": 1.6693266218602152
+              },
+              "rmse_cm": {
+                "chest": 2.8919966119419285,
+                "waist": 2.792592767242056,
+                "hip": 1.9897196168876947
+              },
+              "bias_cm": {
+                "chest": 0.16334989898826505,
+                "waist": 1.7768208533524195,
+                "hip": 0.8882888373949037
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q2": {
+              "subjects": 29,
+              "photo_pairs": 587,
+              "mean_mae_cm": 1.9557737522240732,
+              "mae_cm": {
+                "chest": 2.327575209871222,
+                "waist": 2.202182604267863,
+                "hip": 1.3375634425331346
+              },
+              "rmse_cm": {
+                "chest": 2.9679781835642878,
+                "waist": 2.775563602835212,
+                "hip": 1.729907210275677
+              },
+              "bias_cm": {
+                "chest": -0.8886951728243775,
+                "waist": 1.46262452105675,
+                "hip": 0.4325670546287776
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q3": {
+              "subjects": 14,
+              "photo_pairs": 270,
+              "mean_mae_cm": 2.2380496517578834,
+              "mae_cm": {
+                "chest": 2.440842370996807,
+                "waist": 2.7596666905730274,
+                "hip": 1.5136398937038165
+              },
+              "rmse_cm": {
+                "chest": 2.854224735896664,
+                "waist": 3.386430407773363,
+                "hip": 1.89642330299043
+              },
+              "bias_cm": {
+                "chest": -1.4478395737440433,
+                "waist": 2.1207109771184927,
+                "hip": 0.7091694690844375
+              },
+              "small_group": true
+            },
+            "fit_bmi_Q4": {
+              "subjects": 14,
+              "photo_pairs": 259,
+              "mean_mae_cm": 2.3563976224015537,
+              "mae_cm": {
+                "chest": 2.4776642830540814,
+                "waist": 2.657144418133615,
+                "hip": 1.9343841660169647
+              },
+              "rmse_cm": {
+                "chest": 3.1408553144337388,
+                "waist": 3.263355483580166,
+                "hip": 2.481871070487798
+              },
+              "bias_cm": {
+                "chest": -1.8883942595952112,
+                "waist": 2.058306870464092,
+                "hip": 0.24392434691083661
+              },
+              "small_group": true
+            },
+            "outside_fit_height_weight_range": {
+              "subjects": 1,
+              "photo_pairs": 21,
+              "mean_mae_cm": 3.1551947874642905,
+              "mae_cm": {
+                "chest": 6.059325606388824,
+                "waist": 2.335348526479427,
+                "hip": 1.0709102295246216
+              },
+              "rmse_cm": {
+                "chest": 6.208918683689215,
+                "waist": 2.668197292484559,
+                "hip": 1.3870283605281488
+              },
+              "bias_cm": {
+                "chest": 6.059325606388824,
+                "waist": 1.9805238203734155,
+                "hip": 0.4623912746955753
+              },
+              "small_group": true
+            }
+          },
+          "flagged": {
+            "point": {
+              "subjects": 2,
+              "photo_pairs": 22,
+              "mean_mae_cm": 2.13102496429512,
+              "mae_cm": {
+                "chest": 3.2425079628159215,
+                "waist": 2.26020462636492,
+                "hip": 0.8903623037045177
+              },
+              "rmse_cm": {
+                "chest": 4.400675145279543,
+                "waist": 2.43862329696736,
+                "hip": 1.1017450076948028
+              },
+              "bias_cm": {
+                "chest": 3.2425079628159215,
+                "waist": 2.082792273311914,
+                "hip": 0.5861028262899943
+              }
+            },
+            "interval": {
+              "subjects": 2,
+              "photo_pairs": 22,
+              "nominal_coverage": 0.9,
+              "per_target_subject_all_photos_coverage": {
+                "chest": 0.5,
+                "waist": 1.0,
+                "hip": 1.0
+              },
+              "per_target_subject_balanced_pair_coverage": {
+                "chest": 0.642857142857143,
+                "waist": 1.0000000000000004,
+                "hip": 1.0000000000000004
+              },
+              "per_target_width_cm": {
+                "chest": 11.235735617645332,
+                "waist": 12.323607704715187,
+                "hip": 8.53467081221902
+              },
+              "joint_subject_all_targets_all_photos_coverage": 0.5,
+              "joint_width_cm": 14.864167313990038
+            }
+          },
+          "unflagged": {
+            "point": {
+              "subjects": 86,
+              "photo_pairs": 1662,
+              "mean_mae_cm": 2.115372183903895,
+              "mae_cm": {
+                "chest": 2.3288889247623734,
+                "waist": 2.434722479122136,
+                "hip": 1.5825051478271752
+              },
+              "rmse_cm": {
+                "chest": 2.893509100731033,
+                "waist": 2.9724280270551424,
+                "hip": 1.989190776802991
+              },
+              "bias_cm": {
+                "chest": -0.8566881772174016,
+                "waist": 1.7700853889365484,
+                "hip": 0.605801272937478
+              }
+            },
+            "interval": {
+              "subjects": 86,
+              "photo_pairs": 1662,
+              "nominal_coverage": 0.9,
+              "per_target_subject_all_photos_coverage": {
+                "chest": 0.7558139534883721,
+                "waist": 0.7906976744186046,
+                "hip": 0.7790697674418605
+              },
+              "per_target_subject_balanced_pair_coverage": {
+                "chest": 0.9551838009452516,
+                "waist": 0.976181845999789,
+                "hip": 0.9682338349413117
+              },
+              "per_target_width_cm": {
+                "chest": 11.235735617645332,
+                "waist": 12.323607704715187,
+                "hip": 8.53467081221902
+              },
+              "joint_subject_all_targets_all_photos_coverage": 0.8953488372093024,
+              "joint_width_cm": 14.864167313990038
+            }
+          }
+        },
+        "testB": {
+          "point": {
+            "subjects": 400,
+            "photo_pairs": 1160,
+            "mean_mae_cm": 2.63593611054818,
+            "mae_cm": {
+              "chest": 2.7714318070843076,
+              "waist": 2.9957871859387013,
+              "hip": 2.140589338621531
+            },
+            "rmse_cm": {
+              "chest": 3.707129502754913,
+              "waist": 3.867305895953196,
+              "hip": 2.777388501813284
+            },
+            "bias_cm": {
+              "chest": 0.06502093245332258,
+              "waist": 0.780079608904456,
+              "hip": -0.49201198113623384
+            }
+          },
+          "interval": {
+            "subjects": 400,
+            "photo_pairs": 1160,
+            "nominal_coverage": 0.9,
+            "per_target_subject_all_photos_coverage": {
+              "chest": 0.825,
+              "waist": 0.8125,
+              "hip": 0.835
+            },
+            "per_target_subject_balanced_pair_coverage": {
+              "chest": 0.8982678571428531,
+              "waist": 0.9016964285714247,
+              "hip": 0.8950535714285678
+            },
+            "per_target_width_cm": {
+              "chest": 11.235735617645332,
+              "waist": 12.323607704715187,
+              "hip": 8.53467081221902
+            },
+            "joint_subject_all_targets_all_photos_coverage": 0.81,
+            "joint_width_cm": 14.864167313990038
+          },
+          "subgroups": {
+            "provided_gender_female": {
+              "subjects": 243,
+              "photo_pairs": 687,
+              "mean_mae_cm": 2.6708403020079534,
+              "mae_cm": {
+                "chest": 2.913602179061616,
+                "waist": 2.9388847354854346,
+                "hip": 2.1600339914768103
+              },
+              "rmse_cm": {
+                "chest": 3.9522318621454344,
+                "waist": 3.7683037465843485,
+                "hip": 2.8064063089098545
+              },
+              "bias_cm": {
+                "chest": 0.09622859173942787,
+                "waist": 1.2076782696284447,
+                "hip": -0.5765772740976443
+              },
+              "small_group": false
+            },
+            "provided_gender_male": {
+              "subjects": 157,
+              "photo_pairs": 473,
+              "mean_mae_cm": 2.5819124256773165,
+              "mae_cm": {
+                "chest": 2.5513846708391625,
+                "waist": 3.0838591315447124,
+                "hip": 2.110493474648074
+              },
+              "rmse_cm": {
+                "chest": 3.2919806477634226,
+                "waist": 4.01572900109342,
+                "hip": 2.731867933697004
+              },
+              "bias_cm": {
+                "chest": 0.016718631774827904,
+                "waist": 0.11825493020426803,
+                "hip": -0.36112429839978166
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q1": {
+              "subjects": 134,
+              "photo_pairs": 374,
+              "mean_mae_cm": 2.370941941259152,
+              "mae_cm": {
+                "chest": 2.697907621906518,
+                "waist": 2.655461373200035,
+                "hip": 1.7594568286709036
+              },
+              "rmse_cm": {
+                "chest": 3.4463628703252622,
+                "waist": 3.4034747535935694,
+                "hip": 2.217761579283047
+              },
+              "bias_cm": {
+                "chest": 0.9862485075042634,
+                "waist": 1.4917597790336907,
+                "hip": 0.17062986182166098
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q2": {
+              "subjects": 86,
+              "photo_pairs": 274,
+              "mean_mae_cm": 2.3110669228168654,
+              "mae_cm": {
+                "chest": 2.238191949501424,
+                "waist": 2.808659517956044,
+                "hip": 1.8863493009931283
+              },
+              "rmse_cm": {
+                "chest": 3.010386585066109,
+                "waist": 3.5357215578358083,
+                "hip": 2.3609247076526003
+              },
+              "bias_cm": {
+                "chest": 0.20198476414152025,
+                "waist": 1.0266494230507126,
+                "hip": -0.3418603731976653
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q3": {
+              "subjects": 79,
+              "photo_pairs": 232,
+              "mean_mae_cm": 2.4870879458102917,
+              "mae_cm": {
+                "chest": 2.551366741278908,
+                "waist": 2.7377982806663206,
+                "hip": 2.172098815485647
+              },
+              "rmse_cm": {
+                "chest": 3.255510256726741,
+                "waist": 3.765480567203531,
+                "hip": 2.94818443753076
+              },
+              "bias_cm": {
+                "chest": -0.15610163278709477,
+                "waist": -0.3466255114853369,
+                "hip": -0.87533192520256
+              },
+              "small_group": false
+            },
+            "fit_bmi_Q4": {
+              "subjects": 101,
+              "photo_pairs": 280,
+              "mean_mae_cm": 3.380559613953285,
+              "mae_cm": {
+                "chest": 3.495154666139523,
+                "waist": 3.808438293562549,
+                "hip": 2.8380858821577823
+              },
+              "rmse_cm": {
+                "chest": 4.760513748748781,
+                "waist": 4.704086446744657,
+                "hip": 3.532687106975915
+              },
+              "bias_cm": {
+                "chest": -1.1008672054478474,
+                "waist": 0.5072039425371034,
+                "hip": -1.199187918342519
+              },
+              "small_group": false
+            },
+            "outside_fit_height_weight_range": {
+              "subjects": 1,
+              "photo_pairs": 5,
+              "mean_mae_cm": 5.103708612379538,
+              "mae_cm": {
+                "chest": 9.264499424892506,
+                "waist": 3.564589286063165,
+                "hip": 2.4820371261829455
+              },
+              "rmse_cm": {
+                "chest": 9.325120588092728,
+                "waist": 3.825950454271368,
+                "hip": 2.683203838239506
+              },
+              "bias_cm": {
+                "chest": -9.264499424892506,
+                "waist": -3.564589286063165,
+                "hip": -2.4820371261829455
+              },
+              "small_group": true
+            }
+          },
+          "flagged": {
+            "point": {
+              "subjects": 2,
+              "photo_pairs": 6,
+              "mean_mae_cm": 4.065389205125325,
+              "mae_cm": {
+                "chest": 4.785478335489359,
+                "waist": 4.180717431410904,
+                "hip": 3.2299718484757145
+              },
+              "rmse_cm": {
+                "chest": 6.5974157829467455,
+                "waist": 4.338641744014378,
+                "hip": 3.392883988829141
+              },
+              "bias_cm": {
+                "chest": -4.785478335489359,
+                "waist": -4.180717431410904,
+                "hip": -3.2299718484757145
+              }
+            },
+            "interval": {
+              "subjects": 2,
+              "photo_pairs": 6,
+              "nominal_coverage": 0.9,
+              "per_target_subject_all_photos_coverage": {
+                "chest": 0.5,
+                "waist": 1.0,
+                "hip": 1.0
+              },
+              "per_target_subject_balanced_pair_coverage": {
+                "chest": 0.5000000000000001,
+                "waist": 1.0,
+                "hip": 1.0
+              },
+              "per_target_width_cm": {
+                "chest": 11.235735617645332,
+                "waist": 12.323607704715187,
+                "hip": 8.53467081221902
+              },
+              "joint_subject_all_targets_all_photos_coverage": 0.5,
+              "joint_width_cm": 14.864167313990038
+            }
+          },
+          "unflagged": {
+            "point": {
+              "subjects": 399,
+              "photo_pairs": 1154,
+              "mean_mae_cm": 2.632414902949254,
+              "mae_cm": {
+                "chest": 2.7578998380227056,
+                "waist": 2.9977040379637883,
+                "hip": 2.1416408328612673
+              },
+              "rmse_cm": {
+                "chest": 3.683339530444218,
+                "waist": 3.872703644494107,
+                "hip": 2.780872603736916
+              },
+              "bias_cm": {
+                "chest": 0.0856618056240415,
+                "waist": 0.787626082179727,
+                "hip": -0.4889317025501935
+              }
+            },
+            "interval": {
+              "subjects": 399,
+              "photo_pairs": 1154,
+              "nominal_coverage": 0.9,
+              "per_target_subject_all_photos_coverage": {
+                "chest": 0.8270676691729323,
+                "waist": 0.8120300751879699,
+                "hip": 0.8345864661654135
+              },
+              "per_target_subject_balanced_pair_coverage": {
+                "chest": 0.9005191550304291,
+                "waist": 0.9001969208736089,
+                "hip": 0.893537414965983
+              },
+              "per_target_width_cm": {
+                "chest": 11.235735617645332,
+                "waist": 12.323607704715187,
+                "hip": 8.53467081221902
+              },
+              "joint_subject_all_targets_all_photos_coverage": 0.8120300751879699,
+              "joint_width_cm": 14.864167313990038
+            }
+          }
+        }
+      }
+    }
+  },
+  "ood": {
+    "testA": {
+      "photo_pairs": 1684,
+      "flagged_pairs": 22,
+      "subjects_with_any_flag": 2,
+      "pair_flag_rate": 0.013064133016627079,
+      "distance_threshold": 2.5193656371895434,
+      "interpretation": "Novelty heuristic only; no OOD ground-truth or calibrated probability"
+    },
+    "testB": {
+      "photo_pairs": 1160,
+      "flagged_pairs": 6,
+      "subjects_with_any_flag": 2,
+      "pair_flag_rate": 0.005172413793103448,
+      "distance_threshold": 2.5193656371895434,
+      "interpretation": "Novelty heuristic only; no OOD ground-truth or calibrated probability"
+    }
+  },
+  "default_model_changed": false,
+  "note": "New research checkpoints trained with calibration excluded. Do not attach their intervals to the default all-train checkpoint.",
+  "historical_reuse": "Architecture/hyperparameters and test sets were explored in earlier phases; this is not a pristine prospective benchmark."
+}

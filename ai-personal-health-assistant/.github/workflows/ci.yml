@@ -1,0 +1,39 @@
+name: CI
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  typescript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run typecheck
+      - run: npm run build:web
+  python:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service: [apps/api, services/ai-service]
+    defaults:
+      run:
+        working-directory: ${{ matrix.service }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.12'
+      - run: pip install -e ../../packages/health-core
+        if: matrix.service == 'apps/api'
+      - run: pip install -e '.[dev]'
+      - run: python -m compileall -q app
+      - run: python -c "from app.main import app; app.openapi()"
+      - run: python -m pytest -q
+        if: matrix.service == 'apps/api'
+      - run: python -m alembic upgrade head && python -m alembic check
+        if: matrix.service == 'apps/api'

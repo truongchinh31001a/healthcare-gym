@@ -1,0 +1,1332 @@
+{
+  "v5_rows": [
+    {
+      "document_id": "layout-synthetic-000",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:missing",
+        "body_fat_mass_kg:missing_or_unsupported_unit",
+        "ecw_tbw_ratio:missing",
+        "height_cm:missing_or_unsupported_unit",
+        "percent_body_fat:missing_or_unsupported_unit",
+        "skeletal_muscle_mass_kg:missing_or_unsupported_unit",
+        "total_body_water_l:missing",
+        "weight_kg:missing_or_unsupported_unit"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-001",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:missing",
+        "body_fat_mass_kg:missing_or_unsupported_unit",
+        "ecw_tbw_ratio:missing",
+        "height_cm:missing_or_unsupported_unit",
+        "percent_body_fat:missing_or_unsupported_unit",
+        "skeletal_muscle_mass_kg:missing_or_unsupported_unit",
+        "total_body_water_l:missing",
+        "weight_kg:missing_or_unsupported_unit"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-002",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:missing",
+        "body_fat_mass_kg:missing_or_unsupported_unit",
+        "ecw_tbw_ratio:missing",
+        "height_cm:missing_or_unsupported_unit",
+        "percent_body_fat:missing_or_unsupported_unit",
+        "skeletal_muscle_mass_kg:missing_or_unsupported_unit",
+        "total_body_water_l:missing",
+        "weight_kg:missing_or_unsupported_unit"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-003",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:missing",
+        "body_fat_mass_kg:missing_or_unsupported_unit",
+        "ecw_tbw_ratio:missing",
+        "height_cm:missing_or_unsupported_unit",
+        "percent_body_fat:missing_or_unsupported_unit",
+        "skeletal_muscle_mass_kg:missing_or_unsupported_unit",
+        "total_body_water_l:missing",
+        "weight_kg:missing_or_unsupported_unit"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-004",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:missing",
+        "body_fat_mass_kg:missing",
+        "ecw_tbw_ratio:missing",
+        "height_cm:missing_or_unsupported_unit",
+        "percent_body_fat:missing",
+        "skeletal_muscle_mass_kg:missing_or_unsupported_unit",
+        "total_body_water_l:missing",
+        "weight_kg:missing"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-005",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:missing",
+        "body_fat_mass_kg:missing",
+        "ecw_tbw_ratio:missing",
+        "height_cm:missing_or_unsupported_unit",
+        "percent_body_fat:missing",
+        "skeletal_muscle_mass_kg:missing_or_unsupported_unit",
+        "total_body_water_l:missing",
+        "weight_kg:missing"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-006",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:missing",
+        "body_fat_mass_kg:missing",
+        "ecw_tbw_ratio:missing",
+        "height_cm:missing_or_unsupported_unit",
+        "percent_body_fat:missing",
+        "skeletal_muscle_mass_kg:missing",
+        "total_body_water_l:missing",
+        "weight_kg:missing"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-007",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:missing",
+        "body_fat_mass_kg:missing",
+        "ecw_tbw_ratio:missing",
+        "height_cm:missing_or_unsupported_unit",
+        "percent_body_fat:missing",
+        "skeletal_muscle_mass_kg:missing_or_unsupported_unit",
+        "total_body_water_l:missing",
+        "weight_kg:missing"
+      ]
+    },
+    {
+      "document_id": "synthetic-008",
+      "values": {
+        "weight_kg": 95.6,
+        "height_cm": 174.7,
+        "skeletal_muscle_mass_kg": 38.2,
+        "body_fat_mass_kg": 30.8,
+        "percent_body_fat": 32.2,
+        "total_body_water_l": 52.6,
+        "ecw_tbw_ratio": 0.383,
+        "basal_metabolic_rate_kcal": 1921.0,
+        "bmi": 31.3
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-009",
+      "values": {
+        "weight_kg": 53.8,
+        "height_cm": 176.5,
+        "skeletal_muscle_mass_kg": 21.5,
+        "body_fat_mass_kg": 16.4,
+        "percent_body_fat": 30.5,
+        "total_body_water_l": 29.6,
+        "ecw_tbw_ratio": 0.399,
+        "basal_metabolic_rate_kcal": 2075.0,
+        "bmi": 17.3
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-010",
+      "values": {
+        "weight_kg": 62.8,
+        "height_cm": 154.0,
+        "skeletal_muscle_mass_kg": 25.1,
+        "body_fat_mass_kg": 12.9,
+        "percent_body_fat": 20.5,
+        "total_body_water_l": 34.5,
+        "ecw_tbw_ratio": 0.385,
+        "basal_metabolic_rate_kcal": 1573.0,
+        "bmi": 26.5
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-011",
+      "values": {
+        "weight_kg": 58.9,
+        "height_cm": 164.2,
+        "skeletal_muscle_mass_kg": 23.6,
+        "body_fat_mass_kg": 16.7,
+        "percent_body_fat": 28.4,
+        "total_body_water_l": 32.4,
+        "ecw_tbw_ratio": 0.388,
+        "basal_metabolic_rate_kcal": 1899.0,
+        "bmi": 21.8
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-012",
+      "values": {
+        "weight_kg": 85.6,
+        "height_cm": 174.4,
+        "skeletal_muscle_mass_kg": 34.2,
+        "body_fat_mass_kg": 15.8,
+        "percent_body_fat": 18.5,
+        "total_body_water_l": 47.1,
+        "ecw_tbw_ratio": 0.389,
+        "basal_metabolic_rate_kcal": 1367.0,
+        "bmi": 28.1
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-013",
+      "values": {
+        "weight_kg": 75.4,
+        "height_cm": 160.8,
+        "skeletal_muscle_mass_kg": 30.2,
+        "body_fat_mass_kg": 25.3,
+        "percent_body_fat": 33.6,
+        "total_body_water_l": 41.5,
+        "ecw_tbw_ratio": 0.388,
+        "basal_metabolic_rate_kcal": 1424.0,
+        "bmi": 29.2
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-014",
+      "values": {
+        "weight_kg": 87.7,
+        "height_cm": 183.7,
+        "skeletal_muscle_mass_kg": 35.1,
+        "body_fat_mass_kg": 26.8,
+        "percent_body_fat": 30.6,
+        "total_body_water_l": 48.2,
+        "ecw_tbw_ratio": 0.369,
+        "basal_metabolic_rate_kcal": 1232.0,
+        "bmi": 26.0
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-015",
+      "values": {
+        "weight_kg": 94.3,
+        "height_cm": 166.0,
+        "skeletal_muscle_mass_kg": 37.7,
+        "body_fat_mass_kg": 15.4,
+        "percent_body_fat": 16.3,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": 0.397,
+        "basal_metabolic_rate_kcal": 1780.0,
+        "bmi": 34.2
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "total_body_water_l:missing"
+      ]
+    }
+  ],
+  "v5_layout": [
+    {
+      "document_id": "layout-synthetic-000",
+      "values": {
+        "weight_kg": 70.0,
+        "height_cm": 170.0,
+        "skeletal_muscle_mass_kg": 30.0,
+        "body_fat_mass_kg": 17.0,
+        "percent_body_fat": 24.3,
+        "total_body_water_l": 39.0,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": 1500.0,
+        "bmi": 24.2
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "ecw_tbw_ratio:ambiguous_value",
+        "ecw_tbw_ratio:no_spatial_value"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-001",
+      "values": {
+        "weight_kg": 71.0,
+        "height_cm": 171.0,
+        "skeletal_muscle_mass_kg": 31.0,
+        "body_fat_mass_kg": 18.0,
+        "percent_body_fat": 25.4,
+        "total_body_water_l": 40.0,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": 1510.0,
+        "bmi": 24.3
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "ecw_tbw_ratio:ambiguous_value",
+        "ecw_tbw_ratio:no_spatial_value"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-002",
+      "values": {
+        "weight_kg": 72.0,
+        "height_cm": 172.0,
+        "skeletal_muscle_mass_kg": 32.0,
+        "body_fat_mass_kg": 19.0,
+        "percent_body_fat": 26.4,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": 1520.0,
+        "bmi": 24.3
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "ecw_tbw_ratio:ambiguous_value",
+        "ecw_tbw_ratio:no_spatial_value",
+        "total_body_water_l:ambiguous_value",
+        "total_body_water_l:no_spatial_value"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-003",
+      "values": {
+        "weight_kg": null,
+        "height_cm": 173.0,
+        "skeletal_muscle_mass_kg": 33.0,
+        "body_fat_mass_kg": 20.0,
+        "percent_body_fat": 27.4,
+        "total_body_water_l": 42.0,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": 1530.0,
+        "bmi": 24.4
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "ecw_tbw_ratio:ambiguous_value",
+        "ecw_tbw_ratio:no_spatial_value",
+        "weight_kg:ambiguous_value",
+        "weight_kg:no_spatial_value"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-004",
+      "values": {
+        "weight_kg": null,
+        "height_cm": 174.0,
+        "skeletal_muscle_mass_kg": 34.0,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": 43.0,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": 1540.0,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "bmi:ambiguous_value",
+        "bmi:no_spatial_value",
+        "body_fat_mass_kg:missing",
+        "ecw_tbw_ratio:ambiguous_value",
+        "ecw_tbw_ratio:no_spatial_value",
+        "percent_body_fat:missing",
+        "weight_kg:missing"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-005",
+      "values": {
+        "weight_kg": null,
+        "height_cm": 175.0,
+        "skeletal_muscle_mass_kg": 35.0,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": 44.0,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": 1550.0,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "bmi:ambiguous_value",
+        "bmi:no_spatial_value",
+        "body_fat_mass_kg:missing",
+        "ecw_tbw_ratio:ambiguous_value",
+        "ecw_tbw_ratio:no_spatial_value",
+        "percent_body_fat:missing",
+        "weight_kg:missing"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-006",
+      "values": {
+        "weight_kg": null,
+        "height_cm": 176.0,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": 1560.0,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "bmi:ambiguous_value",
+        "bmi:no_spatial_value",
+        "body_fat_mass_kg:missing",
+        "ecw_tbw_ratio:ambiguous_value",
+        "ecw_tbw_ratio:no_spatial_value",
+        "percent_body_fat:missing",
+        "skeletal_muscle_mass_kg:missing",
+        "total_body_water_l:missing",
+        "weight_kg:missing"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-007",
+      "values": {
+        "weight_kg": null,
+        "height_cm": 177.0,
+        "skeletal_muscle_mass_kg": 37.0,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": 46.0,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": 1570.0,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "bmi:ambiguous_value",
+        "bmi:no_spatial_value",
+        "body_fat_mass_kg:missing",
+        "ecw_tbw_ratio:ambiguous_value",
+        "ecw_tbw_ratio:no_spatial_value",
+        "percent_body_fat:missing",
+        "weight_kg:missing"
+      ]
+    },
+    {
+      "document_id": "synthetic-008",
+      "values": {
+        "weight_kg": 95.6,
+        "height_cm": 174.7,
+        "skeletal_muscle_mass_kg": 38.2,
+        "body_fat_mass_kg": 30.8,
+        "percent_body_fat": 32.2,
+        "total_body_water_l": 52.6,
+        "ecw_tbw_ratio": 0.383,
+        "basal_metabolic_rate_kcal": 1921.0,
+        "bmi": 31.3
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-009",
+      "values": {
+        "weight_kg": 53.8,
+        "height_cm": 176.5,
+        "skeletal_muscle_mass_kg": 21.5,
+        "body_fat_mass_kg": 16.4,
+        "percent_body_fat": 30.5,
+        "total_body_water_l": 29.6,
+        "ecw_tbw_ratio": 0.399,
+        "basal_metabolic_rate_kcal": 2075.0,
+        "bmi": 17.3
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-010",
+      "values": {
+        "weight_kg": 62.8,
+        "height_cm": 154.0,
+        "skeletal_muscle_mass_kg": 25.1,
+        "body_fat_mass_kg": 12.9,
+        "percent_body_fat": 20.5,
+        "total_body_water_l": 34.5,
+        "ecw_tbw_ratio": 0.385,
+        "basal_metabolic_rate_kcal": 1573.0,
+        "bmi": 26.5
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-011",
+      "values": {
+        "weight_kg": 58.9,
+        "height_cm": 164.2,
+        "skeletal_muscle_mass_kg": 23.6,
+        "body_fat_mass_kg": 16.7,
+        "percent_body_fat": 28.4,
+        "total_body_water_l": 32.4,
+        "ecw_tbw_ratio": 0.388,
+        "basal_metabolic_rate_kcal": 1899.0,
+        "bmi": 21.8
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-012",
+      "values": {
+        "weight_kg": 85.6,
+        "height_cm": 174.4,
+        "skeletal_muscle_mass_kg": 34.2,
+        "body_fat_mass_kg": 15.8,
+        "percent_body_fat": 18.5,
+        "total_body_water_l": 47.1,
+        "ecw_tbw_ratio": 0.389,
+        "basal_metabolic_rate_kcal": 1367.0,
+        "bmi": 28.1
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-013",
+      "values": {
+        "weight_kg": 75.4,
+        "height_cm": 160.8,
+        "skeletal_muscle_mass_kg": 30.2,
+        "body_fat_mass_kg": 25.3,
+        "percent_body_fat": 33.6,
+        "total_body_water_l": 41.5,
+        "ecw_tbw_ratio": 0.388,
+        "basal_metabolic_rate_kcal": 1424.0,
+        "bmi": 29.2
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-014",
+      "values": {
+        "weight_kg": 87.7,
+        "height_cm": 183.7,
+        "skeletal_muscle_mass_kg": 35.1,
+        "body_fat_mass_kg": 26.8,
+        "percent_body_fat": 30.6,
+        "total_body_water_l": 48.2,
+        "ecw_tbw_ratio": 0.369,
+        "basal_metabolic_rate_kcal": 1232.0,
+        "bmi": 26.0
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-015",
+      "values": {
+        "weight_kg": 94.3,
+        "height_cm": 166.0,
+        "skeletal_muscle_mass_kg": 37.7,
+        "body_fat_mass_kg": 15.4,
+        "percent_body_fat": 16.3,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": 0.397,
+        "basal_metabolic_rate_kcal": 1780.0,
+        "bmi": 34.2
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "total_body_water_l:missing"
+      ]
+    }
+  ],
+  "v6_rows": [
+    {
+      "document_id": "layout-synthetic-000",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:missing",
+        "body_fat_mass_kg:missing_or_unsupported_unit",
+        "ecw_tbw_ratio:missing",
+        "height_cm:missing_or_unsupported_unit",
+        "percent_body_fat:missing_or_unsupported_unit",
+        "skeletal_muscle_mass_kg:missing_or_unsupported_unit",
+        "total_body_water_l:missing",
+        "weight_kg:missing_or_unsupported_unit"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-001",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:missing",
+        "body_fat_mass_kg:missing_or_unsupported_unit",
+        "ecw_tbw_ratio:missing",
+        "height_cm:missing_or_unsupported_unit",
+        "percent_body_fat:missing_or_unsupported_unit",
+        "skeletal_muscle_mass_kg:missing_or_unsupported_unit",
+        "total_body_water_l:missing",
+        "weight_kg:missing_or_unsupported_unit"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-002",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:missing",
+        "body_fat_mass_kg:missing_or_unsupported_unit",
+        "ecw_tbw_ratio:missing",
+        "height_cm:missing_or_unsupported_unit",
+        "percent_body_fat:missing_or_unsupported_unit",
+        "skeletal_muscle_mass_kg:missing_or_unsupported_unit",
+        "total_body_water_l:missing",
+        "weight_kg:missing_or_unsupported_unit"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-003",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:missing",
+        "body_fat_mass_kg:missing_or_unsupported_unit",
+        "ecw_tbw_ratio:missing",
+        "height_cm:missing_or_unsupported_unit",
+        "percent_body_fat:missing_or_unsupported_unit",
+        "skeletal_muscle_mass_kg:missing_or_unsupported_unit",
+        "total_body_water_l:missing",
+        "weight_kg:missing_or_unsupported_unit"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-004",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:missing",
+        "body_fat_mass_kg:missing",
+        "ecw_tbw_ratio:missing",
+        "height_cm:missing",
+        "percent_body_fat:missing",
+        "skeletal_muscle_mass_kg:missing",
+        "total_body_water_l:missing",
+        "weight_kg:missing"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-005",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:missing",
+        "body_fat_mass_kg:missing",
+        "ecw_tbw_ratio:missing",
+        "height_cm:missing_or_unsupported_unit",
+        "percent_body_fat:missing",
+        "skeletal_muscle_mass_kg:missing_or_unsupported_unit",
+        "total_body_water_l:missing",
+        "weight_kg:missing"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-006",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:missing",
+        "body_fat_mass_kg:missing",
+        "ecw_tbw_ratio:missing",
+        "height_cm:missing",
+        "percent_body_fat:missing",
+        "skeletal_muscle_mass_kg:missing",
+        "total_body_water_l:missing",
+        "weight_kg:missing"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-007",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:missing",
+        "body_fat_mass_kg:missing",
+        "ecw_tbw_ratio:missing",
+        "height_cm:missing",
+        "percent_body_fat:missing",
+        "skeletal_muscle_mass_kg:missing",
+        "total_body_water_l:missing",
+        "weight_kg:missing"
+      ]
+    },
+    {
+      "document_id": "synthetic-008",
+      "values": {
+        "weight_kg": 95.6,
+        "height_cm": 174.7,
+        "skeletal_muscle_mass_kg": 38.2,
+        "body_fat_mass_kg": 30.8,
+        "percent_body_fat": 32.2,
+        "total_body_water_l": 52.6,
+        "ecw_tbw_ratio": 0.383,
+        "basal_metabolic_rate_kcal": 1921.0,
+        "bmi": 31.3
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-009",
+      "values": {
+        "weight_kg": 53.8,
+        "height_cm": 176.5,
+        "skeletal_muscle_mass_kg": 21.5,
+        "body_fat_mass_kg": 16.4,
+        "percent_body_fat": 30.5,
+        "total_body_water_l": 29.6,
+        "ecw_tbw_ratio": 0.399,
+        "basal_metabolic_rate_kcal": 2075.0,
+        "bmi": 17.3
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-010",
+      "values": {
+        "weight_kg": 62.8,
+        "height_cm": 154.0,
+        "skeletal_muscle_mass_kg": 25.1,
+        "body_fat_mass_kg": 12.9,
+        "percent_body_fat": 20.5,
+        "total_body_water_l": 34.5,
+        "ecw_tbw_ratio": 0.385,
+        "basal_metabolic_rate_kcal": 1573.0,
+        "bmi": 26.5
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-011",
+      "values": {
+        "weight_kg": 58.9,
+        "height_cm": 164.2,
+        "skeletal_muscle_mass_kg": 23.6,
+        "body_fat_mass_kg": 16.7,
+        "percent_body_fat": 28.4,
+        "total_body_water_l": 32.4,
+        "ecw_tbw_ratio": 0.388,
+        "basal_metabolic_rate_kcal": 1899.0,
+        "bmi": 21.8
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-012",
+      "values": {
+        "weight_kg": 85.6,
+        "height_cm": 174.4,
+        "skeletal_muscle_mass_kg": 34.2,
+        "body_fat_mass_kg": 15.8,
+        "percent_body_fat": 18.5,
+        "total_body_water_l": 47.1,
+        "ecw_tbw_ratio": 0.389,
+        "basal_metabolic_rate_kcal": 1367.0,
+        "bmi": 28.1
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-013",
+      "values": {
+        "weight_kg": 75.4,
+        "height_cm": 160.8,
+        "skeletal_muscle_mass_kg": 30.2,
+        "body_fat_mass_kg": 25.3,
+        "percent_body_fat": 33.6,
+        "total_body_water_l": 41.5,
+        "ecw_tbw_ratio": 0.388,
+        "basal_metabolic_rate_kcal": 1424.0,
+        "bmi": 29.2
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-014",
+      "values": {
+        "weight_kg": 87.7,
+        "height_cm": 183.7,
+        "skeletal_muscle_mass_kg": 35.1,
+        "body_fat_mass_kg": 26.8,
+        "percent_body_fat": 30.6,
+        "total_body_water_l": 48.2,
+        "ecw_tbw_ratio": 0.369,
+        "basal_metabolic_rate_kcal": 1232.0,
+        "bmi": 26.0
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-015",
+      "values": {
+        "weight_kg": 94.3,
+        "height_cm": 166.0,
+        "skeletal_muscle_mass_kg": 37.7,
+        "body_fat_mass_kg": 15.4,
+        "percent_body_fat": 16.3,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": 0.397,
+        "basal_metabolic_rate_kcal": 1780.0,
+        "bmi": 34.2
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "total_body_water_l:missing"
+      ]
+    }
+  ],
+  "v6_layout": [
+    {
+      "document_id": "layout-synthetic-000",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": 30.0,
+        "body_fat_mass_kg": 17.0,
+        "percent_body_fat": 24.3,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": 1500.0,
+        "bmi": 24.2
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "ecw_tbw_ratio:ambiguous_value",
+        "ecw_tbw_ratio:no_spatial_value",
+        "height_cm:ambiguous_value",
+        "height_cm:no_spatial_value",
+        "total_body_water_l:ambiguous_value",
+        "total_body_water_l:no_spatial_value",
+        "weight_kg:ambiguous_value",
+        "weight_kg:no_spatial_value"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-001",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": 31.0,
+        "body_fat_mass_kg": 18.0,
+        "percent_body_fat": 25.4,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": 1510.0,
+        "bmi": 24.3
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "ecw_tbw_ratio:ambiguous_value",
+        "ecw_tbw_ratio:no_spatial_value",
+        "height_cm:ambiguous_value",
+        "height_cm:no_spatial_value",
+        "total_body_water_l:ambiguous_value",
+        "total_body_water_l:no_spatial_value",
+        "weight_kg:ambiguous_value",
+        "weight_kg:no_spatial_value"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-002",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": 32.0,
+        "body_fat_mass_kg": 19.0,
+        "percent_body_fat": 26.4,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": 1520.0,
+        "bmi": 24.3
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "ecw_tbw_ratio:ambiguous_value",
+        "ecw_tbw_ratio:no_spatial_value",
+        "height_cm:ambiguous_value",
+        "height_cm:no_spatial_value",
+        "total_body_water_l:ambiguous_value",
+        "total_body_water_l:no_spatial_value",
+        "weight_kg:ambiguous_value",
+        "weight_kg:no_spatial_value"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-003",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": 33.0,
+        "body_fat_mass_kg": 20.0,
+        "percent_body_fat": 27.4,
+        "total_body_water_l": 42.0,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": 1530.0,
+        "bmi": 24.4
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "ecw_tbw_ratio:ambiguous_value",
+        "ecw_tbw_ratio:no_spatial_value",
+        "height_cm:ambiguous_value",
+        "height_cm:no_spatial_value",
+        "weight_kg:ambiguous_value",
+        "weight_kg:no_spatial_value"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-004",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:ambiguous_value",
+        "bmi:no_spatial_value",
+        "body_fat_mass_kg:missing",
+        "ecw_tbw_ratio:ambiguous_value",
+        "ecw_tbw_ratio:no_spatial_value",
+        "height_cm:missing",
+        "percent_body_fat:missing",
+        "skeletal_muscle_mass_kg:missing",
+        "total_body_water_l:missing",
+        "weight_kg:missing"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-005",
+      "values": {
+        "weight_kg": null,
+        "height_cm": 175.0,
+        "skeletal_muscle_mass_kg": 35.0,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:ambiguous_value",
+        "bmi:no_spatial_value",
+        "body_fat_mass_kg:missing",
+        "ecw_tbw_ratio:ambiguous_value",
+        "ecw_tbw_ratio:no_spatial_value",
+        "percent_body_fat:missing",
+        "total_body_water_l:missing",
+        "weight_kg:missing"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-006",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:ambiguous_value",
+        "bmi:no_spatial_value",
+        "body_fat_mass_kg:missing",
+        "ecw_tbw_ratio:ambiguous_value",
+        "ecw_tbw_ratio:no_spatial_value",
+        "height_cm:missing",
+        "percent_body_fat:missing",
+        "skeletal_muscle_mass_kg:missing",
+        "total_body_water_l:missing",
+        "weight_kg:missing"
+      ]
+    },
+    {
+      "document_id": "layout-synthetic-007",
+      "values": {
+        "weight_kg": null,
+        "height_cm": null,
+        "skeletal_muscle_mass_kg": null,
+        "body_fat_mass_kg": null,
+        "percent_body_fat": null,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": null,
+        "basal_metabolic_rate_kcal": null,
+        "bmi": null
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "basal_metabolic_rate_kcal:missing",
+        "bmi:ambiguous_value",
+        "bmi:no_spatial_value",
+        "body_fat_mass_kg:missing",
+        "ecw_tbw_ratio:ambiguous_value",
+        "ecw_tbw_ratio:no_spatial_value",
+        "height_cm:missing",
+        "percent_body_fat:missing",
+        "skeletal_muscle_mass_kg:missing",
+        "total_body_water_l:missing",
+        "weight_kg:missing"
+      ]
+    },
+    {
+      "document_id": "synthetic-008",
+      "values": {
+        "weight_kg": 95.6,
+        "height_cm": 174.7,
+        "skeletal_muscle_mass_kg": 38.2,
+        "body_fat_mass_kg": 30.8,
+        "percent_body_fat": 32.2,
+        "total_body_water_l": 52.6,
+        "ecw_tbw_ratio": 0.383,
+        "basal_metabolic_rate_kcal": 1921.0,
+        "bmi": 31.3
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-009",
+      "values": {
+        "weight_kg": 53.8,
+        "height_cm": 176.5,
+        "skeletal_muscle_mass_kg": 21.5,
+        "body_fat_mass_kg": 16.4,
+        "percent_body_fat": 30.5,
+        "total_body_water_l": 29.6,
+        "ecw_tbw_ratio": 0.399,
+        "basal_metabolic_rate_kcal": 2075.0,
+        "bmi": 17.3
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-010",
+      "values": {
+        "weight_kg": 62.8,
+        "height_cm": 154.0,
+        "skeletal_muscle_mass_kg": 25.1,
+        "body_fat_mass_kg": 12.9,
+        "percent_body_fat": 20.5,
+        "total_body_water_l": 34.5,
+        "ecw_tbw_ratio": 0.385,
+        "basal_metabolic_rate_kcal": 1573.0,
+        "bmi": 26.5
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-011",
+      "values": {
+        "weight_kg": 58.9,
+        "height_cm": 164.2,
+        "skeletal_muscle_mass_kg": 23.6,
+        "body_fat_mass_kg": 16.7,
+        "percent_body_fat": 28.4,
+        "total_body_water_l": 32.4,
+        "ecw_tbw_ratio": 0.388,
+        "basal_metabolic_rate_kcal": 1899.0,
+        "bmi": 21.8
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-012",
+      "values": {
+        "weight_kg": 85.6,
+        "height_cm": 174.4,
+        "skeletal_muscle_mass_kg": 34.2,
+        "body_fat_mass_kg": 15.8,
+        "percent_body_fat": 18.5,
+        "total_body_water_l": 47.1,
+        "ecw_tbw_ratio": 0.389,
+        "basal_metabolic_rate_kcal": 1367.0,
+        "bmi": 28.1
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-013",
+      "values": {
+        "weight_kg": 75.4,
+        "height_cm": 160.8,
+        "skeletal_muscle_mass_kg": 30.2,
+        "body_fat_mass_kg": 25.3,
+        "percent_body_fat": 33.6,
+        "total_body_water_l": 41.5,
+        "ecw_tbw_ratio": 0.388,
+        "basal_metabolic_rate_kcal": 1424.0,
+        "bmi": 29.2
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-014",
+      "values": {
+        "weight_kg": 87.7,
+        "height_cm": 183.7,
+        "skeletal_muscle_mass_kg": 35.1,
+        "body_fat_mass_kg": 26.8,
+        "percent_body_fat": 30.6,
+        "total_body_water_l": 48.2,
+        "ecw_tbw_ratio": 0.369,
+        "basal_metabolic_rate_kcal": 1232.0,
+        "bmi": 26.0
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": []
+    },
+    {
+      "document_id": "synthetic-015",
+      "values": {
+        "weight_kg": 94.3,
+        "height_cm": 166.0,
+        "skeletal_muscle_mass_kg": 37.7,
+        "body_fat_mass_kg": 15.4,
+        "percent_body_fat": 16.3,
+        "total_body_water_l": null,
+        "ecw_tbw_ratio": 0.397,
+        "basal_metabolic_rate_kcal": 1780.0,
+        "bmi": 34.2
+      },
+      "measured_at": "2026-10-21",
+      "quality_flags": [
+        "total_body_water_l:missing"
+      ]
+    }
+  ]
+}

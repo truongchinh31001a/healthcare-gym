@@ -1,0 +1,28 @@
+{
+  "seed": 42,
+  "checkpoint": "models/bodym_cnn/model.pt",
+  "subject_split": "configs/bodym_subject_split.json",
+  "data_root": "data/raw/bodym",
+  "output": "experiments/bodym_phase2",
+  "workers": 8,
+  "batch_size": 64,
+  "cpu_threads": 4,
+  "quality": {
+    "version": "silhouette-quality-v1",
+    "min_foreground_height_px": 64,
+    "min_foreground_pixels": 256,
+    "min_largest_component_fraction": 0.98,
+    "max_nonbinary_fraction": 0.01,
+    "note": "Fixed engineering review flags; not anatomical/clinical thresholds. Never exclude flagged cases from reported test metrics."
+  },
+  "subgroups": {
+    "body_size": "BMI quartiles fit on unique FIT subjects, not clinical categories",
+    "minimum_subjects_for_stable_description": 20
+  },
+  "robustness": {
+    "max_subjects_per_split": 128,
+    "one_pair_per_subject": true,
+    "transforms": ["identity", "translate", "erode_2px", "dilate_2px", "rotate_5deg", "remove_top_10pct"],
+    "note": "Raw silhouette perturbations before canonical preprocessing; synthetic stress tests, not RGB lighting/device/pose validation. No model selection or threshold tuning on these test results."
+  }
+}

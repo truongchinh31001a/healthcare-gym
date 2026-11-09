@@ -1,0 +1,78 @@
+{
+  "document_id": "layout-synthetic-001",
+  "subject_id": "layout-synthetic-001-subject",
+  "synthetic": true,
+  "measured_at": "2026-10-21",
+  "values": {
+    "weight_kg": 71.0,
+    "height_cm": 171.0,
+    "skeletal_muscle_mass_kg": 31.0,
+    "body_fat_mass_kg": 18.0,
+    "percent_body_fat": 25.4,
+    "total_body_water_l": 40.0,
+    "ecw_tbw_ratio": 0.385,
+    "basal_metabolic_rate_kcal": 1510.0,
+    "bmi": 24.3
+  },
+  "value_boxes": {
+    "weight_kg": [
+      450,
+      255,
+      512,
+      278
+    ],
+    "height_cm": [
+      450,
+      370,
+      533,
+      388
+    ],
+    "skeletal_muscle_mass_kg": [
+      450,
+      485,
+      512,
+      508
+    ],
+    "body_fat_mass_kg": [
+      450,
+      600,
+      512,
+      623
+    ],
+    "percent_body_fat": [
+      450,
+      715,
+      528,
+      737
+    ],
+    "total_body_water_l": [
+      1350,
+      255,
+      1399,
+      273
+    ],
+    "ecw_tbw_ratio": [
+      1350,
+      370,
+      1469,
+      392
+    ],
+    "basal_metabolic_rate_kcal": [
+      1350,
+      485,
+      1507,
+      508
+    ],
+    "bmi": [
+      1350,
+      600,
+      1475,
+      623
+    ]
+  },
+  "bbox_coordinate_space": "exif_transposed_page_0",
+  "transcript": "SYNTHETIC BODY DATA - ENGINEERING FIXTURE\nTest date: 2026-10-21\nWeight: 71 kg Ref: 0-100 Total Body Water: 40 L Ref: 0-100\nHeight: 171 cm Ref: 0-100 ECW/TBW: 0,385 ratio Ref: 0-100\nSkeletal Muscle Mass: 31 kg Ref: 0-100 Basal Metabolic Rate: 1510 kcal/day Ref: 0-100\nBody Fat Mass: 18 kg Ref: 0-100 Body Mass Index: 24,3 kg/m2 Ref: 0-100\nPercent Body Fat: 25,4 % Ref: 0-100\nGenerated example only. No real person. No medical interpretation.",
+  "language": "en",
+  "layout_family": "original-two-column",
+  "transform": "none"
+}

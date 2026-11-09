@@ -1,0 +1,10 @@
+{
+  "primary_weight_subject": "synthetic-steady",
+  "primary_weight_device": "scale-A",
+  "expected_slope_kg_per_week": -0.28,
+  "suspect_subject": "synthetic-review",
+  "sparse_subject": "synthetic-sparse",
+  "stale_subject": "synthetic-stale",
+  "expected_corruption_policy": "Keep raw originals, review outliers, quarantine conflicting IDs, ignore future knowledge at as_of",
+  "real_longitudinal_validation": false
+}

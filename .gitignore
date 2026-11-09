@@ -1,0 +1,38 @@
+# Downloaded datasets and generated research artifacts
+data/raw/**
+data/processed/**
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+.venv-ocr/
+# Real health documents, labels, OCR text and user-review records stay private.
+data/annotations/inbody_real/
+data/manifests/inbody_real*.json
+reports/private/
+data/annotations/progress_real/
+data/manifests/progress_real*.json
+
+# Local environments, application builds, credentials and private runtime data.
+node_modules/
+.next/
+.expo/
+dist/
+build/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+*.tsbuildinfo
+coverage/
+*.log
+.env
+.env.*
+!.env.example
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+private-storage/

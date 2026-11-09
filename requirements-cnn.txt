@@ -1,0 +1,5 @@
+-r requirements.txt
+# Install the CUDA wheels first on the RTX 4060; see README_BODYM.md.
+# These public-version pins also accept the matching +cu128 builds.
+torch==2.11.0
+torchvision==0.26.0

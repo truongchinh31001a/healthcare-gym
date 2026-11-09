@@ -1,0 +1,15 @@
+{
+  "experiment_id": "inbody_ocr_v6_layout_v1",
+  "manifest": "data/manifests/inbody_synthetic_v1.json",
+  "split": "smoke_test",
+  "confidence_threshold": 0.85,
+  "device": "cpu",
+  "detection_model": "PP-OCRv6_medium_det",
+  "recognition_model": "PP-OCRv6_medium_rec",
+  "note": "PP-OCRv6 medium + spatial field association. Primary research candidate, not released for real health use. V5 baseline is retained separately.",
+  "extraction_mode": "layout",
+  "cpu_threads": 4,
+  "layout_config": "configs/inbody_layout.json",
+  "research_only": true,
+  "production_enabled": false
+}

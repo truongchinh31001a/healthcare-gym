@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "description": "Engineering plausibility bounds for adult document transcription; not clinical thresholds. Never clamp or delete an outlier.",
+  "fields": {
+    "weight_kg": {"unit": "kg", "bounds": [10, 500], "aliases": ["Weight", "Can nang"], "units": {"kg": 1, "lb": 0.45359237, "lbs": 0.45359237}},
+    "height_cm": {"unit": "cm", "bounds": [80, 250], "aliases": ["Height", "Chieu cao"], "units": {"cm": 1, "in": 2.54}},
+    "skeletal_muscle_mass_kg": {"unit": "kg", "bounds": [1, 150], "aliases": ["Skeletal Muscle Mass", "SMM", "Khoi luong co xuong"], "units": {"kg": 1, "lb": 0.45359237, "lbs": 0.45359237}},
+    "body_fat_mass_kg": {"unit": "kg", "bounds": [0, 300], "aliases": ["Body Fat Mass", "BFM", "Khoi luong mo"], "units": {"kg": 1, "lb": 0.45359237, "lbs": 0.45359237}},
+    "percent_body_fat": {"unit": "%", "bounds": [0, 100], "aliases": ["Percent Body Fat", "PBF", "Ty le mo co the"], "units": {"%": 1}},
+    "total_body_water_l": {"unit": "L", "bounds": [1, 200], "aliases": ["Total Body Water", "TBW", "Tong luong nuoc"], "units": {"l": 1}},
+    "ecw_tbw_ratio": {"unit": "ratio", "bounds": [0, 1], "aliases": ["ECW/TBW", "ECW TBW"], "units": {"ratio": 1}},
+    "basal_metabolic_rate_kcal": {"unit": "kcal/day", "bounds": [300, 6000], "aliases": ["Basal Metabolic Rate", "BMR", "Chuyen hoa co ban"], "units": {"kcal/day": 1, "kcal": 1}},
+    "bmi": {"unit": "kg/m2", "bounds": [5, 100], "aliases": ["Body Mass Index", "BMI"], "units": {"kg/m2": 1, "kg/m²": 1}}
+  }
+}

@@ -1,0 +1,796 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "InBodyExtraction",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "parser_version",
+    "document_id",
+    "source",
+    "provenance",
+    "device_model",
+    "measured_at",
+    "recorded_at",
+    "verification_status",
+    "model_version",
+    "quality_flags",
+    "field_evidence",
+    "weight_kg",
+    "height_cm",
+    "skeletal_muscle_mass_kg",
+    "body_fat_mass_kg",
+    "percent_body_fat",
+    "total_body_water_l",
+    "ecw_tbw_ratio",
+    "basal_metabolic_rate_kcal",
+    "bmi"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "parser_version": {
+      "const": "rules-0.1.0"
+    },
+    "document_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "const": "inbody"
+    },
+    "provenance": {
+      "const": "extracted"
+    },
+    "device_model": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "measured_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "verification_status": {
+      "const": "pending_user_review"
+    },
+    "model_version": {
+      "type": "string"
+    },
+    "quality_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "field_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "weight_kg",
+        "height_cm",
+        "skeletal_muscle_mass_kg",
+        "body_fat_mass_kg",
+        "percent_body_fat",
+        "total_body_water_l",
+        "ecw_tbw_ratio",
+        "basal_metabolic_rate_kcal",
+        "bmi"
+      ],
+      "properties": {
+        "weight_kg": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "unit",
+            "candidates",
+            "flags"
+          ],
+          "properties": {
+            "unit": {
+              "const": "kg"
+            },
+            "candidates": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "raw_text",
+                  "raw_value",
+                  "raw_unit",
+                  "value",
+                  "confidence",
+                  "line_index"
+                ],
+                "properties": {
+                  "raw_text": {
+                    "type": "string"
+                  },
+                  "raw_value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "raw_unit": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "confidence": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "line_index": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              }
+            },
+            "flags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            }
+          }
+        },
+        "height_cm": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "unit",
+            "candidates",
+            "flags"
+          ],
+          "properties": {
+            "unit": {
+              "const": "cm"
+            },
+            "candidates": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "raw_text",
+                  "raw_value",
+                  "raw_unit",
+                  "value",
+                  "confidence",
+                  "line_index"
+                ],
+                "properties": {
+                  "raw_text": {
+                    "type": "string"
+                  },
+                  "raw_value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "raw_unit": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "confidence": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "line_index": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              }
+            },
+            "flags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            }
+          }
+        },
+        "skeletal_muscle_mass_kg": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "unit",
+            "candidates",
+            "flags"
+          ],
+          "properties": {
+            "unit": {
+              "const": "kg"
+            },
+            "candidates": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "raw_text",
+                  "raw_value",
+                  "raw_unit",
+                  "value",
+                  "confidence",
+                  "line_index"
+                ],
+                "properties": {
+                  "raw_text": {
+                    "type": "string"
+                  },
+                  "raw_value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "raw_unit": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "confidence": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "line_index": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              }
+            },
+            "flags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            }
+          }
+        },
+        "body_fat_mass_kg": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "unit",
+            "candidates",
+            "flags"
+          ],
+          "properties": {
+            "unit": {
+              "const": "kg"
+            },
+            "candidates": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "raw_text",
+                  "raw_value",
+                  "raw_unit",
+                  "value",
+                  "confidence",
+                  "line_index"
+                ],
+                "properties": {
+                  "raw_text": {
+                    "type": "string"
+                  },
+                  "raw_value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "raw_unit": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "confidence": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "line_index": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              }
+            },
+            "flags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            }
+          }
+        },
+        "percent_body_fat": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "unit",
+            "candidates",
+            "flags"
+          ],
+          "properties": {
+            "unit": {
+              "const": "%"
+            },
+            "candidates": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "raw_text",
+                  "raw_value",
+                  "raw_unit",
+                  "value",
+                  "confidence",
+                  "line_index"
+                ],
+                "properties": {
+                  "raw_text": {
+                    "type": "string"
+                  },
+                  "raw_value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "raw_unit": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "confidence": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "line_index": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              }
+            },
+            "flags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            }
+          }
+        },
+        "total_body_water_l": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "unit",
+            "candidates",
+            "flags"
+          ],
+          "properties": {
+            "unit": {
+              "const": "L"
+            },
+            "candidates": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "raw_text",
+                  "raw_value",
+                  "raw_unit",
+                  "value",
+                  "confidence",
+                  "line_index"
+                ],
+                "properties": {
+                  "raw_text": {
+                    "type": "string"
+                  },
+                  "raw_value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "raw_unit": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "confidence": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "line_index": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              }
+            },
+            "flags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            }
+          }
+        },
+        "ecw_tbw_ratio": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "unit",
+            "candidates",
+            "flags"
+          ],
+          "properties": {
+            "unit": {
+              "const": "ratio"
+            },
+            "candidates": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "raw_text",
+                  "raw_value",
+                  "raw_unit",
+                  "value",
+                  "confidence",
+                  "line_index"
+                ],
+                "properties": {
+                  "raw_text": {
+                    "type": "string"
+                  },
+                  "raw_value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "raw_unit": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "confidence": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "line_index": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              }
+            },
+            "flags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            }
+          }
+        },
+        "basal_metabolic_rate_kcal": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "unit",
+            "candidates",
+            "flags"
+          ],
+          "properties": {
+            "unit": {
+              "const": "kcal/day"
+            },
+            "candidates": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "raw_text",
+                  "raw_value",
+                  "raw_unit",
+                  "value",
+                  "confidence",
+                  "line_index"
+                ],
+                "properties": {
+                  "raw_text": {
+                    "type": "string"
+                  },
+                  "raw_value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "raw_unit": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "confidence": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "line_index": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              }
+            },
+            "flags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            }
+          }
+        },
+        "bmi": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "unit",
+            "candidates",
+            "flags"
+          ],
+          "properties": {
+            "unit": {
+              "const": "kg/m2"
+            },
+            "candidates": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "raw_text",
+                  "raw_value",
+                  "raw_unit",
+                  "value",
+                  "confidence",
+                  "line_index"
+                ],
+                "properties": {
+                  "raw_text": {
+                    "type": "string"
+                  },
+                  "raw_value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "raw_unit": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "confidence": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "line_index": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              }
+            },
+            "flags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            }
+          }
+        }
+      }
+    },
+    "weight_kg": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "kg"
+    },
+    "height_cm": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "cm"
+    },
+    "skeletal_muscle_mass_kg": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "kg"
+    },
+    "body_fat_mass_kg": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "kg"
+    },
+    "percent_body_fat": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "%"
+    },
+    "total_body_water_l": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "L"
+    },
+    "ecw_tbw_ratio": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "ratio"
+    },
+    "basal_metabolic_rate_kcal": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "kcal/day"
+    },
+    "bmi": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "kg/m2"
+    }
+  }
+}

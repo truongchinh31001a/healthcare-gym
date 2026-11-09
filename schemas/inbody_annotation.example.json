@@ -1,0 +1,34 @@
+{
+  "document_id": "REPLACE_WITH_RANDOM_ID",
+  "original_document_id": "REPLACE_WITH_ORIGINAL_ID",
+  "subject_id": "REPLACE_WITH_PSEUDONYM",
+  "synthetic": false,
+  "split": "unassigned",
+  "processing_consent_id": null,
+  "research_consent_id": null,
+  "source_authorization_id": null,
+  "measured_at": null,
+  "device_model": null,
+  "transcript": null,
+  "values": {
+    "weight_kg": null,
+    "height_cm": null,
+    "skeletal_muscle_mass_kg": null,
+    "body_fat_mass_kg": null,
+    "percent_body_fat": null,
+    "total_body_water_l": null,
+    "ecw_tbw_ratio": null,
+    "basal_metabolic_rate_kcal": null,
+    "bmi": null
+  },
+  "evidence": [],
+  "evidence_example_do_not_submit": {
+    "field": "weight_kg", "page": 0, "label_bbox": [0, 0, 1, 1],
+    "value_bbox": [0, 0, 1, 1], "raw_text": null, "raw_unit": null,
+    "missing_reason": "not_yet_annotated"
+  },
+  "annotation_version": "0.1.0",
+  "annotator_id": null,
+  "second_reviewer_id": null,
+  "adjudication_notes": null
+}

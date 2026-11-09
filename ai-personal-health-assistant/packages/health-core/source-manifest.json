@@ -1,0 +1,25 @@
+{
+  "research_source_sha256": {
+    "src\\document_ai\\schema.py": "4ec04359f03af9bb42f021682ce5b5e18bb1bb9b6fee582304e5fd5fd4f6bafa",
+    "src\\document_ai\\parser.py": "e3cd601d9e75f56553b6638c734ed8ba2d47c092d2bfd386d802ef8ad523acfc",
+    "src\\document_ai\\review.py": "165543ddb329ccd66074e9482217d310b783bed50975f20ae1d1764a535f8ea7",
+    "src\\body_progress\\schema.py": "607d96195f73d1d621e320b485870f26e164b1c9580e081299222053fafee52c",
+    "src\\body_progress\\engine.py": "17fcfa852b1d3fb8d673b6abe976cc7840352bf1925b01989aa3ef796909c9a4",
+    "src\\body_progress\\adapters.py": "558156027bf0269019d9dc9fe1fe032cea63a6248ebf54835af59a235d6a741e",
+    "src\\body_progress\\contracts.py": "24c30e0c27e368b0f22c3798f9b66936afdd2dd6d62ad012f36c1076ad662ca1"
+  },
+  "packaged_sha256": {
+    "health_core/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "health_core/body_progress/adapters.py": "4008b5598164daf829c0477783ab6121d279402181e702bb1abdda250f4d1593",
+    "health_core/body_progress/contracts.py": "bd0a1a8cf3bb016c2772e8fa75760ef22517b090618e5e28135217191f638db3",
+    "health_core/body_progress/engine.py": "0aee3aaa82f0753fe3173b8e6befb4cbef4ba8959bf64029681ea9317e8a7676",
+    "health_core/body_progress/schema.py": "e9a98778ca6e2e152d7c3f062b58c6f506b9fb4663830e20b124cb1614425320",
+    "health_core/body_progress/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "health_core/configs/inbody_fields.json": "960f46d24ab01fff3a7c30ff66e87055bd6f6813e5e37b6db34864f2617d6e12",
+    "health_core/configs/progress_phase4.json": "7664dee4b28830eba09819be02a0b6ee9afa08ac7ce16faf7368eb1251316b25",
+    "health_core/document_ai/parser.py": "30e522c8d37220af42f0af5d770aa466c363ddd453de032d27afe1d192de2686",
+    "health_core/document_ai/review.py": "d29139562bde5e2ec8489b5d03b845eac346cdb6a76eccd971219e3ac9e8b434",
+    "health_core/document_ai/schema.py": "07aeb84dcd9143bfbf21d665a982949cc23791d7d0ce5571b6c86eb8dadfe480",
+    "health_core/document_ai/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

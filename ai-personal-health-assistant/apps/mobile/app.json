@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "Personal Health Assistant",
+    "slug": "personal-health-assistant",
+    "version": "0.1.0",
+    "scheme": "healthassistant",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      "expo-router",
+      [
+        "expo-secure-store",
+        {
+          "configureAndroidBackup": true
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.healthassistant"
+    },
+    "android": {
+      "package": "com.example.healthassistant"
+    }
+  }
+}

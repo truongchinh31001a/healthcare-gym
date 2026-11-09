@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "seed": 42,
+  "as_of": "2026-10-22T00:00:00+07:00",
+  "report_timezone": "Asia/Bangkok",
+  "analysis_days": 90,
+  "trend_days": 28,
+  "minimum_trend_days_with_values": 4,
+  "minimum_trend_span_days": 14,
+  "maximum_gap_days": 14,
+  "stale_after_days": 14,
+  "minimum_week_days_with_values": 3,
+  "engineering_max_daily_change": {
+    "weight_kg": 2,
+    "height_cm": 2,
+    "chest_cm": 5,
+    "waist_cm": 5,
+    "hip_cm": 5,
+    "bicep_cm": 3,
+    "thigh_cm": 3,
+    "skeletal_muscle_mass_kg": 2,
+    "body_fat_mass_kg": 2,
+    "percent_body_fat": 5,
+    "total_body_water_l": 3,
+    "ecw_tbw_ratio": 0.03,
+    "basal_metabolic_rate_kcal": 500,
+    "bmi": 2
+  },
+  "notes": "Fixed data-review heuristics, not clinical thresholds, weight-loss targets or adherence requirements. No imputation, forecasting, automatic goal changes or source blending."
+}

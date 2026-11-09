@@ -1,0 +1,19 @@
+{
+  "name": "ai-personal-health-assistant",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "apps/mobile",
+    "packages/contracts"
+  ],
+  "engines": {
+    "node": "^24.3.0 || >=26.0.0"
+  },
+  "scripts": {
+    "dev:web": "npm run dev --workspace=@health/web",
+    "dev:mobile": "npm run start --workspace=@health/mobile",
+    "build:web": "npm run build --workspace=@health/web",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  }
+}

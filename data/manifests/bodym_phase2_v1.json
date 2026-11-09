@@ -1,0 +1,186 @@
+{
+  "dataset_id": "bodym-phase2-v1",
+  "source": "https://amazon-bodym.s3.us-west-2.amazonaws.com",
+  "registry": "https://registry.opendata.aws/bodym/",
+  "paper": "https://adversarialbodysim.github.io/",
+  "license_review_date": "2026-10-21",
+  "license_status": "Registry/paper name BY-NC 4.0 but link to BY 4.0. Non-commercial research only pending clarification.",
+  "label_provenance": "14 circumferences/lengths computed from registered 3D-scan meshes, not tape/InBody labels",
+  "source_manifest_sha256": "20577bf086ad4f0a0ec675b2afa7fa8cb19fdff99d96c1f4cdce81ea339616de",
+  "csv_sha256": {
+    "train/hwg_metadata.csv": "703e98428939767aaf877f38ccfd12b9563ef7d0b0688e0590738acbf876f175",
+    "train/measurements.csv": "1a21380ea9eb77e4d0736f32fd7b5335859e1d27746a105914677a9e366a94c3",
+    "train/subject_to_photo_map.csv": "21e7486d3952a4e3a63048c88d9fbfa70be3ca6d277763d32b423a03c20497d8",
+    "testA/hwg_metadata.csv": "7a53a109354e7e6dd5d750f98c243317b6acb79afbb9725eebf3642b18165d17",
+    "testA/measurements.csv": "fdf4fe74bbf66d57bc9ad1727cebf437650ebe830569c15c911fc933752d74c5",
+    "testA/subject_to_photo_map.csv": "95c47cad359b1b5c476250f8198dc8a7433a783392760294c5616027b2eda843",
+    "testB/hwg_metadata.csv": "737c148f202cffa81d0cbf5f8d07470f9e7673e1b588b309cb9e261aad6c7637",
+    "testB/measurements.csv": "8e5c8e50680dd959c8691e829b1f4cd42fea18a8d9bd681cda41f91c7ab4816e",
+    "testB/subject_to_photo_map.csv": "03f0eeaf626c50c7f942ac2b418d2f9e77bd5c8fb6b09eba88ae3e4ae1ea7680"
+  },
+  "image_inventory_sha256": "d896f114157cec3ec4af6aeb95e811f721e4c5cabede46c4b91ff9b0931d5e51",
+  "images_verified": 17956,
+  "audit_relative_path": "data/processed/bodym_phase2/quality_audit.jsonl",
+  "audit_sha256": "0ac2e41358c3ef3a9f6dd86be869a81b613ec66e776d82c593080abdcb7788a0",
+  "split_record_sha256": "757cf47547d9c9f150d029c4d34703d25f139e5700b33aff48f5633aba8a35f1",
+  "splits": {
+    "train": {
+      "subjects": 2018,
+      "photo_pairs": 6134
+    },
+    "testA": {
+      "subjects": 87,
+      "photo_pairs": 1684
+    },
+    "testB": {
+      "subjects": 400,
+      "photo_pairs": 1160
+    }
+  },
+  "overlaps": {
+    "train__testA": {
+      "subject_ids": 0,
+      "photo_ids": 0,
+      "exact_image_content_hashes": 0
+    },
+    "train__testB": {
+      "subject_ids": 0,
+      "photo_ids": 0,
+      "exact_image_content_hashes": 0
+    },
+    "testA__testB": {
+      "subject_ids": 1,
+      "photo_ids": 0,
+      "exact_image_content_hashes": 0
+    }
+  },
+  "quality_config": {
+    "version": "silhouette-quality-v1",
+    "min_foreground_height_px": 64,
+    "min_foreground_pixels": 256,
+    "min_largest_component_fraction": 0.98,
+    "max_nonbinary_fraction": 0.01,
+    "note": "Fixed engineering review flags; not anatomical/clinical thresholds. Never exclude flagged cases from reported test metrics."
+  },
+  "quality_summary": {
+    "train/mask": {
+      "images": 6134,
+      "review_images": 123,
+      "unusable_images": 0,
+      "flags": {
+        "fragmented_foreground": 17,
+        "foreground_touches_frame": 112
+      },
+      "dimensions": {
+        "720x960": 6134
+      },
+      "foreground_fraction_quantiles": {
+        "min": 0.08808883101851851,
+        "p05": 0.14560163483796296,
+        "median": 0.17571252893518519,
+        "p95": 0.21766456886574073,
+        "max": 0.3107552083333333
+      }
+    },
+    "train/mask_left": {
+      "images": 6134,
+      "review_images": 1691,
+      "unusable_images": 0,
+      "flags": {
+        "foreground_touches_frame": 1584,
+        "fragmented_foreground": 149
+      },
+      "dimensions": {
+        "720x960": 6134
+      },
+      "foreground_fraction_quantiles": {
+        "min": 0.025112847222222224,
+        "p05": 0.09308600983796297,
+        "median": 0.1197779224537037,
+        "p95": 0.1633969907407407,
+        "max": 0.24677228009259258
+      }
+    },
+    "testA/mask": {
+      "images": 1684,
+      "review_images": 34,
+      "unusable_images": 0,
+      "flags": {
+        "foreground_touches_frame": 33,
+        "fragmented_foreground": 2
+      },
+      "dimensions": {
+        "720x960": 1684
+      },
+      "foreground_fraction_quantiles": {
+        "min": 0.11103443287037038,
+        "p05": 0.15175238715277778,
+        "median": 0.17646412037037038,
+        "p95": 0.20977727141203703,
+        "max": 0.2673972800925926
+      }
+    },
+    "testA/mask_left": {
+      "images": 1684,
+      "review_images": 596,
+      "unusable_images": 0,
+      "flags": {
+        "foreground_touches_frame": 596,
+        "fragmented_foreground": 1
+      },
+      "dimensions": {
+        "720x960": 1684
+      },
+      "foreground_fraction_quantiles": {
+        "min": 0.0637109375,
+        "p05": 0.10072099247685184,
+        "median": 0.12534866898148148,
+        "p95": 0.156904296875,
+        "max": 0.19127893518518518
+      }
+    },
+    "testB/mask": {
+      "images": 1160,
+      "review_images": 55,
+      "unusable_images": 0,
+      "flags": {
+        "foreground_touches_frame": 50,
+        "fragmented_foreground": 7
+      },
+      "dimensions": {
+        "720x960": 1160
+      },
+      "foreground_fraction_quantiles": {
+        "min": 0.1327560763888889,
+        "p05": 0.15624754050925926,
+        "median": 0.18068504050925926,
+        "p95": 0.2193343460648148,
+        "max": 0.2549638310185185
+      }
+    },
+    "testB/mask_left": {
+      "images": 1160,
+      "review_images": 545,
+      "unusable_images": 0,
+      "flags": {
+        "foreground_touches_frame": 535,
+        "fragmented_foreground": 25
+      },
+      "dimensions": {
+        "720x960": 1160
+      },
+      "foreground_fraction_quantiles": {
+        "min": 0.07466579861111111,
+        "p05": 0.10733217592592594,
+        "median": 0.13071759259259258,
+        "p95": 0.1649987702546296,
+        "max": 0.21178385416666667
+      }
+    }
+  },
+  "notes": [
+    "All source CSV/image sizes and single-part ETags checked against downloaded source manifest.",
+    "Flags require review; not anatomical pose/completeness certification. No flagged test case is excluded.",
+    "testA/testB evaluated separately; never pooled as independent people."
+  ]
+}

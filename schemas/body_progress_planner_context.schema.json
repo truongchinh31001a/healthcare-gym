@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BodyProgressPlannerContext-v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "subject_id",
+    "as_of",
+    "facts",
+    "needs_source_selection",
+    "inferred_stream_ids_excluded",
+    "missing_or_withheld_stream_ids",
+    "plan_generation_authorized",
+    "requires_safety_screening",
+    "goal_changes_require_user_approval",
+    "interpretation_limits"
+  ],
+  "properties": {
+    "subject_id": {
+      "type": "string"
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "stream_id",
+          "field",
+          "provenance",
+          "verification_band",
+          "measurement_method",
+          "trend"
+        ],
+        "properties": {
+          "provenance": {
+            "enum": [
+              "observed",
+              "extracted"
+            ]
+          },
+          "verification_band": {
+            "const": "reviewed"
+          },
+          "trend": {
+            "type": "object",
+            "required": [
+              "status"
+            ],
+            "properties": {
+              "status": {
+                "const": "descriptive_only"
+              }
+            }
+          }
+        }
+      }
+    },
+    "needs_source_selection": {
+      "type": "array"
+    },
+    "inferred_stream_ids_excluded": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missing_or_withheld_stream_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "plan_generation_authorized": {
+      "const": false
+    },
+    "requires_safety_screening": {
+      "const": true
+    },
+    "goal_changes_require_user_approval": {
+      "const": true
+    },
+    "interpretation_limits": {
+      "type": "string"
+    }
+  }
+}

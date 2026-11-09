@@ -1,0 +1,6 @@
+{
+  "sample": "first testB pair",
+  "cpu_raw_cached_max_abs_difference_cm": 0.0,
+  "cpu_vs_recorded_batched_backend_max_abs_difference_cm": 0.0024855211611338746,
+  "note": "Same-backend raw/cache checked at 1e-6 cm. CPU vs recorded GPU/batch arithmetic reported separately; CUDA cuDNN TF32 was enabled in measured GPU run."
+}

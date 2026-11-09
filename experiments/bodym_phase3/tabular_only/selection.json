@@ -1,0 +1,6 @@
+{
+  "selected_epoch": 21,
+  "tuning_mean_mae_cm": 2.795725781419596,
+  "selection_epochs_run": 33,
+  "training_seconds": 23.277802300020994
+}

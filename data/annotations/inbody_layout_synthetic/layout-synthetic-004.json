@@ -1,0 +1,78 @@
+{
+  "document_id": "layout-synthetic-004",
+  "subject_id": "layout-synthetic-004-subject",
+  "synthetic": true,
+  "measured_at": "2026-10-21",
+  "values": {
+    "weight_kg": 74.0,
+    "height_cm": 174.0,
+    "skeletal_muscle_mass_kg": 34.0,
+    "body_fat_mass_kg": 21.0,
+    "percent_body_fat": 28.4,
+    "total_body_water_l": 43.0,
+    "ecw_tbw_ratio": 0.385,
+    "basal_metabolic_rate_kcal": 1540.0,
+    "bmi": 24.4
+  },
+  "value_boxes": {
+    "weight_kg": [
+      450,
+      255,
+      512,
+      278
+    ],
+    "height_cm": [
+      450,
+      370,
+      533,
+      388
+    ],
+    "skeletal_muscle_mass_kg": [
+      450,
+      485,
+      512,
+      508
+    ],
+    "body_fat_mass_kg": [
+      450,
+      600,
+      512,
+      623
+    ],
+    "percent_body_fat": [
+      450,
+      715,
+      528,
+      733
+    ],
+    "total_body_water_l": [
+      1350,
+      255,
+      1399,
+      273
+    ],
+    "ecw_tbw_ratio": [
+      1350,
+      370,
+      1469,
+      388
+    ],
+    "basal_metabolic_rate_kcal": [
+      1350,
+      485,
+      1507,
+      508
+    ],
+    "bmi": [
+      1350,
+      600,
+      1475,
+      623
+    ]
+  },
+  "bbox_coordinate_space": "exif_transposed_page_0",
+  "transcript": "SYNTHETIC BODY DATA - ENGINEERING FIXTURE\nNgày đo: 2026-10-21\nCân nặng: 74 kg Ref: 0-100 Tổng lượng nước: 43 L Ref: 0-100\nChiều cao: 174 cm Ref: 0-100 ECW/TBW: 0.385 ratio Ref: 0-100\nKhối lượng cơ xương: 34 kg Ref: 0-100 Chuyển hóa cơ bản: 1540 kcal/day Ref: 0-100\nKhối lượng mỡ: 21 kg Ref: 0-100 BMI: 24.4 kg/m2 Ref: 0-100\nTỷ lệ mỡ cơ thể: 28.4 % Ref: 0-100\nGenerated example only. No real person. No medical interpretation.",
+  "language": "vi",
+  "layout_family": "original-two-column",
+  "transform": "none"
+}

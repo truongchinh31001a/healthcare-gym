@@ -1,0 +1,8 @@
+{
+  "testA_metadata_ridge": "restored predictions and independently recomputed MAE match",
+  "testB_metadata_ridge": "restored predictions and independently recomputed MAE match",
+  "testA_silhouette_metadata_ridge": "restored predictions and independently recomputed MAE match",
+  "testB_silhouette_metadata_ridge": "restored predictions and independently recomputed MAE match",
+  "raw_image_feature_roundtrip": "passed",
+  "subject_disjoint_validation": "passed"
+}

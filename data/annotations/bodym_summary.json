@@ -1,0 +1,121 @@
+{
+  "checked_at_utc": "2026-10-18T04:47:30.579933+00:00",
+  "splits": {
+    "train": {
+      "subjects": 2018,
+      "photo_pairs": 6134,
+      "png_images": 12268,
+      "images_by_directory": {
+        "mask": 6134,
+        "mask_left": 6134
+      },
+      "gender_counts": {
+        "female": 800,
+        "male": 1218
+      },
+      "measurement_columns": [
+        "ankle",
+        "arm-length",
+        "bicep",
+        "calf",
+        "chest",
+        "forearm",
+        "height",
+        "hip",
+        "leg-length",
+        "shoulder-breadth",
+        "shoulder-to-crotch",
+        "thigh",
+        "waist",
+        "wrist"
+      ]
+    },
+    "testA": {
+      "subjects": 87,
+      "photo_pairs": 1684,
+      "png_images": 3368,
+      "images_by_directory": {
+        "mask": 1684,
+        "mask_left": 1684
+      },
+      "gender_counts": {
+        "male": 46,
+        "female": 41
+      },
+      "measurement_columns": [
+        "ankle",
+        "arm-length",
+        "bicep",
+        "calf",
+        "chest",
+        "forearm",
+        "height",
+        "hip",
+        "leg-length",
+        "shoulder-breadth",
+        "shoulder-to-crotch",
+        "thigh",
+        "waist",
+        "wrist"
+      ]
+    },
+    "testB": {
+      "subjects": 400,
+      "photo_pairs": 1160,
+      "png_images": 2320,
+      "images_by_directory": {
+        "mask": 1160,
+        "mask_left": 1160
+      },
+      "gender_counts": {
+        "female": 243,
+        "male": 157
+      },
+      "measurement_columns": [
+        "ankle",
+        "arm-length",
+        "bicep",
+        "calf",
+        "chest",
+        "forearm",
+        "height",
+        "hip",
+        "leg-length",
+        "shoulder-breadth",
+        "shoulder-to-crotch",
+        "thigh",
+        "waist",
+        "wrist"
+      ]
+    }
+  },
+  "totals": {
+    "photo_pairs": 8978,
+    "png_images": 17956,
+    "subject_entries": 2505,
+    "unique_subject_ids": 2504
+  },
+  "split_overlaps": {
+    "train__testA": {
+      "shared_subject_ids": 0,
+      "shared_photo_ids": 0
+    },
+    "train__testB": {
+      "shared_subject_ids": 0,
+      "shared_photo_ids": 0
+    },
+    "testA__testB": {
+      "shared_subject_ids": 1,
+      "shared_photo_ids": 0
+    }
+  },
+  "checks": {
+    "tables_and_image_mappings": "passed",
+    "positive_finite_measurements": "passed",
+    "train_subject_isolation_from_tests": "passed",
+    "photo_split_isolation": "passed"
+  },
+  "notes": [
+    "The original testA and testB tables share subject IDs; keep test results separate. Subject entries across splits therefore differ from unique subject IDs."
+  ]
+}

@@ -1,0 +1,9 @@
+# Isolated CPU environment; do not install over the BodyM CUDA environment.
+paddlepaddle==3.3.1
+paddleocr==3.7.0
+Pillow==12.3.0
+pypdfium2==5.14.0
+jsonschema==4.26.0
+nbformat==5.11.1
+nbclient==0.11.0
+ipykernel==7.4.0

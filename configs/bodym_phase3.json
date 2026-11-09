@@ -1,0 +1,15 @@
+{
+  "seed": 42,
+  "calibration_split_seed": 20261022,
+  "calibration_fraction_of_original_fit": 0.2,
+  "base_config": "configs/bodym_cnn.json",
+  "outer_split": "configs/bodym_subject_split.json",
+  "data_root": "data/raw/bodym",
+  "variants": ["tabular_only", "image_only", "fusion"],
+  "alpha": 0.1,
+  "ood_training_quantile": 0.99,
+  "output": "experiments/bodym_phase3",
+  "model_dir": "models/bodym_phase3",
+  "protocol": "Hold calibration subjects out of all new training, normalization, BatchNorm and epoch selection; select on original validation, refit on proper-fit plus tuning only. Existing default checkpoint is never calibrated or replaced.",
+  "limitations": "Research extension on a historically reused dataset, one seed; tests already inspected in earlier phases. Empirical coverage under domain shift, not unconditional deployment guarantees."
+}

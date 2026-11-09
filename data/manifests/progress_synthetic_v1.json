@@ -1,0 +1,14 @@
+{
+  "dataset_id": "body-progress-synthetic-v1",
+  "generator_version": "1.0.0",
+  "seed": 42,
+  "records": 193,
+  "subjects": 5,
+  "real_subjects": 0,
+  "input": "data/raw/progress_synthetic/observations.json",
+  "sha256": "f7ffc0b76d6b39b9f6c514114129ddd63cc67dd4b7990b576cb25e4850d740ef",
+  "expected": "data/annotations/progress_synthetic/expected.json",
+  "expected_sha256": "11a953337278e2afcb4717c36b988cb1586c07a1594c0b2b04ace93e461e77db",
+  "origin": "Original deterministic fixtures, no real person or copied clinical record",
+  "purpose": "Known-trend and adversarial behavior checks only; not medical or real-world longitudinal validation"
+}

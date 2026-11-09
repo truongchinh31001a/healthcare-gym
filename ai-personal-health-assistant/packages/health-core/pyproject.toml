@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "health-research-core"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.2,<3", "scipy>=1.15,<2", "jsonschema>=4.26,<5", "tzdata>=2026.3"]
+[tool.setuptools.package-data]
+health_core = ["configs/*.json"]

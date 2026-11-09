@@ -1,0 +1,8 @@
+name: Deployment placeholder
+on:
+  workflow_dispatch:
+jobs:
+  configure-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Configure the hosting target, secrets and approval environment before adding deployment steps."

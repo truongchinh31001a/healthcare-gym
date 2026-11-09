@@ -1,0 +1,11 @@
+{
+  "name": "BodyM Two-View CNN + Metadata",
+  "model_type": "two_view_cnn_metadata",
+  "selected_on": "2026-10-20",
+  "checkpoint": "models/bodym_cnn/model.pt",
+  "training_config": "configs/bodym_cnn.json",
+  "subject_split": "configs/bodym_subject_split.json",
+  "metrics": "experiments/bodym_cnn/metrics.json",
+  "report": "experiments/bodym_cnn/report.md",
+  "notebook": "notebooks/09_multimodal_deep_learning.ipynb"
+}

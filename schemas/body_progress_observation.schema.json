@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BodyProgressObservation-v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "observation_id",
+    "subject_id",
+    "measurement_session_id",
+    "source",
+    "measurement_method",
+    "consent_id",
+    "measured_at",
+    "measurement_timezone",
+    "device_id",
+    "device_model",
+    "protocol_id",
+    "model_version",
+    "field",
+    "value",
+    "unit",
+    "recorded_at",
+    "provenance",
+    "verification_status",
+    "synthetic",
+    "quality_flags"
+  ],
+  "properties": {
+    "observation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "measurement_session_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "measurement_method": {
+      "type": "string",
+      "minLength": 1
+    },
+    "consent_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "measured_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "measurement_timezone": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "device_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "device_model": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "protocol_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "model_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "supersedes_observation_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "field": {
+      "enum": [
+        "weight_kg",
+        "height_cm",
+        "skeletal_muscle_mass_kg",
+        "body_fat_mass_kg",
+        "percent_body_fat",
+        "total_body_water_l",
+        "ecw_tbw_ratio",
+        "basal_metabolic_rate_kcal",
+        "bmi",
+        "chest_cm",
+        "waist_cm",
+        "hip_cm",
+        "bicep_cm",
+        "thigh_cm"
+      ]
+    },
+    "value": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "unit": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recorded_at": {
+      "type": "string"
+    },
+    "provenance": {
+      "enum": [
+        "declared",
+        "observed",
+        "extracted",
+        "inferred"
+      ]
+    },
+    "verification_status": {
+      "enum": [
+        "declared",
+        "verified",
+        "confirmed_by_user",
+        "pending_user_review",
+        "unverified_estimate",
+        "rejected"
+      ]
+    },
+    "synthetic": {
+      "type": "boolean"
+    },
+    "quality_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "audit_metadata": {
+      "type": "object"
+    }
+  }
+}

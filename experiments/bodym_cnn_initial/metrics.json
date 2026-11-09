@@ -1,0 +1,237 @@
+{
+  "created_at_utc": "2026-10-19T12:18:38.740359+00:00",
+  "config": {
+    "seed": 42,
+    "image_height": 128,
+    "image_width": 96,
+    "padding": 4,
+    "channels": [
+      16,
+      32,
+      64,
+      128
+    ],
+    "metadata_hidden": [
+      32,
+      16
+    ],
+    "fusion_hidden": [
+      128,
+      64
+    ],
+    "dropout": 0.2,
+    "batch_size": 64,
+    "max_epochs": 60,
+    "patience": 12,
+    "learning_rate": 0.001,
+    "min_learning_rate": 1e-05,
+    "weight_decay": 0.0001,
+    "huber_beta": 1.0,
+    "preprocess_workers": 8,
+    "cpu_threads": 4
+  },
+  "device": "NVIDIA GeForce RTX 4060",
+  "torch_version": "2.11.0+cu128",
+  "parameters": 141443,
+  "selected_epoch": 13,
+  "selection_epochs_run": 25,
+  "fit_subjects": 1614,
+  "validation_subjects": 404,
+  "final_train_subjects": 2018,
+  "results": {
+    "validation": {
+      "subjects": 404,
+      "photo_pairs": 1165,
+      "mean_mae_cm": 2.6293618774432423,
+      "mae_cm": {
+        "chest": 2.6287493698077995,
+        "waist": 2.9373305120801363,
+        "hip": 2.3220057504417917
+      },
+      "rmse_cm": {
+        "chest": 3.309346746562913,
+        "waist": 3.850579540095193,
+        "hip": 3.0801473861926936
+      }
+    },
+    "testA": {
+      "subjects": 87,
+      "photo_pairs": 1684,
+      "mean_mae_cm": 3.7720943993179357,
+      "mae_cm": {
+        "chest": 3.2039904727454096,
+        "waist": 5.831170523676847,
+        "hip": 2.281122201531551
+      },
+      "rmse_cm": {
+        "chest": 4.016436718195481,
+        "waist": 6.45210317600436,
+        "hip": 2.8291784682035708
+      }
+    },
+    "testB": {
+      "subjects": 400,
+      "photo_pairs": 1160,
+      "mean_mae_cm": 3.6772673490060477,
+      "mae_cm": {
+        "chest": 3.9998283212701633,
+        "waist": 4.660877357724076,
+        "hip": 2.3710963680239026
+      },
+      "rmse_cm": {
+        "chest": 4.863896399836077,
+        "waist": 5.66175517740766,
+        "hip": 3.0360206047531535
+      }
+    }
+  },
+  "test_subject_overlap": 1,
+  "comparison": {
+    "metadata_ridge": {
+      "alpha": 0.1,
+      "validation": {
+        "subjects": 404,
+        "photo_pairs": 1165,
+        "mean_mae_cm": 2.8805601350024013,
+        "mae_cm": {
+          "chest": 2.871836747591123,
+          "waist": 3.4778385492318122,
+          "hip": 2.292005108184269
+        },
+        "rmse_cm": {
+          "chest": 3.762030553641955,
+          "waist": 4.530993961929041,
+          "hip": 3.081326333676473
+        }
+      },
+      "testA": {
+        "subjects": 87,
+        "photo_pairs": 1684,
+        "mean_mae_cm": 2.742359804824615,
+        "mae_cm": {
+          "chest": 2.9027997647143313,
+          "waist": 3.3061672508910296,
+          "hip": 2.0181123988684835
+        },
+        "rmse_cm": {
+          "chest": 3.7429826249841485,
+          "waist": 3.910746487066136,
+          "hip": 2.5352309932989425
+        }
+      },
+      "testB": {
+        "subjects": 400,
+        "photo_pairs": 1160,
+        "mean_mae_cm": 3.094578200011022,
+        "mae_cm": {
+          "chest": 3.2768493603724007,
+          "waist": 3.5605669169326797,
+          "hip": 2.4463183227279854
+        },
+        "rmse_cm": {
+          "chest": 4.271641443730787,
+          "waist": 4.569997868498782,
+          "hip": 3.2686537842969035
+        }
+      }
+    },
+    "silhouette_metadata_ridge": {
+      "alpha": 10.0,
+      "validation": {
+        "subjects": 404,
+        "photo_pairs": 1165,
+        "mean_mae_cm": 2.3270524385368847,
+        "mae_cm": {
+          "chest": 2.2364166237761385,
+          "waist": 2.7881844672834357,
+          "hip": 1.9565562245510797
+        },
+        "rmse_cm": {
+          "chest": 3.1435787102605066,
+          "waist": 3.999199512465667,
+          "hip": 2.5292950628595263
+        }
+      },
+      "testA": {
+        "subjects": 87,
+        "photo_pairs": 1684,
+        "mean_mae_cm": 2.2455654873402775,
+        "mae_cm": {
+          "chest": 2.2838938866579315,
+          "waist": 2.6130490601519307,
+          "hip": 1.8397535152109707
+        },
+        "rmse_cm": {
+          "chest": 2.935590649059604,
+          "waist": 3.4046967304075633,
+          "hip": 2.3578626387658335
+        }
+      },
+      "testB": {
+        "subjects": 400,
+        "photo_pairs": 1160,
+        "mean_mae_cm": 3.023386256283772,
+        "mae_cm": {
+          "chest": 2.9522549205201956,
+          "waist": 3.719103753067762,
+          "hip": 2.398800095263359
+        },
+        "rmse_cm": {
+          "chest": 4.068501658076256,
+          "waist": 5.013943092090086,
+          "hip": 3.249752084061153
+        }
+      }
+    },
+    "two_view_cnn": {
+      "validation": {
+        "subjects": 404,
+        "photo_pairs": 1165,
+        "mean_mae_cm": 2.6293618774432423,
+        "mae_cm": {
+          "chest": 2.6287493698077995,
+          "waist": 2.9373305120801363,
+          "hip": 2.3220057504417917
+        },
+        "rmse_cm": {
+          "chest": 3.309346746562913,
+          "waist": 3.850579540095193,
+          "hip": 3.0801473861926936
+        }
+      },
+      "testA": {
+        "subjects": 87,
+        "photo_pairs": 1684,
+        "mean_mae_cm": 3.7720943993179357,
+        "mae_cm": {
+          "chest": 3.2039904727454096,
+          "waist": 5.831170523676847,
+          "hip": 2.281122201531551
+        },
+        "rmse_cm": {
+          "chest": 4.016436718195481,
+          "waist": 6.45210317600436,
+          "hip": 2.8291784682035708
+        }
+      },
+      "testB": {
+        "subjects": 400,
+        "photo_pairs": 1160,
+        "mean_mae_cm": 3.6772673490060477,
+        "mae_cm": {
+          "chest": 3.9998283212701633,
+          "waist": 4.660877357724076,
+          "hip": 2.3710963680239026
+        },
+        "rmse_cm": {
+          "chest": 4.863896399836077,
+          "waist": 5.66175517740766,
+          "hip": 3.0360206047531535
+        }
+      }
+    }
+  },
+  "training_seconds": 63.72458890001144,
+  "evaluation_only": true,
+  "elapsed_seconds": 1.7091123999998672
+}

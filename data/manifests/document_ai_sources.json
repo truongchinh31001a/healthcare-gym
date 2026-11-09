@@ -1,0 +1,56 @@
+{
+  "reviewed_on": "2026-10-21",
+  "sources": [
+    {
+      "id": "funsd",
+      "source": "https://guillaumejaume.github.io/FUNSD/",
+      "terms": "https://guillaumejaume.github.io/FUNSD/work/",
+      "role": "Generic noisy form OCR and field-relation exploration, not InBody labels",
+      "license_status": "Terms reviewed: non-commercial research/education; original-image rights require separate consideration",
+      "download_status": "not_downloaded",
+      "use_for_inbody_accuracy": false
+    },
+    {
+      "id": "sroie",
+      "source": "https://rrc.cvc.uab.es/?ch=13",
+      "role": "Receipt OCR/KIE baseline exploration, not InBody labels",
+      "license_status": "pending source terms verification; official download page timed out",
+      "download_status": "not_downloaded",
+      "use_for_inbody_accuracy": false
+    },
+    {
+      "id": "doclaynet",
+      "source": "https://huggingface.co/datasets/docling-project/DocLayNet",
+      "role": "Layout bounding boxes; not a specialized InBody benchmark",
+      "license_status": "Dataset card states CDLA-Permissive-1.0; verify applicable assets before download",
+      "download_status": "not_downloaded",
+      "use_for_inbody_accuracy": false
+    },
+    {
+      "id": "inbody_sample_sheets",
+      "source": "https://downloads.inbody.com/",
+      "role": "Candidate reference for manual layout exploration",
+      "license_status": "not reviewed; public visibility is not training/redistribution permission",
+      "download_status": "not_downloaded",
+      "use_for_inbody_accuracy": false
+    },
+    {
+      "id": "inbody_real_consented",
+      "source": null,
+      "role": "Required independent real-world InBody benchmark",
+      "license_status": "Requires source authorization, processing consent and separate research consent",
+      "download_status": "not_available",
+      "documents": 0,
+      "use_for_inbody_accuracy": true
+    },
+    {
+      "id": "inbody_synthetic_v1",
+      "source": "scripts/prepare_inbody_synthetic.py",
+      "role": "Original layout, deterministic pipeline smoke tests only",
+      "license_status": "Project-original; no third-party layout or personal data",
+      "download_status": "generated_locally",
+      "documents": 16,
+      "use_for_inbody_accuracy": false
+    }
+  ]
+}
